@@ -9,201 +9,203 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,400;0,500;1,700;1,800&family=Saira+Condensed:wght@800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/main.css">
+  <script>try{if(localStorage.getItem("gymrillas_theme")==="light")document.documentElement.setAttribute("data-theme","light")}catch(e){}</script>
 </head>
 <body>
-<div class="barra-anuncio">Envío gratis en órdenes +$150 · PR &amp; USA &nbsp;|&nbsp; 10% off con <strong>BIENVENIDO10</strong></div>
+<div class="barra-anuncio" data-en-html='Free shipping on orders +$150 · PR &amp; USA &nbsp;|&nbsp; 10% off with <strong>BIENVENIDO10</strong>'>Envío gratis en órdenes +$150 · PR &amp; USA &nbsp;|&nbsp; 10% off con <strong>BIENVENIDO10</strong></div>
 <header class="header">
   <div class="fila">
     <div class="zona-izq">
-      <button class="hamburguesa" id="btn-menu" aria-label="Abrir menú">☰</button>
+      <button class="hamburguesa" id="btn-menu" aria-label="Abrir menú" data-en-aria="Open menu">☰</button>
       <nav class="nav-desktop" aria-label="Principal">
-        <div class="nav-item"><a href="tienda.html?f=cat:mujer&n=Mujer">Mujer</a><div class="dropdown"><a href="tienda.html?f=sub:w-leggings&n=Leggings">Leggings</a><a href="tienda.html?f=sub:w-shorts&n=Shorts">Shorts</a><a class="dd-todo" href="tienda.html?f=cat:mujer&n=Mujer">Ver todo mujer</a></div></div>
-        <div class="nav-item"><a href="tienda.html?f=cat:hombre&n=Hombre">Hombre</a><div class="dropdown"><a href="tienda.html?f=sub:h-tanks&n=Tank tops">Tank tops</a><a class="dd-todo" href="tienda.html?f=cat:hombre&n=Hombre">Ver todo hombre</a></div></div>
-        <div class="nav-item"><a href="tienda.html?f=cat:accesorios&n=Accesorios">Accesorios</a><div class="dropdown"><a href="tienda.html?f=sub:a-straps&n=Straps">Straps</a><a href="tienda.html?f=sub:a-cinturones&n=Cinturones">Cinturones</a><a class="dd-todo" href="tienda.html?f=cat:accesorios&n=Accesorios">Ver todo accesorios</a></div></div>
-        
-        <div class="nav-item"><a href="tienda.html">Descubre</a><div class="dropdown"><a href="index.html#preorden">Drop 001</a><a href="tienda.html?f=tag:hot&n=Hot deals">Hot deals</a><a href="tienda.html?f=tag:trending&n=Trending">Trending</a><a href="tienda.html?f=tag:nuevo&n=Nuevos">Nuevos</a><a class="dd-todo" href="tienda.html">Ver toda la tienda</a></div></div>
+        <div class="nav-item"><a href="tienda.html?f=cat:mujer&n=Mujer" data-en="Women">Mujer</a><div class="dropdown"><a href="tienda.html?f=sub:w-leggings&n=Leggings" data-en="Leggings">Leggings</a><a href="tienda.html?f=sub:w-shorts&n=Shorts" data-en="Shorts">Shorts</a><a class="dd-todo" href="tienda.html?f=cat:mujer&n=Mujer" data-en="Shop all women">Ver todo mujer</a></div></div>
+        <div class="nav-item"><a href="tienda.html?f=cat:hombre&n=Hombre" data-en="Men">Hombre</a><div class="dropdown"><a href="tienda.html?f=sub:h-tanks&n=Tank tops" data-en="Tank tops">Tank tops</a><a class="dd-todo" href="tienda.html?f=cat:hombre&n=Hombre" data-en="Shop all men">Ver todo hombre</a></div></div>
+        <div class="nav-item"><a href="tienda.html?f=cat:accesorios&n=Accesorios" data-en="Accessories">Accesorios</a><div class="dropdown"><a href="tienda.html?f=sub:a-straps&n=Straps" data-en="Straps">Straps</a><a href="tienda.html?f=sub:a-cinturones&n=Cinturones" data-en="Belts">Cinturones</a><a class="dd-todo" href="tienda.html?f=cat:accesorios&n=Accesorios" data-en="Shop all accessories">Ver todo accesorios</a></div></div>
+
+        <div class="nav-item"><a href="tienda.html" data-en="Discover">Descubre</a><div class="dropdown"><a href="index.html#preorden" data-en="Drop 001">Drop 001</a><a href="tienda.html?f=tag:hot&n=Hot deals" data-en="Hot deals">Hot deals</a><a href="tienda.html?f=tag:trending&n=Trending" data-en="Trending">Trending</a><a href="tienda.html?f=tag:nuevo&n=Nuevos" data-en="New">Nuevos</a><a class="dd-todo" href="tienda.html" data-en="Shop everything">Ver toda la tienda</a></div></div>
       </nav>
     </div>
     <a class="wordmark" href="index.html"><img src="https://assets.zyrosite.com/AoPeB1VKDLfKgeV3/isotipo-color-1-2x-AoPGxkJ68bF7O1oX.png" alt="" width="26" height="26">GYMRILLAS</a>
     <div class="iconos">
-      <button class="btn-ico" id="btn-lupa" aria-label="Buscar"><svg class="ico" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5 21 21"/></svg></button>
-      <a class="btn-ico" href="login.html" aria-label="Mi cuenta"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.6 3.1-5.6 7-5.6s7 2 7 5.6"/></svg></a>
-      <a class="btn-ico carrito" href="carrito.html" aria-label="Carrito"><svg class="ico" viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><em data-cart-count>0</em></a>
-      <a class="btn-ico" href="index.html#lead" aria-label="Lista de espera del drop"><svg class="ico" viewBox="0 0 24 24"><path d="M18 16H6c1.2-1.2 1.5-2.8 1.5-5a4.5 4.5 0 0 1 9 0c0 2.2.3 3.8 1.5 5z"/><path d="M10.5 19a1.8 1.8 0 0 0 3 0"/></svg></a>
+      <button class="btn-ico" id="btn-lupa" aria-label="Buscar" data-en-aria="Search"><svg class="ico" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5 21 21"/></svg></button>
+      <a class="btn-ico" href="login.html" aria-label="Mi cuenta" data-en-aria="My account"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.6 3.1-5.6 7-5.6s7 2 7 5.6"/></svg></a>
+      <a class="btn-ico carrito" href="carrito.html" aria-label="Carrito" data-en-aria="Cart"><svg class="ico" viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><em data-cart-count>0</em></a>
+      <a class="btn-ico" href="index.html#lead" aria-label="Lista de espera del drop" data-en-aria="Drop waitlist"><svg class="ico" viewBox="0 0 24 24"><path d="M18 16H6c1.2-1.2 1.5-2.8 1.5-5a4.5 4.5 0 0 1 9 0c0 2.2.3 3.8 1.5 5z"/><path d="M10.5 19a1.8 1.8 0 0 0 3 0"/></svg></a>
     </div>
   </div>
   <div class="buscador" id="buscador" hidden>
     <form action="tienda.html" class="container">
-      <input type="search" name="q" placeholder="Buscar productos…" aria-label="Buscar productos">
-      <button class="btn btn-volt" type="submit">Buscar</button>
+      <input type="search" name="q" placeholder="Buscar productos…" aria-label="Buscar productos" data-en-ph="Search products…" data-en-aria="Search products">
+      <button class="btn btn-volt" type="submit" data-en="Search">Buscar</button>
     </form>
   </div>
 </header>
 <div class="drawer" id="drawer">
   <div class="fondo" data-cerrar></div>
   <div class="panel">
-    <button class="cerrar" data-cerrar aria-label="Cerrar">✕</button>
-    <div class="dw-grupo"><h6>Descubre</h6><a href="index.html#preorden">Drop 001</a><a href="tienda.html?f=tag:hot&n=Hot deals">Hot deals</a><a href="tienda.html?f=tag:trending&n=Trending">Trending</a><a href="tienda.html?f=tag:nuevo&n=Nuevos">Nuevos</a><a href="tienda.html">Toda la tienda</a></div><div class="dw-grupo"><h6>Mujer</h6><a href="tienda.html?f=cat:mujer&n=Mujer">Ver todo mujer</a><a href="tienda.html?f=sub:w-leggings&n=Leggings">Leggings</a><a href="tienda.html?f=sub:w-shorts&n=Shorts">Shorts</a></div><div class="dw-grupo"><h6>Hombre</h6><a href="tienda.html?f=cat:hombre&n=Hombre">Ver todo hombre</a><a href="tienda.html?f=sub:h-tanks&n=Tank tops">Tank tops</a></div><div class="dw-grupo"><h6>Accesorios</h6><a href="tienda.html?f=cat:accesorios&n=Accesorios">Ver todo accesorios</a><a href="tienda.html?f=sub:a-straps&n=Straps">Straps</a><a href="tienda.html?f=sub:a-cinturones&n=Cinturones">Cinturones</a></div><div class="dw-grupo"><h6>Cuenta</h6><a href="login.html">Iniciar sesión / Crear cuenta</a><a href="cuenta.html">Mi cuenta</a><a href="carrito.html">Carrito</a></div>
+    <button class="cerrar" data-cerrar aria-label="Cerrar" data-en-aria="Close">✕</button>
+    <div class="dw-grupo"><h6 data-en="Discover">Descubre</h6><a href="index.html#preorden" data-en="Drop 001">Drop 001</a><a href="tienda.html?f=tag:hot&n=Hot deals" data-en="Hot deals">Hot deals</a><a href="tienda.html?f=tag:trending&n=Trending" data-en="Trending">Trending</a><a href="tienda.html?f=tag:nuevo&n=Nuevos" data-en="New">Nuevos</a><a href="tienda.html" data-en="Full store">Toda la tienda</a></div><div class="dw-grupo"><h6 data-en="Women">Mujer</h6><a href="tienda.html?f=cat:mujer&n=Mujer" data-en="Shop all women">Ver todo mujer</a><a href="tienda.html?f=sub:w-leggings&n=Leggings" data-en="Leggings">Leggings</a><a href="tienda.html?f=sub:w-shorts&n=Shorts" data-en="Shorts">Shorts</a></div><div class="dw-grupo"><h6 data-en="Men">Hombre</h6><a href="tienda.html?f=cat:hombre&n=Hombre" data-en="Shop all men">Ver todo hombre</a><a href="tienda.html?f=sub:h-tanks&n=Tank tops" data-en="Tank tops">Tank tops</a></div><div class="dw-grupo"><h6 data-en="Accessories">Accesorios</h6><a href="tienda.html?f=cat:accesorios&n=Accesorios" data-en="Shop all accessories">Ver todo accesorios</a><a href="tienda.html?f=sub:a-straps&n=Straps" data-en="Straps">Straps</a><a href="tienda.html?f=sub:a-cinturones&n=Cinturones" data-en="Belts">Cinturones</a></div><div class="dw-grupo"><h6 data-en="Account">Cuenta</h6><a href="login.html" data-en="Sign in / Create account">Iniciar sesión / Crear cuenta</a><a href="cuenta.html" data-en="My account">Mi cuenta</a><a href="carrito.html" data-en="Cart">Carrito</a></div>
   </div>
 </div>
 
 <main class="doc">
-  <p class="eyebrow">Legal</p>
-  <h1>Términos y <span style="color:var(--volt)">condiciones</span></h1>
-  <p class="actualizado">Última actualización: junio 2026</p>
-  <p class="intro">Estos términos rigen el uso de este sitio y la compra de productos de Gymrillas. Léelos completos: son el acuerdo entre tú y nosotros. Si tienes preguntas, escríbenos por nuestras redes antes de comprar.</p>
+  <p class="eyebrow" data-en="Legal">Legal</p>
+  <h1 data-en-html='Terms &amp; <span style="color:var(--enlace)">conditions</span>'>Términos y <span style="color:var(--enlace)">condiciones</span></h1>
+  <p class="actualizado" data-en="Last updated: June 2026">Última actualización: junio 2026</p>
+  <p class="intro" data-en="These terms govern the use of this site and the purchase of Gymrillas products. Read them in full: they are the agreement between you and us. If you have questions, message us on our social media before buying.">Estos términos rigen el uso de este sitio y la compra de productos de Gymrillas. Léelos completos: son el acuerdo entre tú y nosotros. Si tienes preguntas, escríbenos por nuestras redes antes de comprar.</p>
 
   <div class="caja">
-    <p>Al navegar este sitio o realizar una compra, aceptas estos términos en su totalidad. Si no estás de acuerdo, no uses el sitio ni hagas órdenes.</p>
+    <p data-en="By browsing this site or making a purchase, you accept these terms in their entirety. If you do not agree, do not use the site or place orders.">Al navegar este sitio o realizar una compra, aceptas estos términos en su totalidad. Si no estás de acuerdo, no uses el sitio ni hagas órdenes.</p>
   </div>
 
   <div class="toc">
-    <a href="#aceptacion">Aceptación de los términos</a>
-    <a href="#quienes">Quiénes somos</a>
-    <a href="#productos">Productos, precios e IVU</a>
-    <a href="#ordenes">Órdenes y pagos</a>
-    <a href="#envios">Envíos</a>
-    <a href="#devoluciones">Devoluciones</a>
-    <a href="#cupones">Cupones y referidos</a>
-    <a href="#propiedad">Propiedad intelectual</a>
-    <a href="#uso">Uso permitido y prohibido</a>
-    <a href="#cuentas">Cuentas de usuario</a>
-    <a href="#responsabilidad">Limitación de responsabilidad</a>
-    <a href="#ley">Ley aplicable</a>
-    <a href="#cambios">Cambios a los términos</a>
-    <a href="#contacto">Contacto</a>
+    <a href="#aceptacion" data-en="Acceptance of the terms">Aceptación de los términos</a>
+    <a href="#quienes" data-en="Who we are">Quiénes somos</a>
+    <a href="#productos" data-en="Products, prices and IVU">Productos, precios e IVU</a>
+    <a href="#ordenes" data-en="Orders and payments">Órdenes y pagos</a>
+    <a href="#envios" data-en="Shipping">Envíos</a>
+    <a href="#devoluciones" data-en="Returns">Devoluciones</a>
+    <a href="#cupones" data-en="Coupons and referrals">Cupones y referidos</a>
+    <a href="#propiedad" data-en="Intellectual property">Propiedad intelectual</a>
+    <a href="#uso" data-en="Permitted and prohibited use">Uso permitido y prohibido</a>
+    <a href="#cuentas" data-en="User accounts">Cuentas de usuario</a>
+    <a href="#responsabilidad" data-en="Limitation of liability">Limitación de responsabilidad</a>
+    <a href="#ley" data-en="Governing law">Ley aplicable</a>
+    <a href="#cambios" data-en="Changes to the terms">Cambios a los términos</a>
+    <a href="#contacto" data-en="Contact">Contacto</a>
   </div>
 
-  <h2 id="aceptacion">Aceptación de los términos</h2>
-  <p>Al acceder a este sitio, crear una cuenta o realizar una orden, confirmas que has leído, entendido y aceptado estos términos y nuestra <a href="privacidad.html">política de privacidad</a>. Estos términos aplican a todos los visitantes y clientes. Si compras en nombre de otra persona o empresa, declaras tener autorización para aceptar estos términos por ellos.</p>
+  <h2 id="aceptacion" data-en="Acceptance of the terms">Aceptación de los términos</h2>
+  <p data-en-html='By accessing this site, creating an account or placing an order, you confirm that you have read, understood and accepted these terms and our <a href="privacidad.html">privacy policy</a>. These terms apply to all visitors and customers. If you buy on behalf of another person or company, you declare that you have authorization to accept these terms for them.'>Al acceder a este sitio, crear una cuenta o realizar una orden, confirmas que has leído, entendido y aceptado estos términos y nuestra <a href="privacidad.html">política de privacidad</a>. Estos términos aplican a todos los visitantes y clientes. Si compras en nombre de otra persona o empresa, declaras tener autorización para aceptar estos términos por ellos.</p>
 
-  <h2 id="quienes">Quiénes somos</h2>
-  <p><strong>Gymrillas</strong> es una marca de ropa y equipo de fitness con operaciones en Puerto Rico. Vendemos en línea a través de este sitio y ofrecemos recogido local en Caguas. Cuando en estos términos decimos "nosotros", "nuestro" o "Gymrillas", nos referimos al comercio Gymrillas.</p>
+  <h2 id="quienes" data-en="Who we are">Quiénes somos</h2>
+  <p data-en-html='<strong>Gymrillas</strong> is a fitness clothing and equipment brand operating in Puerto Rico. We sell online through this site and offer local pickup in Caguas. When in these terms we say "we", "our" or "Gymrillas", we mean the Gymrillas store.'><strong>Gymrillas</strong> es una marca de ropa y equipo de fitness con operaciones en Puerto Rico. Vendemos en línea a través de este sitio y ofrecemos recogido local en Caguas. Cuando en estos términos decimos "nosotros", "nuestro" o "Gymrillas", nos referimos al comercio Gymrillas.</p>
 
-  <h2 id="productos">Productos, precios e IVU 11.5%</h2>
-  <p>Mostramos los productos con la mayor exactitud posible, pero los colores en pantalla pueden variar levemente según tu dispositivo. La disponibilidad de tallas y estilos está sujeta a inventario.</p>
+  <h2 id="productos" data-en="Products, prices and IVU 11.5%">Productos, precios e IVU 11.5%</h2>
+  <p data-en="We show products as accurately as possible, but on-screen colors may vary slightly depending on your device. The availability of sizes and styles is subject to inventory.">Mostramos los productos con la mayor exactitud posible, pero los colores en pantalla pueden variar levemente según tu dispositivo. La disponibilidad de tallas y estilos está sujeta a inventario.</p>
   <ul>
-    <li>Todos los precios están en <strong>dólares estadounidenses (USD)</strong> y no incluyen impuestos ni envío hasta el checkout.</li>
-    <li>Los precios pueden cambiar en cualquier momento sin previo aviso; el precio que aplica a tu orden es el que aparece al momento de pagar.</li>
-    <li>Al subtotal de productos se le añade el <strong>IVU de 11.5%</strong> requerido en Puerto Rico, calculado automáticamente en el checkout.</li>
+    <li data-en-html='All prices are in <strong>US dollars (USD)</strong> and do not include taxes or shipping until checkout.'>Todos los precios están en <strong>dólares estadounidenses (USD)</strong> y no incluyen impuestos ni envío hasta el checkout.</li>
+    <li data-en="Prices may change at any time without prior notice; the price that applies to your order is the one shown at the time of payment.">Los precios pueden cambiar en cualquier momento sin previo aviso; el precio que aplica a tu orden es el que aparece al momento de pagar.</li>
+    <li data-en-html='The <strong>11.5% IVU</strong> required in Puerto Rico is added to the product subtotal, calculated automatically at checkout.'>Al subtotal de productos se le añade el <strong>IVU de 11.5%</strong> requerido en Puerto Rico, calculado automáticamente en el checkout.</li>
   </ul>
-  <p>Las promociones y descuentos son por tiempo limitado y no son retroactivos a órdenes ya completadas.</p>
+  <p data-en="Promotions and discounts are for a limited time and are not retroactive to already completed orders.">Las promociones y descuentos son por tiempo limitado y no son retroactivos a órdenes ya completadas.</p>
 
-  <h2 id="ordenes">Órdenes y pagos</h2>
-  <p>Aceptamos pagos mediante <strong>ATH Móvil</strong> y <strong>tarjeta de crédito o débito</strong>. Los pagos con tarjeta los procesa nuestro proveedor de pago; <strong>no guardamos los números de tarjeta</strong> en nuestros servidores. ATH Móvil <strong>no tiene cobro recurrente</strong>: cada compra es un pago único que tú autorizas.</p>
-  <p>Tu orden se considera confirmada una vez recibimos el pago y te enviamos la confirmación por correo. Recibir una confirmación no garantiza la disponibilidad final del producto.</p>
+  <h2 id="ordenes" data-en="Orders and payments">Órdenes y pagos</h2>
+  <p data-en-html='We accept payments via <strong>ATH Móvil</strong> and <strong>credit or debit card</strong>. Card payments are processed by our payment provider; <strong>we do not store card numbers</strong> on our servers. ATH Móvil <strong>has no recurring billing</strong>: each purchase is a one-time payment that you authorize.'>Aceptamos pagos mediante <strong>ATH Móvil</strong> y <strong>tarjeta de crédito o débito</strong>. Los pagos con tarjeta los procesa nuestro proveedor de pago; <strong>no guardamos los números de tarjeta</strong> en nuestros servidores. ATH Móvil <strong>no tiene cobro recurrente</strong>: cada compra es un pago único que tú autorizas.</p>
+  <p data-en="Your order is considered confirmed once we receive payment and send you the confirmation by email. Receiving a confirmation does not guarantee the final availability of the product.">Tu orden se considera confirmada una vez recibimos el pago y te enviamos la confirmación por correo. Recibir una confirmación no garantiza la disponibilidad final del producto.</p>
   <div class="caja">
-    <p>Nos reservamos el derecho de <strong>rechazar o cancelar cualquier orden</strong> por errores evidentes de precio, sospecha de fraude o falta de inventario. Si cancelamos una orden que ya pagaste, te <strong>reembolsamos el monto completo</strong> por el mismo método de pago.</p>
+    <p data-en-html='We reserve the right to <strong>reject or cancel any order</strong> due to obvious pricing errors, suspected fraud or lack of inventory. If we cancel an order you already paid for, we <strong>refund the full amount</strong> through the same payment method.'>Nos reservamos el derecho de <strong>rechazar o cancelar cualquier orden</strong> por errores evidentes de precio, sospecha de fraude o falta de inventario. Si cancelamos una orden que ya pagaste, te <strong>reembolsamos el monto completo</strong> por el mismo método de pago.</p>
   </div>
 
-  <h2 id="envios">Envíos</h2>
-  <p>Enviamos a Puerto Rico y Estados Unidos vía USPS, con <strong>envío gratis en órdenes de $150 o más</strong> (tarifa estándar de $5.99 bajo ese monto) y recogido gratis en Caguas. Los tiempos de entrega y el seguimiento se detallan en nuestra <a href="envios.html">política de envíos</a>.</p>
+  <h2 id="envios" data-en="Shipping">Envíos</h2>
+  <p data-en-html='We ship to Puerto Rico and the United States via USPS, with <strong>free shipping on orders of $150 or more</strong> (standard rate of $5.99 below that amount) and free pickup in Caguas. Delivery times and tracking are detailed in our <a href="envios.html">shipping policy</a>.'>Enviamos a Puerto Rico y Estados Unidos vía USPS, con <strong>envío gratis en órdenes de $150 o más</strong> (tarifa estándar de $5.99 bajo ese monto) y recogido gratis en Caguas. Los tiempos de entrega y el seguimiento se detallan en nuestra <a href="envios.html">política de envíos</a>.</p>
 
-  <h2 id="devoluciones">Devoluciones</h2>
-  <p>Aceptamos cambios y devoluciones de artículos elegibles dentro del periodo y las condiciones indicadas en nuestra <a href="devoluciones.html">política de devoluciones</a>. Antes de comprar, te recomendamos revisar la <a href="guia-tallas.html">guía de tallas</a> para escoger bien.</p>
+  <h2 id="devoluciones" data-en="Returns">Devoluciones</h2>
+  <p data-en-html='We accept exchanges and returns of eligible items within the period and conditions stated in our <a href="devoluciones.html">returns policy</a>. Before buying, we recommend checking the <a href="guia-tallas.html">size guide</a> to choose well.'>Aceptamos cambios y devoluciones de artículos elegibles dentro del periodo y las condiciones indicadas en nuestra <a href="devoluciones.html">política de devoluciones</a>. Antes de comprar, te recomendamos revisar la <a href="guia-tallas.html">guía de tallas</a> para escoger bien.</p>
 
-  <h2 id="cupones">Cupones y códigos de referido</h2>
-  <p>Los cupones y códigos de descuento (incluyendo códigos de referido) están sujetos a sus propias condiciones de uso:</p>
+  <h2 id="cupones" data-en="Coupons and referral codes">Cupones y códigos de referido</h2>
+  <p data-en="Coupons and discount codes (including referral codes) are subject to their own terms of use:">Los cupones y códigos de descuento (incluyendo códigos de referido) están sujetos a sus propias condiciones de uso:</p>
   <ul>
-    <li>Aplica <strong>un cupón por orden</strong>, salvo que se indique lo contrario.</li>
-    <li>No son canjeables por efectivo ni transferibles, y no tienen valor monetario fuera del sitio.</li>
-    <li>No son acumulables con otras promociones a menos que lo especifiquemos.</li>
-    <li>Podemos <strong>anular o desactivar</strong> un cupón o código si detectamos abuso, uso indebido o intento de fraude.</li>
-  </ul>
-
-  <h2 id="propiedad">Propiedad intelectual</h2>
-  <p>La marca <strong>Gymrillas</strong>, el logo del gorila, el nombre, los diseños, las fotos, los textos y todo el contenido del sitio son propiedad de <strong>Gymrillas</strong> y están protegidos por las leyes aplicables. No puedes copiar, reproducir, modificar ni usar nuestra marca o contenido con fines comerciales sin autorización escrita.</p>
-
-  <h2 id="uso">Uso permitido y prohibido</h2>
-  <p>Puedes usar este sitio para conocer y comprar nuestros productos para tu uso personal. Queda <strong>prohibido</strong>:</p>
-  <ul>
-    <li>Revender nuestros productos o contenido sin autorización.</li>
-    <li>Hacer <em>scraping</em>, copiar el sitio de forma automatizada o sobrecargar nuestros servidores.</li>
-    <li>Usar el sitio para fines ilegales, fraudulentos o que perjudiquen a terceros.</li>
-    <li>Intentar acceder a cuentas, datos o sistemas que no te pertenecen.</li>
+    <li data-en-html='<strong>One coupon per order</strong> applies, unless otherwise stated.'>Aplica <strong>un cupón por orden</strong>, salvo que se indique lo contrario.</li>
+    <li data-en="They are not redeemable for cash or transferable, and have no monetary value outside the site.">No son canjeables por efectivo ni transferibles, y no tienen valor monetario fuera del sitio.</li>
+    <li data-en="They cannot be combined with other promotions unless we specify it.">No son acumulables con otras promociones a menos que lo especifiquemos.</li>
+    <li data-en-html='We may <strong>void or deactivate</strong> a coupon or code if we detect abuse, misuse or attempted fraud.'>Podemos <strong>anular o desactivar</strong> un cupón o código si detectamos abuso, uso indebido o intento de fraude.</li>
   </ul>
 
-  <h2 id="cuentas">Cuentas de usuario</h2>
-  <p>Si creas una cuenta, eres responsable de mantener la <strong>confidencialidad de tu contraseña</strong> y de toda actividad realizada bajo tu cuenta. Usa una contraseña segura y no la compartas. Avísanos de inmediato si sospechas un acceso no autorizado. Puedes administrar tu información desde <a href="cuenta.html">tu cuenta</a> o <a href="login.html">iniciar sesión</a> cuando lo necesites.</p>
+  <h2 id="propiedad" data-en="Intellectual property">Propiedad intelectual</h2>
+  <p data-en-html='The <strong>Gymrillas</strong> brand, the gorilla logo, the name, the designs, the photos, the text and all site content are property of <strong>Gymrillas</strong> and are protected by applicable laws. You may not copy, reproduce, modify or use our brand or content for commercial purposes without written authorization.'>La marca <strong>Gymrillas</strong>, el logo del gorila, el nombre, los diseños, las fotos, los textos y todo el contenido del sitio son propiedad de <strong>Gymrillas</strong> y están protegidos por las leyes aplicables. No puedes copiar, reproducir, modificar ni usar nuestra marca o contenido con fines comerciales sin autorización escrita.</p>
 
-  <h2 id="responsabilidad">Limitación de responsabilidad</h2>
-  <p>Nuestros productos se venden <strong>"tal cual"</strong> para uso de fitness y vestimenta deportiva. En la medida permitida por la ley, Gymrillas no será responsable por daños indirectos o incidentales derivados del uso del sitio o de los productos más allá del valor pagado por tu orden.</p>
+  <h2 id="uso" data-en="Permitted and prohibited use">Uso permitido y prohibido</h2>
+  <p data-en-html='You may use this site to discover and buy our products for your personal use. It is <strong>prohibited</strong> to:'>Puedes usar este sitio para conocer y comprar nuestros productos para tu uso personal. Queda <strong>prohibido</strong>:</p>
+  <ul>
+    <li data-en="Resell our products or content without authorization.">Revender nuestros productos o contenido sin autorización.</li>
+    <li data-en-html='Perform <em>scraping</em>, copy the site in an automated way or overload our servers.'>Hacer <em>scraping</em>, copiar el sitio de forma automatizada o sobrecargar nuestros servidores.</li>
+    <li data-en="Use the site for illegal, fraudulent purposes or that harm third parties.">Usar el sitio para fines ilegales, fraudulentos o que perjudiquen a terceros.</li>
+    <li data-en="Attempt to access accounts, data or systems that do not belong to you.">Intentar acceder a cuentas, datos o sistemas que no te pertenecen.</li>
+  </ul>
+
+  <h2 id="cuentas" data-en="User accounts">Cuentas de usuario</h2>
+  <p data-en-html='If you create an account, you are responsible for keeping the <strong>confidentiality of your password</strong> and for all activity carried out under your account. Use a secure password and do not share it. Notify us immediately if you suspect unauthorized access. You can manage your information from <a href="cuenta.html">your account</a> or <a href="login.html">sign in</a> whenever you need to.'>Si creas una cuenta, eres responsable de mantener la <strong>confidencialidad de tu contraseña</strong> y de toda actividad realizada bajo tu cuenta. Usa una contraseña segura y no la compartas. Avísanos de inmediato si sospechas un acceso no autorizado. Puedes administrar tu información desde <a href="cuenta.html">tu cuenta</a> o <a href="login.html">iniciar sesión</a> cuando lo necesites.</p>
+
+  <h2 id="responsabilidad" data-en="Limitation of liability">Limitación de responsabilidad</h2>
+  <p data-en-html='Our products are sold <strong>"as is"</strong> for fitness use and athletic wear. To the extent permitted by law, Gymrillas will not be liable for indirect or incidental damages arising from the use of the site or the products beyond the value paid for your order.'>Nuestros productos se venden <strong>"tal cual"</strong> para uso de fitness y vestimenta deportiva. En la medida permitida por la ley, Gymrillas no será responsable por daños indirectos o incidentales derivados del uso del sitio o de los productos más allá del valor pagado por tu orden.</p>
   <div class="caja">
-    <p>El ejercicio conlleva riesgos. <strong>Consulta a un médico o profesional de la salud</strong> antes de comenzar cualquier programa de entrenamiento, especialmente si tienes condiciones de salud preexistentes. Nuestra ropa y equipo no sustituyen la orientación profesional.</p>
+    <p data-en-html='Exercise carries risks. <strong>Consult a doctor or health professional</strong> before starting any training program, especially if you have pre-existing health conditions. Our clothing and equipment do not replace professional guidance.'>El ejercicio conlleva riesgos. <strong>Consulta a un médico o profesional de la salud</strong> antes de comenzar cualquier programa de entrenamiento, especialmente si tienes condiciones de salud preexistentes. Nuestra ropa y equipo no sustituyen la orientación profesional.</p>
   </div>
 
-  <h2 id="ley">Ley aplicable</h2>
-  <p>Estos términos se rigen por las leyes del <strong>Estado Libre Asociado de Puerto Rico</strong> y, cuando corresponda, por las leyes federales aplicables de los Estados Unidos. Cualquier controversia se atenderá conforme a la jurisdicción aplicable en Puerto Rico.</p>
+  <h2 id="ley" data-en="Governing law">Ley aplicable</h2>
+  <p data-en-html='These terms are governed by the laws of the <strong>Commonwealth of Puerto Rico</strong> and, where applicable, by the applicable federal laws of the United States. Any dispute will be handled in accordance with the applicable jurisdiction in Puerto Rico.'>Estos términos se rigen por las leyes del <strong>Estado Libre Asociado de Puerto Rico</strong> y, cuando corresponda, por las leyes federales aplicables de los Estados Unidos. Cualquier controversia se atenderá conforme a la jurisdicción aplicable en Puerto Rico.</p>
 
-  <h2 id="cambios">Cambios a los términos</h2>
-  <p>Podemos actualizar estos términos en cualquier momento. La versión vigente es la publicada en esta página, con su fecha de "Última actualización". El uso continuado del sitio luego de un cambio implica que aceptas la versión actualizada.</p>
+  <h2 id="cambios" data-en="Changes to the terms">Cambios a los términos</h2>
+  <p data-en='We may update these terms at any time. The version in force is the one published on this page, with its "Last updated" date. Continued use of the site after a change implies that you accept the updated version.'>Podemos actualizar estos términos en cualquier momento. La versión vigente es la publicada en esta página, con su fecha de "Última actualización". El uso continuado del sitio luego de un cambio implica que aceptas la versión actualizada.</p>
 
-  <h2 id="contacto">Contacto</h2>
-  <p>¿Tienes dudas sobre estos términos? Escríbenos y con gusto te orientamos.</p>
+  <h2 id="contacto" data-en="Contact">Contacto</h2>
+  <p data-en="Have questions about these terms? Message us and we'll gladly help you out.">¿Tienes dudas sobre estos términos? Escríbenos y con gusto te orientamos.</p>
   <div class="caja">
-    <p>Contáctanos por Instagram <a href="https://www.instagram.com/_gymrillas/" target="_blank" rel="noopener">@_gymrillas</a> o TikTok <a href="https://www.tiktok.com/@_gymrillas" target="_blank" rel="noopener">@_gymrillas</a>.</p>
+    <p data-en-html='Contact us on Instagram <a href="https://www.instagram.com/_gymrillas/" target="_blank" rel="noopener">@_gymrillas</a> or TikTok <a href="https://www.tiktok.com/@_gymrillas" target="_blank" rel="noopener">@_gymrillas</a>.'>Contáctanos por Instagram <a href="https://www.instagram.com/_gymrillas/" target="_blank" rel="noopener">@_gymrillas</a> o TikTok <a href="https://www.tiktok.com/@_gymrillas" target="_blank" rel="noopener">@_gymrillas</a>.</p>
   </div>
 
-  <a class="volver" href="index.html">← Volver a la tienda</a>
+  <a class="volver" href="index.html" data-en="← Back to the store">← Volver a la tienda</a>
 </main>
 
 <footer class="footer">
   <div class="cols">
     <div>
-      <h5>Mujer</h5>
-      
-      
-      <a href="tienda.html?f=sub:w-leggings&n=Leggings">Leggings</a>
-      <a href="tienda.html?f=sub:w-shorts&n=Shorts">Shorts</a>
-      
-      <a href="tienda.html?f=cat:mujer&n=Mujer">Ver todo mujer</a>
+      <h5 data-en="Women">Mujer</h5>
+
+
+      <a href="tienda.html?f=sub:w-leggings&n=Leggings" data-en="Leggings">Leggings</a>
+      <a href="tienda.html?f=sub:w-shorts&n=Shorts" data-en="Shorts">Shorts</a>
+
+      <a href="tienda.html?f=cat:mujer&n=Mujer" data-en="Shop all women">Ver todo mujer</a>
     </div>
     <div>
-      <h5>Hombre</h5>
-      
-      <a href="tienda.html?f=sub:h-tanks&n=Tank tops">Tank tops</a>
-      
-      
-      
-      <a href="tienda.html?f=cat:hombre&n=Hombre">Ver todo hombre</a>
+      <h5 data-en="Men">Hombre</h5>
+
+      <a href="tienda.html?f=sub:h-tanks&n=Tank tops" data-en="Tank tops">Tank tops</a>
+
+
+
+      <a href="tienda.html?f=cat:hombre&n=Hombre" data-en="Shop all men">Ver todo hombre</a>
     </div>
     <div>
-      <h5>Accesorios</h5>
-      
-      
-      
-      
-      <a href="tienda.html?f=sub:a-straps&n=Straps">Straps</a>
-      
-      <a href="tienda.html?f=sub:a-cinturones&n=Cinturones">Cinturones</a>
-      
-      <a href="tienda.html?f=cat:accesorios&n=Accesorios">Ver todo</a>
+      <h5 data-en="Accessories">Accesorios</h5>
+
+
+
+
+      <a href="tienda.html?f=sub:a-straps&n=Straps" data-en="Straps">Straps</a>
+
+      <a href="tienda.html?f=sub:a-cinturones&n=Cinturones" data-en="Belts">Cinturones</a>
+
+      <a href="tienda.html?f=cat:accesorios&n=Accesorios" data-en="Shop all">Ver todo</a>
     </div>
     <div>
-      <h5>Destacados</h5>
-      <a href="tienda.html?f=tag:hot&n=Hot deals">Hot deals</a>
-      <a href="tienda.html?f=tag:trending&n=Trending">Trending</a>
-      <a href="tienda.html?f=tag:nuevo&n=Nuevos">Nuevos</a>
-      <a href="index.html#preorden">Drop 001</a>
-      
+      <h5 data-en="Featured">Destacados</h5>
+      <a href="tienda.html?f=tag:hot&n=Hot deals" data-en="Hot deals">Hot deals</a>
+      <a href="tienda.html?f=tag:trending&n=Trending" data-en="Trending">Trending</a>
+      <a href="tienda.html?f=tag:nuevo&n=Nuevos" data-en="New">Nuevos</a>
+      <a href="index.html#preorden" data-en="Drop 001">Drop 001</a>
+
     </div>
     <div>
-      <h5>Ayuda y cuenta</h5>
-      <a href="envios.html">Envíos y entregas</a>
-      <a href="devoluciones.html">Devoluciones</a>
-      <a href="guia-tallas.html">Guía de tallas</a>
-      <a href="login.html">Iniciar sesión</a>
-      <a href="cuenta.html">Mi cuenta</a>
-      <a href="https://www.instagram.com/_gymrillas/" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://www.tiktok.com/@_gymrillas" target="_blank" rel="noopener">TikTok</a>
+      <h5 data-en="Help &amp; account">Ayuda y cuenta</h5>
+      <a href="envios.html" data-en="Shipping &amp; delivery">Envíos y entregas</a>
+      <a href="devoluciones.html" data-en="Returns">Devoluciones</a>
+      <a href="guia-tallas.html" data-en="Size guide">Guía de tallas</a>
+      <a href="login.html" data-en="Sign in">Iniciar sesión</a>
+      <a href="cuenta.html" data-en="My account">Mi cuenta</a>
+      <a href="https://www.instagram.com/_gymrillas/" target="_blank" rel="noopener" data-en="Instagram">Instagram</a>
+      <a href="https://www.tiktok.com/@_gymrillas" target="_blank" rel="noopener" data-en="TikTok">TikTok</a>
     </div>
   </div>
   <div class="legal">
-    <span>© 2026 Gymrillas · Hecho en Puerto Rico</span>
-    <span class="enlaces-legales"><a href="terminos.html">Términos</a><a href="privacidad.html">Privacidad</a><a href="envios.html">Envíos</a><a href="devoluciones.html">Devoluciones</a></span>
+    <span data-en="© 2026 Gymrillas · Made in Puerto Rico">© 2026 Gymrillas · Hecho en Puerto Rico</span>
+    <span class="enlaces-legales"><a href="terminos.html" data-en="Terms">Términos</a><a href="privacidad.html" data-en="Privacy">Privacidad</a><a href="envios.html" data-en="Shipping">Envíos</a><a href="devoluciones.html" data-en="Returns">Devoluciones</a></span>
     <span class="pagos"><i>ATH Móvil</i><i>VISA</i><i>Mastercard</i><i>AMEX</i></span>
   </div>
 </footer>
+<script src="assets/js/i18n.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/api.js"></script>
 </body>

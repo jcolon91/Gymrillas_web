@@ -1,5 +1,8 @@
 /* GYMRILLAS — main.js (compartido) */
+// Helper de idioma GLOBAL (accesible a todos los IIFE; usa el motor i18n si está cargado)
+function T(es, en){ return (window.GYM_I18N ? GYM_I18N.t(es, en) : es); }
 (function(){
+
   // Drawer móvil
   var drawer = document.getElementById('drawer');
   var btnMenu = document.getElementById('btn-menu');
@@ -46,7 +49,7 @@
     btn.addEventListener('click', function(ev){
       ev.preventDefault();
       guardarCart(leerCart() + 1);
-      grToast('Añadido al carrito');
+      grToast(T('Añadido al carrito', 'Added to cart'));
     });
   });
 
@@ -90,7 +93,7 @@
     });
   });
 
-  // Cantidad +/- 
+  // Cantidad +/-
   document.querySelectorAll('.cantidad').forEach(function(c){
     var span = c.querySelector('span');
     c.querySelectorAll('button').forEach(function(b){
@@ -100,6 +103,76 @@
       });
     });
   });
+
+  // ===== Página del carrito: eliminar items + recalcular resumen =====
+  (function(){
+    var grid = document.querySelector('.carrito-grid');
+    if (!grid) return;
+    var colItems = grid.querySelector('div');          // primera columna = items
+    var resumen = grid.querySelector('.resumen');
+    var IVU = 0.115, UMBRAL = 150;
+    function money(n){ return '$' + n.toFixed(2); }
+    function num(txt){ return parseFloat(String(txt).replace(/[^0-9.]/g, '')) || 0; }
+
+    function recompute(){
+      var items = colItems.querySelectorAll('.carrito-item');
+      var subtotal = 0, totalQty = 0;
+      items.forEach(function(it){
+        var precioEl = it.querySelector('.precio');
+        var qEl = it.querySelector('.cantidad span');
+        var q = qEl ? (parseInt(qEl.textContent, 10) || 1) : 1;
+        subtotal += num(precioEl ? precioEl.textContent : 0) * q;
+        totalQty += q;
+      });
+      var ivu = subtotal * IVU;
+      var lineas = resumen ? resumen.querySelectorAll('.linea') : [];
+      if (lineas[0]) lineas[0].querySelector('b').textContent = money(subtotal);
+      if (lineas[2]) lineas[2].querySelector('b').textContent = money(ivu);
+      if (lineas[3]) lineas[3].querySelector('b').textContent = money(subtotal + ivu);
+
+      // Barra de envío gratis (umbral $150)
+      var bar = document.querySelector('.envio-bar');
+      if (bar){
+        var track = bar.querySelector('.track i'), pMsg = bar.querySelector('p');
+        if (subtotal >= UMBRAL){
+          if (track) track.style.width = '100%';
+          if (pMsg) pMsg.textContent = T('Envío gratis desbloqueado', 'Free shipping unlocked');
+        } else {
+          if (track) track.style.width = Math.min(100, subtotal / UMBRAL * 100) + '%';
+          var falta = (UMBRAL - subtotal).toFixed(2);
+          if (pMsg) pMsg.textContent = T('Te faltan $' + falta + ' para envío gratis', '$' + falta + ' away from free shipping');
+        }
+      }
+
+      // Carrito vacío
+      if (items.length === 0){
+        colItems.innerHTML = '<p style="padding:2.2rem 0;color:var(--gris)">' +
+          T('Tu carrito está vacío.', 'Your cart is empty.') + ' <a href="tienda.html" style="color:var(--volt);font-weight:500">' +
+          T('Ir a la tienda', 'Go to the shop') + '</a></p>';
+        var goCheckout = resumen && resumen.querySelector('a.btn');
+        if (goCheckout){ goCheckout.setAttribute('aria-disabled', 'true'); goCheckout.style.pointerEvents = 'none'; goCheckout.style.opacity = '.45'; }
+      }
+
+      // Contador del header
+      try { localStorage.setItem('gr_cart', String(totalQty)); } catch(e){}
+      document.querySelectorAll('[data-cart-count]').forEach(function(el){ el.textContent = totalQty; });
+    }
+
+    // Eliminar item / cambiar cantidad (delegación)
+    colItems.addEventListener('click', function(e){
+      var quitar = e.target.closest('.quitar');
+      if (quitar){
+        e.preventDefault();
+        var it = quitar.closest('.carrito-item');
+        if (it){ it.remove(); recompute(); }
+        return;
+      }
+      if (e.target.closest('.cantidad button')) setTimeout(recompute, 0); // main.js ya actualizó el número
+    });
+
+    document.addEventListener('gym:langchange', recompute);
+    recompute();
+  })();
 
   // Galería PDP
   var principal = document.querySelector('.galeria .principal img');
@@ -208,7 +281,19 @@
   var P = new URLSearchParams(location.search);
   var f = P.get('f');
   if (!f && P.get('cat')) f = 'cat:' + P.get('cat');
-  function aplicar(filtro, label){
+  // Etiquetas de categoría/subcategoría/tag bilingües (el título del filtro
+  // no debe depender del parámetro ?n= de la URL, que está en español).
+  var FILTER_LABELS = {
+    'cat:mujer':{es:'Mujer',en:'Women'}, 'cat:hombre':{es:'Hombre',en:'Men'}, 'cat:accesorios':{es:'Accesorios',en:'Accessories'},
+    'sub:w-bodysuits':{es:'Bodysuits',en:'Bodysuits'}, 'sub:w-crops':{es:'Crop tops',en:'Crop Tops'}, 'sub:w-leggings':{es:'Leggings',en:'Leggings'}, 'sub:w-shorts':{es:'Shorts',en:'Shorts'},
+    'sub:h-tanks':{es:'Tanks',en:'Tanks'},
+    'sub:a-cinturones':{es:'Cinturones',en:'Belts'}, 'sub:a-straps':{es:'Straps',en:'Straps'}, 'sub:a-munequeras':{es:'Muñequeras',en:'Wrist Wraps'}, 'sub:a-rodilleras':{es:'Rodilleras',en:'Knee Sleeves'}, 'sub:a-tobilleras':{es:'Tobilleras',en:'Ankle Straps'}, 'sub:a-guantes':{es:'Guantes',en:'Gloves'}, 'sub:a-medias':{es:'Medias',en:'Socks'},
+    'tag:hot':{es:'Ofertas',en:'Hot deals'}, 'tag:trending':{es:'Tendencia',en:'Trending'}, 'tag:nuevo':{es:'Nuevos',en:'New'}
+  };
+  function labelFor(filtro, fallback){ var m = FILTER_LABELS[filtro]; return m ? T(m.es, m.en) : fallback; }
+  var curFiltro = null, curFallback = '';
+  function aplicar(filtro, fallback){
+    curFiltro = filtro; curFallback = fallback;
     var p = filtro.split(':'), tipo = p[0], val = p[1], n = 0;
     items.forEach(function(it){
       var ok = (tipo === 'cat' && it.dataset.categoria === val)
@@ -217,13 +302,14 @@
       it.style.display = ok ? '' : 'none';
       if (ok) n++;
     });
-    tt.textContent = label;
-    tc.textContent = n + (n === 1 ? ' producto' : ' productos');
+    tt.textContent = labelFor(filtro, fallback);
+    tc.textContent = n + (n === 1 ? T(' producto', ' product') : T(' productos', ' products'));
   }
   if (f) {
     var label = P.get('n') || (f.split(':')[1] || 'Ver todo');
     label = label.charAt(0).toUpperCase() + label.slice(1);
     aplicar(f, label);
+    document.addEventListener('gym:langchange', function(){ if (curFiltro) aplicar(curFiltro, curFallback); });
   }
   var sel = document.getElementById('orden-sel');
   if (sel) sel.addEventListener('change', function(){
@@ -254,8 +340,8 @@
     it.style.display = ok ? '' : 'none';
     if (ok) n++;
   });
-  document.getElementById('tienda-titulo').textContent = 'Resultados: "' + q + '"';
-  document.getElementById('tienda-count').textContent = n ? n + (n === 1 ? ' producto' : ' productos') : 'Sin resultados — intenta otra búsqueda';
+  document.getElementById('tienda-titulo').textContent = T('Resultados: "', 'Results: "') + q + '"';
+  document.getElementById('tienda-count').textContent = n ? n + (n === 1 ? T(' producto', ' product') : T(' productos', ' products')) : T('Sin resultados — intenta otra búsqueda', 'No results — try another search');
 })();
 
 // ===== Pre-orden del drop (edicion limitada 50/50) =====
@@ -301,9 +387,9 @@
     var q = c.quedanEl;
     if (quedan === 0){
       if (q){ q.textContent = 'Sold out'; q.classList.add('bajo'); }
-      c.card.classList.add('agotado'); c.btn.textContent = 'Agotado'; c.btn.disabled = true;
+      c.card.classList.add('agotado'); c.btn.textContent = T('Agotado', 'Sold out'); c.btn.disabled = true;
     } else {
-      if (q){ q.textContent = 'Pre-orden abierta'; q.classList.remove('bajo'); }
+      if (q){ q.textContent = T('Pre-orden abierta', 'Pre-order open'); q.classList.remove('bajo'); }
     }
   }
 
@@ -312,7 +398,7 @@
     cards[estilo] = {
       card: card, estilo: estilo,
       total: parseInt(card.dataset.total, 10) || 50,
-      nombre: card.dataset.nombre || 'camisa', precio: parseFloat(card.dataset.precio) || 0,
+      nombre: card.dataset.nombre || 'camisa', nombreEn: card.dataset.nombreEn || card.dataset.nombre || 'shirt', precio: parseFloat(card.dataset.precio) || 0,
       fill: card.querySelector('[data-po-fill]'),
       reservadasEl: card.querySelector('[data-po-reservadas]'),
       quedanEl: card.querySelector('[data-po-quedan]'),
@@ -325,19 +411,25 @@
     pintar(estilo);
   });
 
+  // Al cambiar de idioma, re-pintar los estados de las tarjetas del drop
+  document.addEventListener('gym:langchange', function(){
+    if (dropCerrado) return;
+    Object.keys(cards).forEach(function(k){ pintar(k); });
+  });
+
   // ---- Modal de reserva ----
   var modal = document.getElementById('po-modal');
   var qtyN = modal && document.getElementById('po-qty-n');
   var estiloActivo = null, maxQty = MAX_POR_PERSONA;
   function setQty(n){ n = Math.max(1, Math.min(maxQty, n)); qtyN.textContent = n; }
   function abrirModal(estilo){
-    if (dropCerrado) { toast('La pre-orden ya cerro'); return; }
+    if (dropCerrado) { toast(T('La pre-orden ya cerró', 'Pre-orders are closed')); return; }
     var c = cards[estilo]; var quedan = c.total - leer(estilo);
     if (quedan <= 0) return;
     estiloActivo = estilo; maxQty = Math.min(MAX_POR_PERSONA, quedan); setQty(1);
-    document.getElementById('po-m-titulo').textContent = 'Pre-ordena tu ' + c.nombre;
+    document.getElementById('po-m-titulo').textContent = T('Pre-ordena tu ', 'Pre-order your ') + T(c.nombre, c.nombreEn);
     var s = document.getElementById('po-m-stock');
-    s.textContent = '$' + c.precio + ' · pago completo por adelantado';
+    s.textContent = '$' + c.precio + T(' · pago completo por adelantado', ' · full payment upfront');
     s.classList.remove('bajo');
     modal.hidden = false;
   }
@@ -365,7 +457,7 @@
       if (!estiloActivo) return;
       var email = document.getElementById('po-email').value.trim();
       var nombre = document.getElementById('po-nombre').value.trim();
-      if (!email || email.indexOf('@') < 0){ toast('Escribe un email valido para tu recibo'); return; }
+      if (!email || email.indexOf('@') < 0){ toast(T('Escribe un email válido para tu recibo', 'Enter a valid email for your receipt')); return; }
       var qty = parseInt(qtyN.textContent, 10) || 1;
       var c = cards[estiloActivo];
       var reservadas = Math.min(c.total, leer(estiloActivo) + qty);
@@ -384,11 +476,11 @@
       // Llevar al pago real del método elegido
       var link = PAGOS[metodoPago];
       if (link){
-        toast('Te llevamos a pagar por ' + PAGO_NOMBRE[metodoPago] + ' para asegurar tu ' + nom + '.');
+        toast(T('Te llevamos a pagar por ', 'Taking you to pay with ') + PAGO_NOMBRE[metodoPago] + T(' para asegurar tu ', ' to secure your ') + T(nom, c.nombreEn) + '.');
         try { window.open(link, '_blank', 'noopener'); } catch(e4){ location.href = link; }
       } else {
         try { console.warn('[gymrillas] Falta el link de pago de ' + metodoPago + ' (PAGOS en main.js)'); } catch(e5){}
-        toast('¡Pre-orden registrada! Completa el pago por ' + PAGO_NOMBRE[metodoPago] + ' para asegurar tu ' + nom + '.');
+        toast(T('¡Pre-orden registrada! Completa el pago por ', 'Pre-order registered! Complete payment with ') + PAGO_NOMBRE[metodoPago] + T(' para asegurar tu ', ' to secure your ') + T(nom, c.nombreEn) + '.');
       }
     });
   }
@@ -403,8 +495,8 @@
       var t = Math.floor((dl - Date.now()) / 1000);
       if (t <= 0){
         dropCerrado = true;
-        reloj.innerHTML = '<span class="po-reloj-lbl" style="color:var(--volt)">Pre-orden cerrada</span>';
-        Object.keys(cards).forEach(function(k){ var c = cards[k]; if (!c.card.classList.contains('agotado')){ c.btn.textContent = 'Cerrada'; c.btn.disabled = true; } });
+        reloj.innerHTML = '<span class="po-reloj-lbl" style="color:var(--volt)">' + T('Pre-orden cerrada', 'Pre-orders closed') + '</span>';
+        Object.keys(cards).forEach(function(k){ var c = cards[k]; if (!c.card.classList.contains('agotado')){ c.btn.textContent = T('Cerrada', 'Closed'); c.btn.disabled = true; } });
         clearInterval(itv);
         return;
       }

@@ -2,7 +2,7 @@
 :root{
   --volt:#DFE44E;--green:#93C83F;--carbon:#262726;--carbon-deep:#1a1b1a;--panel:#2e2f2e;
   --blanco:#F5F6F2;--tinta:#F5F6F2;--tinta-2:#9a9b96;--gris:#9a9b96;--gris-osc:#6f706b;
-  --suave:#1a1b1a;--hueso:#2e2f2e;--linea:rgba(245,246,242,.1);--borde:1px solid rgba(245,246,242,.09);
+  --suave:#1a1b1a;--hueso:#2e2f2e;--enlace:#DFE44E;--linea:rgba(245,246,242,.1);--borde:1px solid rgba(245,246,242,.09);
   --display:'Saira',sans-serif;--condensed:'Saira Condensed',sans-serif;--radio:12px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
@@ -439,3 +439,83 @@ button{font-family:var(--display);cursor:pointer}
   .nav-desktop{gap:1rem;font-size:.8rem}
 }
 @media(min-width:1360px){ .nav-desktop{gap:1.3rem;font-size:.84rem} }
+
+/* ===== Selector de idioma ES/EN (inyectado por i18n.js en el header) ===== */
+.lang-switch{display:inline-flex;align-items:center;gap:2px;margin-right:.5rem;padding:2px;border:1px solid rgba(245,246,242,.22);border-radius:999px;background:rgba(245,246,242,.04)}
+.lang-btn{appearance:none;border:0;background:transparent;color:var(--tinta-2);font-family:inherit;font-weight:700;font-size:.7rem;letter-spacing:.04em;line-height:1;padding:.3rem .5rem;border-radius:999px;cursor:pointer;transition:color .15s,background .15s}
+.lang-btn:hover{color:var(--tinta)}
+.lang-btn.is-on{background:var(--volt);color:var(--carbon)}
+@media(max-width:420px){ .lang-switch{margin-right:.3rem} .lang-btn{padding:.28rem .42rem;font-size:.66rem} }
+
+/* ============================================================
+   MODO CLARO  (:root[data-theme="light"])
+   Toggle sol/luna en el header, guardado en localStorage.
+   ============================================================ */
+:root[data-theme="light"]{
+  --carbon:#f2f3ee;        /* fondo página */
+  --carbon-deep:#ffffff;   /* tarjetas / paneles / footer / drawer */
+  --panel:#e7e8e2;
+  --blanco:#191a17;        /* texto principal */
+  --tinta:#191a17;
+  --tinta-2:#65665f;
+  --gris:#585a53;          /* texto atenuado (legible sobre claro) */
+  --gris-osc:#83847a;
+  --suave:#e7e8e2;
+  --hueso:#ffffff;
+  --enlace:#377a10;
+  --linea:rgba(20,21,17,.12);
+  --borde:1px solid rgba(20,21,17,.13);
+}
+
+/* Texto OSCURO sobre acentos volt (no debe seguir el bg claro) */
+:root[data-theme="light"] :is(.btn-volt,.po-tag,.iconos .carrito em,.prod .badge,.prod .add,.chip.activo,.banner-volt,.tallas button.activo,.auth .tabs button.activo,.avatar,.toast,.lang-btn.is-on,.radio-card.activo .punto){color:#191a17}
+
+/* Acentos que eran volt/green como TEXTO sobre fondo claro -> verde oscuro legible */
+:root[data-theme="light"] :is(
+  .prod .precio,.pdp-info .precio,.carrito-item .precio,.resumen .total b,.orden-card .total,
+  .po-precio,.po-quedan,.po-m-stock,.po-reloj b,.stat .num,.pasos b,.feature b,.radio-card .der,
+  .auth .beneficios b,.titulo span,.doc h2,.doc a,.doc .volver,.trainer .esp,
+  .articulo a.leer,.metodo-pago button.activo,.opcion .label a,.dropdown .dd-todo,.review .estrellas,.stars,
+  .eyebrow,.articulo .tag,.envio-bar p,.perfil-info .sync,.orden-card .estado,.po-ahorro
+){color:#377a10}
+:root[data-theme="light"] .acordeon summary::after{color:#377a10}
+:root[data-theme="light"] .pdp-stock{color:#2f8a2a}
+/* Hover states (volt sobre claro -> verde oscuro) */
+:root[data-theme="light"] :is(.footer a:hover,.nav-item>a:hover,.nav-item>a.activo,.btn-ico:hover,.migas a:hover,.header .iconos a:hover,.dw-grupo a:hover,.dw-grupo a:active,.legal .enlaces-legales a:hover,.btn-linea:hover,.btn-linea.claro:hover,.doc .toc a:hover){color:#377a10}
+:root[data-theme="light"] :is(.btn-linea:hover,.btn-linea.claro:hover,.doc .toc a:hover){border-color:#377a10}
+
+/* Wordmark del header (era volt) -> oscuro */
+:root[data-theme="light"] .wordmark{color:#191a17}
+
+/* Tile SÓLIDO de categoría (fondo panel claro, sin foto) -> texto oscuro.
+   Los tiles con foto conservan h3 blanco + flecha volt (van sobre la imagen). */
+:root[data-theme="light"] .tile.solido .capa h3{color:#191a17}
+:root[data-theme="light"] .tile.solido .capa span{color:#377a10}
+
+/* Header / nav / dropdown / iconos */
+:root[data-theme="light"] .header{background:rgba(255,255,255,.9)}
+:root[data-theme="light"] :is(.nav-item>a,.header .iconos a,.btn-ico){color:rgba(25,26,23,.82)}
+:root[data-theme="light"] .dropdown{background:#fff}
+:root[data-theme="light"] .lang-switch{border-color:rgba(20,21,17,.2);background:rgba(20,21,17,.03)}
+
+/* Hero: sigue siendo foto oscura -> texto claro */
+:root[data-theme="light"] .hero p.sub{color:rgba(255,255,255,.82)}
+:root[data-theme="light"] .po-360{color:#fff}
+
+/* Inputs / selects / chips de pago: fondo claro + borde visible */
+:root[data-theme="light"] :is(#po-form input,.lead input,.cupon input,.form-grupo input,.form-grupo select,.buscador input,.tienda-top select,.po-pago,.po-qty-ctrl){background:#fff;border-color:rgba(20,21,17,.16);color:var(--tinta)}
+:root[data-theme="light"] .banner-volt .btn{background:#191a17}
+
+/* Bordes sutiles hardcodeados (claros sobre oscuro) -> oscuros */
+:root[data-theme="light"] :is(.po-card,.po-box,.swatch,.colores button,.btn-linea,.btn-linea.claro,.feature,.chip,.prod,.tile.solido.oscuro,.pt-banner,.trainer,.articulo,.review){border-color:rgba(20,21,17,.14)}
+:root[data-theme="light"] .po-barra{background:rgba(20,21,17,.1)}
+
+/* ===== Botón de tema (sol/luna) inyectado por i18n.js ===== */
+.theme-toggle{appearance:none;border:0;background:none;padding:.2rem;margin-right:.15rem;cursor:pointer;color:rgba(245,246,242,.88);display:inline-grid;place-items:center}
+:root[data-theme="light"] .theme-toggle{color:rgba(25,26,23,.82)}
+.theme-toggle:hover{color:var(--volt)}
+:root[data-theme="light"] .theme-toggle:hover{color:#377a10}
+.theme-toggle svg{width:20px;height:20px;display:block}
+.theme-toggle .ico-luna{display:none}
+:root[data-theme="light"] .theme-toggle .ico-sol{display:none}
+:root[data-theme="light"] .theme-toggle .ico-luna{display:block}

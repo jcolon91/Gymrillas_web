@@ -9,204 +9,206 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,400;0,500;1,700;1,800&family=Saira+Condensed:wght@800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/main.css">
+  <script>try{if(localStorage.getItem("gymrillas_theme")==="light")document.documentElement.setAttribute("data-theme","light")}catch(e){}</script>
 </head>
 <body>
-<div class="barra-anuncio">Envío gratis en órdenes +$150 · PR &amp; USA &nbsp;|&nbsp; 10% off con <strong>BIENVENIDO10</strong></div>
+<div class="barra-anuncio" data-en-html='Free shipping on orders +$150 · PR &amp; USA &nbsp;|&nbsp; 10% off with <strong>BIENVENIDO10</strong>'>Envío gratis en órdenes +$150 · PR &amp; USA &nbsp;|&nbsp; 10% off con <strong>BIENVENIDO10</strong></div>
 <header class="header">
   <div class="fila">
     <div class="zona-izq">
-      <button class="hamburguesa" id="btn-menu" aria-label="Abrir menú">☰</button>
+      <button class="hamburguesa" id="btn-menu" aria-label="Abrir menú" data-en-aria="Open menu">☰</button>
       <nav class="nav-desktop" aria-label="Principal">
-        <div class="nav-item"><a href="tienda.html?f=cat:mujer&n=Mujer">Mujer</a><div class="dropdown"><a href="tienda.html?f=sub:w-leggings&n=Leggings">Leggings</a><a href="tienda.html?f=sub:w-shorts&n=Shorts">Shorts</a><a class="dd-todo" href="tienda.html?f=cat:mujer&n=Mujer">Ver todo mujer</a></div></div>
-        <div class="nav-item"><a href="tienda.html?f=cat:hombre&n=Hombre">Hombre</a><div class="dropdown"><a href="tienda.html?f=sub:h-tanks&n=Tank tops">Tank tops</a><a class="dd-todo" href="tienda.html?f=cat:hombre&n=Hombre">Ver todo hombre</a></div></div>
-        <div class="nav-item"><a href="tienda.html?f=cat:accesorios&n=Accesorios">Accesorios</a><div class="dropdown"><a href="tienda.html?f=sub:a-straps&n=Straps">Straps</a><a href="tienda.html?f=sub:a-cinturones&n=Cinturones">Cinturones</a><a class="dd-todo" href="tienda.html?f=cat:accesorios&n=Accesorios">Ver todo accesorios</a></div></div>
-        
-        <div class="nav-item"><a href="tienda.html">Descubre</a><div class="dropdown"><a href="index.html#preorden">Drop 001</a><a href="tienda.html?f=tag:hot&n=Hot deals">Hot deals</a><a href="tienda.html?f=tag:trending&n=Trending">Trending</a><a href="tienda.html?f=tag:nuevo&n=Nuevos">Nuevos</a><a class="dd-todo" href="tienda.html">Ver toda la tienda</a></div></div>
+        <div class="nav-item"><a href="tienda.html?f=cat:mujer&n=Mujer" data-en="Women">Mujer</a><div class="dropdown"><a href="tienda.html?f=sub:w-leggings&n=Leggings" data-en="Leggings">Leggings</a><a href="tienda.html?f=sub:w-shorts&n=Shorts" data-en="Shorts">Shorts</a><a class="dd-todo" href="tienda.html?f=cat:mujer&n=Mujer" data-en="Shop all women">Ver todo mujer</a></div></div>
+        <div class="nav-item"><a href="tienda.html?f=cat:hombre&n=Hombre" data-en="Men">Hombre</a><div class="dropdown"><a href="tienda.html?f=sub:h-tanks&n=Tank tops" data-en="Tank tops">Tank tops</a><a class="dd-todo" href="tienda.html?f=cat:hombre&n=Hombre" data-en="Shop all men">Ver todo hombre</a></div></div>
+        <div class="nav-item"><a href="tienda.html?f=cat:accesorios&n=Accesorios" data-en="Accessories">Accesorios</a><div class="dropdown"><a href="tienda.html?f=sub:a-straps&n=Straps" data-en="Straps">Straps</a><a href="tienda.html?f=sub:a-cinturones&n=Cinturones" data-en="Belts">Cinturones</a><a class="dd-todo" href="tienda.html?f=cat:accesorios&n=Accesorios" data-en="Shop all accessories">Ver todo accesorios</a></div></div>
+
+        <div class="nav-item"><a href="tienda.html" data-en="Discover">Descubre</a><div class="dropdown"><a href="index.html#preorden" data-en="Drop 001">Drop 001</a><a href="tienda.html?f=tag:hot&n=Hot deals" data-en="Hot deals">Hot deals</a><a href="tienda.html?f=tag:trending&n=Trending" data-en="Trending">Trending</a><a href="tienda.html?f=tag:nuevo&n=Nuevos" data-en="New">Nuevos</a><a class="dd-todo" href="tienda.html" data-en="Shop everything">Ver toda la tienda</a></div></div>
       </nav>
     </div>
     <a class="wordmark" href="index.html"><img src="https://assets.zyrosite.com/AoPeB1VKDLfKgeV3/isotipo-color-1-2x-AoPGxkJ68bF7O1oX.png" alt="" width="26" height="26">GYMRILLAS</a>
     <div class="iconos">
-      <button class="btn-ico" id="btn-lupa" aria-label="Buscar"><svg class="ico" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5 21 21"/></svg></button>
-      <a class="btn-ico" href="login.html" aria-label="Mi cuenta"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.6 3.1-5.6 7-5.6s7 2 7 5.6"/></svg></a>
-      <a class="btn-ico carrito" href="carrito.html" aria-label="Carrito"><svg class="ico" viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><em data-cart-count>0</em></a>
-      <a class="btn-ico" href="index.html#lead" aria-label="Lista de espera del drop"><svg class="ico" viewBox="0 0 24 24"><path d="M18 16H6c1.2-1.2 1.5-2.8 1.5-5a4.5 4.5 0 0 1 9 0c0 2.2.3 3.8 1.5 5z"/><path d="M10.5 19a1.8 1.8 0 0 0 3 0"/></svg></a>
+      <button class="btn-ico" id="btn-lupa" aria-label="Buscar" data-en-aria="Search"><svg class="ico" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5 21 21"/></svg></button>
+      <a class="btn-ico" href="login.html" aria-label="Mi cuenta" data-en-aria="My account"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.6 3.1-5.6 7-5.6s7 2 7 5.6"/></svg></a>
+      <a class="btn-ico carrito" href="carrito.html" aria-label="Carrito" data-en-aria="Cart"><svg class="ico" viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><em data-cart-count>0</em></a>
+      <a class="btn-ico" href="index.html#lead" aria-label="Lista de espera del drop" data-en-aria="Drop waitlist"><svg class="ico" viewBox="0 0 24 24"><path d="M18 16H6c1.2-1.2 1.5-2.8 1.5-5a4.5 4.5 0 0 1 9 0c0 2.2.3 3.8 1.5 5z"/><path d="M10.5 19a1.8 1.8 0 0 0 3 0"/></svg></a>
     </div>
   </div>
   <div class="buscador" id="buscador" hidden>
     <form action="tienda.html" class="container">
-      <input type="search" name="q" placeholder="Buscar productos…" aria-label="Buscar productos">
-      <button class="btn btn-volt" type="submit">Buscar</button>
+      <input type="search" name="q" placeholder="Buscar productos…" aria-label="Buscar productos" data-en-ph="Search products…" data-en-aria="Search products">
+      <button class="btn btn-volt" type="submit" data-en="Search">Buscar</button>
     </form>
   </div>
 </header>
 <div class="drawer" id="drawer">
   <div class="fondo" data-cerrar></div>
   <div class="panel">
-    <button class="cerrar" data-cerrar aria-label="Cerrar">✕</button>
-    <div class="dw-grupo"><h6>Descubre</h6><a href="index.html#preorden">Drop 001</a><a href="tienda.html?f=tag:hot&n=Hot deals">Hot deals</a><a href="tienda.html?f=tag:trending&n=Trending">Trending</a><a href="tienda.html?f=tag:nuevo&n=Nuevos">Nuevos</a><a href="tienda.html">Toda la tienda</a></div><div class="dw-grupo"><h6>Mujer</h6><a href="tienda.html?f=cat:mujer&n=Mujer">Ver todo mujer</a><a href="tienda.html?f=sub:w-leggings&n=Leggings">Leggings</a><a href="tienda.html?f=sub:w-shorts&n=Shorts">Shorts</a></div><div class="dw-grupo"><h6>Hombre</h6><a href="tienda.html?f=cat:hombre&n=Hombre">Ver todo hombre</a><a href="tienda.html?f=sub:h-tanks&n=Tank tops">Tank tops</a></div><div class="dw-grupo"><h6>Accesorios</h6><a href="tienda.html?f=cat:accesorios&n=Accesorios">Ver todo accesorios</a><a href="tienda.html?f=sub:a-straps&n=Straps">Straps</a><a href="tienda.html?f=sub:a-cinturones&n=Cinturones">Cinturones</a></div><div class="dw-grupo"><h6>Cuenta</h6><a href="login.html">Iniciar sesión / Crear cuenta</a><a href="cuenta.html">Mi cuenta</a><a href="carrito.html">Carrito</a></div>
+    <button class="cerrar" data-cerrar aria-label="Cerrar" data-en-aria="Close">✕</button>
+    <div class="dw-grupo"><h6 data-en="Discover">Descubre</h6><a href="index.html#preorden" data-en="Drop 001">Drop 001</a><a href="tienda.html?f=tag:hot&n=Hot deals" data-en="Hot deals">Hot deals</a><a href="tienda.html?f=tag:trending&n=Trending" data-en="Trending">Trending</a><a href="tienda.html?f=tag:nuevo&n=Nuevos" data-en="New">Nuevos</a><a href="tienda.html" data-en="Full store">Toda la tienda</a></div><div class="dw-grupo"><h6 data-en="Women">Mujer</h6><a href="tienda.html?f=cat:mujer&n=Mujer" data-en="Shop all women">Ver todo mujer</a><a href="tienda.html?f=sub:w-leggings&n=Leggings" data-en="Leggings">Leggings</a><a href="tienda.html?f=sub:w-shorts&n=Shorts" data-en="Shorts">Shorts</a></div><div class="dw-grupo"><h6 data-en="Men">Hombre</h6><a href="tienda.html?f=cat:hombre&n=Hombre" data-en="Shop all men">Ver todo hombre</a><a href="tienda.html?f=sub:h-tanks&n=Tank tops" data-en="Tank tops">Tank tops</a></div><div class="dw-grupo"><h6 data-en="Accessories">Accesorios</h6><a href="tienda.html?f=cat:accesorios&n=Accesorios" data-en="Shop all accessories">Ver todo accesorios</a><a href="tienda.html?f=sub:a-straps&n=Straps" data-en="Straps">Straps</a><a href="tienda.html?f=sub:a-cinturones&n=Cinturones" data-en="Belts">Cinturones</a></div><div class="dw-grupo"><h6 data-en="Account">Cuenta</h6><a href="login.html" data-en="Sign in / Create account">Iniciar sesión / Crear cuenta</a><a href="cuenta.html" data-en="My account">Mi cuenta</a><a href="carrito.html" data-en="Cart">Carrito</a></div>
   </div>
 </div>
 
 <main class="doc">
-  <p class="eyebrow">Legal</p>
-  <h1>Política de <span style="color:var(--volt)">privacidad</span></h1>
-  <p class="actualizado">Última actualización: junio 2026</p>
-  <p class="intro">En Gymrillas respetamos tu privacidad. Aquí te explicamos, sin letra chiquita, qué datos recopilamos, para qué los usamos, con quién los compartimos y qué control tienes sobre ellos. Al usar nuestra tienda aceptas las prácticas descritas en esta política.</p>
+  <p class="eyebrow" data-en="Legal">Legal</p>
+  <h1 data-en-html='Privacy <span style="color:var(--enlace)">policy</span>'>Política de <span style="color:var(--enlace)">privacidad</span></h1>
+  <p class="actualizado" data-en="Last updated: June 2026">Última actualización: junio 2026</p>
+  <p class="intro" data-en="At Gymrillas we respect your privacy. Here we explain, with no fine print, what data we collect, what we use it for, who we share it with, and what control you have over it. By using our store you accept the practices described in this policy.">En Gymrillas respetamos tu privacidad. Aquí te explicamos, sin letra chiquita, qué datos recopilamos, para qué los usamos, con quién los compartimos y qué control tienes sobre ellos. Al usar nuestra tienda aceptas las prácticas descritas en esta política.</p>
 
   <div class="caja">
-    <p><strong>Quién es responsable de tus datos.</strong> <strong>Gymrillas</strong>, comercio con operaciones en Puerto Rico, es responsable del tratamiento de los datos personales descritos en esta política.</p>
-    <p style="margin-top:.5rem"><strong>No vendemos tus datos.</strong> Nunca vendemos ni alquilamos tu información personal a terceros. Solo la usamos para procesar tus órdenes, darte soporte y mejorar tu experiencia.</p>
+    <p data-en-html='<strong>Who is responsible for your data.</strong> <strong>Gymrillas</strong>, a business operating in Puerto Rico, is responsible for processing the personal data described in this policy.'><strong>Quién es responsable de tus datos.</strong> <strong>Gymrillas</strong>, comercio con operaciones en Puerto Rico, es responsable del tratamiento de los datos personales descritos en esta política.</p>
+    <p style="margin-top:.5rem" data-en-html='<strong>We do not sell your data.</strong> We never sell or rent your personal information to third parties. We only use it to process your orders, support you, and improve your experience.'><strong>No vendemos tus datos.</strong> Nunca vendemos ni alquilamos tu información personal a terceros. Solo la usamos para procesar tus órdenes, darte soporte y mejorar tu experiencia.</p>
   </div>
 
   <div class="toc">
-    <a href="#info">Qué información recopilamos</a>
-    <a href="#pagos">Pagos</a>
-    <a href="#uso">Cómo usamos tus datos</a>
-    <a href="#cookies">Cookies y almacenamiento local</a>
-    <a href="#compartir">Con quién compartimos</a>
-    <a href="#seguridad">Seguridad</a>
-    <a href="#derechos">Tus derechos</a>
-    <a href="#retencion">Retención de datos</a>
-    <a href="#menores">Menores de edad</a>
-    <a href="#cambios">Cambios a esta política</a>
-    <a href="#contacto">Contacto</a>
+    <a href="#info" data-en="What information we collect">Qué información recopilamos</a>
+    <a href="#pagos" data-en="Payments">Pagos</a>
+    <a href="#uso" data-en="How we use your data">Cómo usamos tus datos</a>
+    <a href="#cookies" data-en="Cookies and local storage">Cookies y almacenamiento local</a>
+    <a href="#compartir" data-en="Who we share with">Con quién compartimos</a>
+    <a href="#seguridad" data-en="Security">Seguridad</a>
+    <a href="#derechos" data-en="Your rights">Tus derechos</a>
+    <a href="#retencion" data-en="Data retention">Retención de datos</a>
+    <a href="#menores" data-en="Minors">Menores de edad</a>
+    <a href="#cambios" data-en="Changes to this policy">Cambios a esta política</a>
+    <a href="#contacto" data-en="Contact">Contacto</a>
   </div>
 
-  <h2 id="info">Qué información recopilamos</h2>
-  <p>Recopilamos solo la información necesaria para operar la tienda y entregarte tu orden. Esto incluye:</p>
+  <h2 id="info" data-en="What information we collect">Qué información recopilamos</h2>
+  <p data-en="We collect only the information needed to run the store and deliver your order. This includes:">Recopilamos solo la información necesaria para operar la tienda y entregarte tu orden. Esto incluye:</p>
   <ul>
-    <li><strong>Datos de cuenta y contacto:</strong> nombre, correo electrónico y teléfono.</li>
-    <li><strong>Datos de envío:</strong> dirección de entrega para hacerte llegar tu paquete.</li>
-    <li><strong>Historial de órdenes:</strong> los productos que compraste, montos y estado de cada orden.</li>
-    <li><strong>Datos de navegación:</strong> información técnica básica como tipo de dispositivo, navegador y páginas que visitas dentro del sitio, usada para que la tienda funcione bien y para entender qué mejorar.</li>
+    <li data-en-html='<strong>Account and contact data:</strong> name, email, and phone.'><strong>Datos de cuenta y contacto:</strong> nombre, correo electrónico y teléfono.</li>
+    <li data-en-html='<strong>Shipping data:</strong> delivery address to get your package to you.'><strong>Datos de envío:</strong> dirección de entrega para hacerte llegar tu paquete.</li>
+    <li data-en-html='<strong>Order history:</strong> the products you bought, amounts, and the status of each order.'><strong>Historial de órdenes:</strong> los productos que compraste, montos y estado de cada orden.</li>
+    <li data-en-html='<strong>Browsing data:</strong> basic technical information such as device type, browser, and the pages you visit within the site, used to keep the store running well and to understand what to improve.'><strong>Datos de navegación:</strong> información técnica básica como tipo de dispositivo, navegador y páginas que visitas dentro del sitio, usada para que la tienda funcione bien y para entender qué mejorar.</li>
   </ul>
-  <p>Tú decides cuánto compartes: puedes comprar como invitado o crear una <a href="cuenta.html">cuenta</a> para guardar tus datos y ver tu historial.</p>
+  <p data-en-html='You decide how much you share: you can check out as a guest or create an <a href="cuenta.html">account</a> to save your data and see your history.'>Tú decides cuánto compartes: puedes comprar como invitado o crear una <a href="cuenta.html">cuenta</a> para guardar tus datos y ver tu historial.</p>
 
-  <h2 id="pagos">Pagos</h2>
-  <p>Los pagos se procesan a través de nuestros proveedores: <strong>ATH Móvil</strong> y el procesador de tarjetas de crédito/débito. Estos proveedores manejan la transacción de forma segura en su propia plataforma.</p>
+  <h2 id="pagos" data-en="Payments">Pagos</h2>
+  <p data-en-html='Payments are processed through our providers: <strong>ATH Móvil</strong> and the credit/debit card processor. These providers handle the transaction securely on their own platform.'>Los pagos se procesan a través de nuestros proveedores: <strong>ATH Móvil</strong> y el procesador de tarjetas de crédito/débito. Estos proveedores manejan la transacción de forma segura en su propia plataforma.</p>
   <div class="caja">
-    <p><strong>No almacenamos los números completos de tarjeta.</strong> Gymrillas no guarda ni tiene acceso a los datos completos de tu tarjeta; los maneja directamente el procesador de pago. ATH Móvil no realiza cobros recurrentes: cada pago lo autorizas tú.</p>
+    <p data-en-html='<strong>We do not store full card numbers.</strong> Gymrillas does not keep or have access to your full card data; it is handled directly by the payment processor. ATH Móvil does not make recurring charges: you authorize every payment.'><strong>No almacenamos los números completos de tarjeta.</strong> Gymrillas no guarda ni tiene acceso a los datos completos de tu tarjeta; los maneja directamente el procesador de pago. ATH Móvil no realiza cobros recurrentes: cada pago lo autorizas tú.</p>
   </div>
 
-  <h2 id="uso">Cómo usamos tus datos</h2>
-  <p>Usamos tu información únicamente para:</p>
+  <h2 id="uso" data-en="How we use your data">Cómo usamos tus datos</h2>
+  <p data-en="We use your information solely to:">Usamos tu información únicamente para:</p>
   <ul>
-    <li><strong>Procesar y enviar tus órdenes,</strong> incluyendo confirmaciones y números de rastreo.</li>
-    <li><strong>Darte soporte</strong> cuando tienes una duda, un cambio o un problema con tu compra.</li>
-    <li><strong>Marketing,</strong> como promociones y avisos de drops, <strong>solo si aceptaste recibirlo</strong>. Puedes darte de baja en cualquier momento.</li>
+    <li data-en-html='<strong>Process and ship your orders,</strong> including confirmations and tracking numbers.'><strong>Procesar y enviar tus órdenes,</strong> incluyendo confirmaciones y números de rastreo.</li>
+    <li data-en-html='<strong>Support you</strong> when you have a question, a change, or a problem with your purchase.'><strong>Darte soporte</strong> cuando tienes una duda, un cambio o un problema con tu compra.</li>
+    <li data-en-html='<strong>Marketing,</strong> such as promotions and drop alerts, <strong>only if you opted in</strong>. You can unsubscribe at any time.'><strong>Marketing,</strong> como promociones y avisos de drops, <strong>solo si aceptaste recibirlo</strong>. Puedes darte de baja en cualquier momento.</li>
   </ul>
-  <p>No usamos tus datos para fines distintos a estos sin avisarte primero.</p>
+  <p data-en="We do not use your data for purposes other than these without telling you first.">No usamos tus datos para fines distintos a estos sin avisarte primero.</p>
 
-  <h2 id="cookies">Cookies y almacenamiento local</h2>
-  <p>El sitio usa cookies y almacenamiento local del navegador para funcionar:</p>
+  <h2 id="cookies" data-en="Cookies and local storage">Cookies y almacenamiento local</h2>
+  <p data-en="The site uses cookies and browser local storage to work:">El sitio usa cookies y almacenamiento local del navegador para funcionar:</p>
   <ul>
-    <li><strong>Carrito y sesión:</strong> guardamos tu carrito y tu sesión en el navegador para que no pierdas lo que añadiste y puedas seguir comprando.</li>
-    <li><strong>Analítica:</strong> usamos herramientas de analítica para entender de forma agregada cómo se usa la tienda y mejorarla.</li>
+    <li data-en-html='<strong>Cart and session:</strong> we save your cart and session in the browser so you do not lose what you added and can keep shopping.'><strong>Carrito y sesión:</strong> guardamos tu carrito y tu sesión en el navegador para que no pierdas lo que añadiste y puedas seguir comprando.</li>
+    <li data-en-html='<strong>Analytics:</strong> we use analytics tools to understand in aggregate how the store is used and to improve it.'><strong>Analítica:</strong> usamos herramientas de analítica para entender de forma agregada cómo se usa la tienda y mejorarla.</li>
   </ul>
-  <p>Puedes borrar las cookies y el almacenamiento local desde la configuración de tu navegador, pero ten en cuenta que algunas funciones (como mantener el carrito) podrían dejar de funcionar correctamente.</p>
+  <p data-en="You can clear cookies and local storage from your browser settings, but keep in mind that some features (such as keeping your cart) may stop working correctly.">Puedes borrar las cookies y el almacenamiento local desde la configuración de tu navegador, pero ten en cuenta que algunas funciones (como mantener el carrito) podrían dejar de funcionar correctamente.</p>
 
-  <h2 id="compartir">Con quién compartimos</h2>
-  <p>Compartimos datos únicamente con los aliados que hacen posible tu compra, y solo lo estrictamente necesario:</p>
+  <h2 id="compartir" data-en="Who we share with">Con quién compartimos</h2>
+  <p data-en="We share data only with the partners that make your purchase possible, and only what is strictly necessary:">Compartimos datos únicamente con los aliados que hacen posible tu compra, y solo lo estrictamente necesario:</p>
   <ul>
-    <li><strong>Transportistas</strong> como USPS, para entregar tu paquete (nombre y dirección de envío).</li>
-    <li><strong>Procesadores de pago</strong> (ATH Móvil y el procesador de tarjeta), para completar la transacción.</li>
-    <li><strong>Herramientas de analítica y marketing,</strong> para operar el sitio y, si lo aceptaste, enviarte promociones.</li>
+    <li data-en-html='<strong>Carriers</strong> such as USPS, to deliver your package (name and shipping address).'><strong>Transportistas</strong> como USPS, para entregar tu paquete (nombre y dirección de envío).</li>
+    <li data-en-html='<strong>Payment processors</strong> (ATH Móvil and the card processor), to complete the transaction.'><strong>Procesadores de pago</strong> (ATH Móvil y el procesador de tarjeta), para completar la transacción.</li>
+    <li data-en-html='<strong>Analytics and marketing tools,</strong> to run the site and, if you opted in, send you promotions.'><strong>Herramientas de analítica y marketing,</strong> para operar el sitio y, si lo aceptaste, enviarte promociones.</li>
   </ul>
   <div class="caja">
-    <p><strong>Nunca vendemos tus datos.</strong> No comerciamos con tu información personal ni la entregamos a terceros para sus propios fines de mercadeo.</p>
+    <p data-en-html='<strong>We never sell your data.</strong> We do not trade your personal information or hand it over to third parties for their own marketing purposes.'><strong>Nunca vendemos tus datos.</strong> No comerciamos con tu información personal ni la entregamos a terceros para sus propios fines de mercadeo.</p>
   </div>
 
-  <h2 id="seguridad">Seguridad</h2>
-  <p>Protegemos tu información con prácticas estándar de la industria:</p>
+  <h2 id="seguridad" data-en="Security">Seguridad</h2>
+  <p data-en="We protect your information with industry-standard practices:">Protegemos tu información con prácticas estándar de la industria:</p>
   <ul>
-    <li><strong>Contraseñas con hashing:</strong> no guardamos tu contraseña en texto plano.</li>
-    <li><strong>Conexiones cifradas:</strong> la información viaja por conexiones seguras (HTTPS).</li>
-    <li><strong>Acceso restringido:</strong> solo el personal autorizado puede acceder a los datos necesarios para operar la tienda.</li>
+    <li data-en-html='<strong>Hashed passwords:</strong> we do not store your password in plain text.'><strong>Contraseñas con hashing:</strong> no guardamos tu contraseña en texto plano.</li>
+    <li data-en-html='<strong>Encrypted connections:</strong> your information travels over secure connections (HTTPS).'><strong>Conexiones cifradas:</strong> la información viaja por conexiones seguras (HTTPS).</li>
+    <li data-en-html='<strong>Restricted access:</strong> only authorized staff can access the data needed to run the store.'><strong>Acceso restringido:</strong> solo el personal autorizado puede acceder a los datos necesarios para operar la tienda.</li>
   </ul>
-  <p>Ningún sistema es 100% infalible, pero trabajamos para mantener tus datos protegidos y actuar rápido si algo ocurre.</p>
+  <p data-en="No system is 100% foolproof, but we work to keep your data protected and to act fast if something happens.">Ningún sistema es 100% infalible, pero trabajamos para mantener tus datos protegidos y actuar rápido si algo ocurre.</p>
 
-  <h2 id="derechos">Tus derechos</h2>
-  <p>Tú tienes el control de tu información. Puedes:</p>
+  <h2 id="derechos" data-en="Your rights">Tus derechos</h2>
+  <p data-en="You are in control of your information. You can:">Tú tienes el control de tu información. Puedes:</p>
   <ul>
-    <li><strong>Acceder</strong> a los datos que tenemos sobre ti.</li>
-    <li><strong>Corregir</strong> información incorrecta o desactualizada.</li>
-    <li><strong>Eliminar</strong> tus datos de nuestros sistemas.</li>
+    <li data-en-html='<strong>Access</strong> the data we hold about you.'><strong>Acceder</strong> a los datos que tenemos sobre ti.</li>
+    <li data-en-html='<strong>Correct</strong> incorrect or outdated information.'><strong>Corregir</strong> información incorrecta o desactualizada.</li>
+    <li data-en-html='<strong>Delete</strong> your data from our systems.'><strong>Eliminar</strong> tus datos de nuestros sistemas.</li>
   </ul>
-  <p>Para ejercer cualquiera de estos derechos, escríbenos por Instagram <a href="https://www.instagram.com/_gymrillas/" target="_blank" rel="noopener">@_gymrillas</a> y lo gestionamos. Para <strong>darte de baja del marketing</strong>, usa el enlace de cancelación que viene en cada correo promocional o escríbenos directamente; dejarás de recibir promociones sin afectar los avisos de tus órdenes.</p>
+  <p data-en-html='To exercise any of these rights, message us on Instagram <a href="https://www.instagram.com/_gymrillas/" target="_blank" rel="noopener">@_gymrillas</a> and we will handle it. To <strong>unsubscribe from marketing</strong>, use the cancellation link in every promotional email or write to us directly; you will stop receiving promotions without affecting your order notifications.'>Para ejercer cualquiera de estos derechos, escríbenos por Instagram <a href="https://www.instagram.com/_gymrillas/" target="_blank" rel="noopener">@_gymrillas</a> y lo gestionamos. Para <strong>darte de baja del marketing</strong>, usa el enlace de cancelación que viene en cada correo promocional o escríbenos directamente; dejarás de recibir promociones sin afectar los avisos de tus órdenes.</p>
 
-  <h2 id="retencion">Retención de datos</h2>
-  <p>Gymrillas conserva tu información mientras tengas una cuenta activa o mientras sea necesaria para completar tus órdenes y cumplir obligaciones legales, contables y fiscales aplicables en Puerto Rico. Cuando ya no la necesitamos, la eliminamos o la anonimizamos. Si solicitas eliminar tu cuenta, borramos tus datos personales salvo lo que debamos retener por ley.</p>
+  <h2 id="retencion" data-en="Data retention">Retención de datos</h2>
+  <p data-en="Gymrillas keeps your information while you have an active account or while it is needed to complete your orders and meet the legal, accounting, and tax obligations that apply in Puerto Rico. When we no longer need it, we delete or anonymize it. If you request to delete your account, we erase your personal data except for what we must keep by law.">Gymrillas conserva tu información mientras tengas una cuenta activa o mientras sea necesaria para completar tus órdenes y cumplir obligaciones legales, contables y fiscales aplicables en Puerto Rico. Cuando ya no la necesitamos, la eliminamos o la anonimizamos. Si solicitas eliminar tu cuenta, borramos tus datos personales salvo lo que debamos retener por ley.</p>
 
-  <h2 id="menores">Menores de edad</h2>
-  <p>Este sitio no está dirigido a menores de <strong>18 años</strong> y no recopilamos de forma intencional información de menores. Si crees que un menor nos ha proporcionado datos, escríbenos por <a href="https://www.instagram.com/_gymrillas/" target="_blank" rel="noopener">@_gymrillas</a> y los eliminaremos.</p>
+  <h2 id="menores" data-en="Minors">Menores de edad</h2>
+  <p data-en-html='This site is not directed at minors under <strong>18 years old</strong> and we do not intentionally collect information from minors. If you believe a minor has provided us with data, message us on <a href="https://www.instagram.com/_gymrillas/" target="_blank" rel="noopener">@_gymrillas</a> and we will delete it.'>Este sitio no está dirigido a menores de <strong>18 años</strong> y no recopilamos de forma intencional información de menores. Si crees que un menor nos ha proporcionado datos, escríbenos por <a href="https://www.instagram.com/_gymrillas/" target="_blank" rel="noopener">@_gymrillas</a> y los eliminaremos.</p>
 
-  <h2 id="cambios">Cambios a esta política</h2>
-  <p>Podemos actualizar esta política para reflejar cambios en nuestras prácticas o por requisitos legales. Cuando lo hagamos, actualizaremos la fecha de "Última actualización" en la parte superior. Te recomendamos revisarla de vez en cuando; el uso continuo de la tienda implica que aceptas la versión vigente.</p>
+  <h2 id="cambios" data-en="Changes to this policy">Cambios a esta política</h2>
+  <p data-en="We may update this policy to reflect changes in our practices or for legal requirements. When we do, we will update the &quot;Last updated&quot; date at the top. We recommend reviewing it from time to time; continued use of the store means you accept the current version.">Podemos actualizar esta política para reflejar cambios en nuestras prácticas o por requisitos legales. Cuando lo hagamos, actualizaremos la fecha de "Última actualización" en la parte superior. Te recomendamos revisarla de vez en cuando; el uso continuo de la tienda implica que aceptas la versión vigente.</p>
 
-  <h2 id="contacto">Contacto</h2>
-  <p>¿Preguntas sobre tu privacidad o tus datos? Escríbenos por Instagram <a href="https://www.instagram.com/_gymrillas/" target="_blank" rel="noopener">@_gymrillas</a> o TikTok <a href="https://www.tiktok.com/@_gymrillas" target="_blank" rel="noopener">@_gymrillas</a> y te ayudamos. Las solicitudes sobre datos personales las atiende <strong>Gymrillas</strong>, responsable del tratamiento.</p>
-  <p>Consulta también nuestros <a href="terminos.html">términos y condiciones</a>, la <a href="envios.html">política de envíos</a> y la <a href="devoluciones.html">política de devoluciones</a>.</p>
+  <h2 id="contacto" data-en="Contact">Contacto</h2>
+  <p data-en-html='Questions about your privacy or your data? Message us on Instagram <a href="https://www.instagram.com/_gymrillas/" target="_blank" rel="noopener">@_gymrillas</a> or TikTok <a href="https://www.tiktok.com/@_gymrillas" target="_blank" rel="noopener">@_gymrillas</a> and we will help. Requests about personal data are handled by <strong>Gymrillas</strong>, the data controller.'>¿Preguntas sobre tu privacidad o tus datos? Escríbenos por Instagram <a href="https://www.instagram.com/_gymrillas/" target="_blank" rel="noopener">@_gymrillas</a> o TikTok <a href="https://www.tiktok.com/@_gymrillas" target="_blank" rel="noopener">@_gymrillas</a> y te ayudamos. Las solicitudes sobre datos personales las atiende <strong>Gymrillas</strong>, responsable del tratamiento.</p>
+  <p data-en-html='Also check our <a href="terminos.html">terms and conditions</a>, the <a href="envios.html">shipping policy</a>, and the <a href="devoluciones.html">returns policy</a>.'>Consulta también nuestros <a href="terminos.html">términos y condiciones</a>, la <a href="envios.html">política de envíos</a> y la <a href="devoluciones.html">política de devoluciones</a>.</p>
 
-  <a class="volver" href="index.html">← Volver a la tienda</a>
+  <a class="volver" href="index.html" data-en="← Back to the store">← Volver a la tienda</a>
 </main>
 
 <footer class="footer">
   <div class="cols">
     <div>
-      <h5>Mujer</h5>
-      
-      
-      <a href="tienda.html?f=sub:w-leggings&n=Leggings">Leggings</a>
-      <a href="tienda.html?f=sub:w-shorts&n=Shorts">Shorts</a>
-      
-      <a href="tienda.html?f=cat:mujer&n=Mujer">Ver todo mujer</a>
+      <h5 data-en="Women">Mujer</h5>
+
+
+      <a href="tienda.html?f=sub:w-leggings&n=Leggings" data-en="Leggings">Leggings</a>
+      <a href="tienda.html?f=sub:w-shorts&n=Shorts" data-en="Shorts">Shorts</a>
+
+      <a href="tienda.html?f=cat:mujer&n=Mujer" data-en="Shop all women">Ver todo mujer</a>
     </div>
     <div>
-      <h5>Hombre</h5>
-      
-      <a href="tienda.html?f=sub:h-tanks&n=Tank tops">Tank tops</a>
-      
-      
-      
-      <a href="tienda.html?f=cat:hombre&n=Hombre">Ver todo hombre</a>
+      <h5 data-en="Men">Hombre</h5>
+
+      <a href="tienda.html?f=sub:h-tanks&n=Tank tops" data-en="Tank tops">Tank tops</a>
+
+
+
+      <a href="tienda.html?f=cat:hombre&n=Hombre" data-en="Shop all men">Ver todo hombre</a>
     </div>
     <div>
-      <h5>Accesorios</h5>
-      
-      
-      
-      
-      <a href="tienda.html?f=sub:a-straps&n=Straps">Straps</a>
-      
-      <a href="tienda.html?f=sub:a-cinturones&n=Cinturones">Cinturones</a>
-      
-      <a href="tienda.html?f=cat:accesorios&n=Accesorios">Ver todo</a>
+      <h5 data-en="Accessories">Accesorios</h5>
+
+
+
+
+      <a href="tienda.html?f=sub:a-straps&n=Straps" data-en="Straps">Straps</a>
+
+      <a href="tienda.html?f=sub:a-cinturones&n=Cinturones" data-en="Belts">Cinturones</a>
+
+      <a href="tienda.html?f=cat:accesorios&n=Accesorios" data-en="Shop all">Ver todo</a>
     </div>
     <div>
-      <h5>Destacados</h5>
-      <a href="tienda.html?f=tag:hot&n=Hot deals">Hot deals</a>
-      <a href="tienda.html?f=tag:trending&n=Trending">Trending</a>
-      <a href="tienda.html?f=tag:nuevo&n=Nuevos">Nuevos</a>
-      <a href="index.html#preorden">Drop 001</a>
-      
+      <h5 data-en="Featured">Destacados</h5>
+      <a href="tienda.html?f=tag:hot&n=Hot deals" data-en="Hot deals">Hot deals</a>
+      <a href="tienda.html?f=tag:trending&n=Trending" data-en="Trending">Trending</a>
+      <a href="tienda.html?f=tag:nuevo&n=Nuevos" data-en="New">Nuevos</a>
+      <a href="index.html#preorden" data-en="Drop 001">Drop 001</a>
+
     </div>
     <div>
-      <h5>Ayuda y cuenta</h5>
-      <a href="envios.html">Envíos y entregas</a>
-      <a href="devoluciones.html">Devoluciones</a>
-      <a href="guia-tallas.html">Guía de tallas</a>
-      <a href="login.html">Iniciar sesión</a>
-      <a href="cuenta.html">Mi cuenta</a>
+      <h5 data-en="Help &amp; account">Ayuda y cuenta</h5>
+      <a href="envios.html" data-en="Shipping &amp; delivery">Envíos y entregas</a>
+      <a href="devoluciones.html" data-en="Returns">Devoluciones</a>
+      <a href="guia-tallas.html" data-en="Size guide">Guía de tallas</a>
+      <a href="login.html" data-en="Sign in">Iniciar sesión</a>
+      <a href="cuenta.html" data-en="My account">Mi cuenta</a>
       <a href="https://www.instagram.com/_gymrillas/" target="_blank" rel="noopener">Instagram</a>
       <a href="https://www.tiktok.com/@_gymrillas" target="_blank" rel="noopener">TikTok</a>
     </div>
   </div>
   <div class="legal">
-    <span>© 2026 Gymrillas · Hecho en Puerto Rico</span>
-    <span class="enlaces-legales"><a href="terminos.html">Términos</a><a href="privacidad.html">Privacidad</a><a href="envios.html">Envíos</a><a href="devoluciones.html">Devoluciones</a></span>
+    <span data-en="© 2026 Gymrillas · Made in Puerto Rico">© 2026 Gymrillas · Hecho en Puerto Rico</span>
+    <span class="enlaces-legales"><a href="terminos.html" data-en="Terms">Términos</a><a href="privacidad.html" data-en="Privacy">Privacidad</a><a href="envios.html" data-en="Shipping">Envíos</a><a href="devoluciones.html" data-en="Returns">Devoluciones</a></span>
     <span class="pagos"><i>ATH Móvil</i><i>VISA</i><i>Mastercard</i><i>AMEX</i></span>
   </div>
 </footer>
+<script src="assets/js/i18n.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/api.js"></script>
 </body>

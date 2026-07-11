@@ -3,78 +3,79 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Iniciar sesión | GYMRILLAS</title>
+<title data-en="Sign in | GYMRILLAS">Iniciar sesión | GYMRILLAS</title>
 <meta name="description" content="Entra a tu cuenta Gymrillas o únete a la tribu.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,400;0,500;1,700;1,800&family=Saira+Condensed:wght@800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/main.css">
+  <script>try{if(localStorage.getItem("gymrillas_theme")==="light")document.documentElement.setAttribute("data-theme","light")}catch(e){}</script>
 </head>
 <body>
-<div class="barra-anuncio">Envío gratis en órdenes +$150 · PR &amp; USA &nbsp;|&nbsp; 10% off con <strong>BIENVENIDO10</strong></div>
+<div class="barra-anuncio" data-en-html='Free shipping on orders +$150 · PR &amp; USA &nbsp;|&nbsp; 10% off with <strong>BIENVENIDO10</strong>'>Envío gratis en órdenes +$150 · PR &amp; USA &nbsp;|&nbsp; 10% off con <strong>BIENVENIDO10</strong></div>
 <header class="header">
   <div class="fila">
     <div class="zona-izq">
-      <button class="hamburguesa" id="btn-menu" aria-label="Abrir menú">☰</button>
+      <button class="hamburguesa" id="btn-menu" aria-label="Abrir menú" data-en-aria="Open menu">☰</button>
       <nav class="nav-desktop" aria-label="Principal">
-        <div class="nav-item"><a href="tienda.html?f=cat:mujer&n=Mujer">Mujer</a><div class="dropdown"><a href="tienda.html?f=sub:w-leggings&n=Leggings">Leggings</a><a href="tienda.html?f=sub:w-shorts&n=Shorts">Shorts</a><a class="dd-todo" href="tienda.html?f=cat:mujer&n=Mujer">Ver todo mujer</a></div></div>
-        <div class="nav-item"><a href="tienda.html?f=cat:hombre&n=Hombre">Hombre</a><div class="dropdown"><a href="tienda.html?f=sub:h-tanks&n=Tank tops">Tank tops</a><a class="dd-todo" href="tienda.html?f=cat:hombre&n=Hombre">Ver todo hombre</a></div></div>
-        <div class="nav-item"><a href="tienda.html?f=cat:accesorios&n=Accesorios">Accesorios</a><div class="dropdown"><a href="tienda.html?f=sub:a-straps&n=Straps">Straps</a><a href="tienda.html?f=sub:a-cinturones&n=Cinturones">Cinturones</a><a class="dd-todo" href="tienda.html?f=cat:accesorios&n=Accesorios">Ver todo accesorios</a></div></div>
-        
-        <div class="nav-item"><a href="tienda.html">Descubre</a><div class="dropdown"><a href="index.html#preorden">Drop 001</a><a href="tienda.html?f=tag:hot&n=Hot deals">Hot deals</a><a href="tienda.html?f=tag:trending&n=Trending">Trending</a><a href="tienda.html?f=tag:nuevo&n=Nuevos">Nuevos</a><a class="dd-todo" href="tienda.html">Ver toda la tienda</a></div></div>
+        <div class="nav-item"><a href="tienda.html?f=cat:mujer&n=Mujer" data-en="Women">Mujer</a><div class="dropdown"><a href="tienda.html?f=sub:w-leggings&n=Leggings" data-en="Leggings">Leggings</a><a href="tienda.html?f=sub:w-shorts&n=Shorts" data-en="Shorts">Shorts</a><a class="dd-todo" href="tienda.html?f=cat:mujer&n=Mujer" data-en="Shop all women">Ver todo mujer</a></div></div>
+        <div class="nav-item"><a href="tienda.html?f=cat:hombre&n=Hombre" data-en="Men">Hombre</a><div class="dropdown"><a href="tienda.html?f=sub:h-tanks&n=Tank tops" data-en="Tank tops">Tank tops</a><a class="dd-todo" href="tienda.html?f=cat:hombre&n=Hombre" data-en="Shop all men">Ver todo hombre</a></div></div>
+        <div class="nav-item"><a href="tienda.html?f=cat:accesorios&n=Accesorios" data-en="Accessories">Accesorios</a><div class="dropdown"><a href="tienda.html?f=sub:a-straps&n=Straps" data-en="Straps">Straps</a><a href="tienda.html?f=sub:a-cinturones&n=Cinturones" data-en="Belts">Cinturones</a><a class="dd-todo" href="tienda.html?f=cat:accesorios&n=Accesorios" data-en="Shop all accessories">Ver todo accesorios</a></div></div>
+
+        <div class="nav-item"><a href="tienda.html" data-en="Discover">Descubre</a><div class="dropdown"><a href="index.html#preorden" data-en="Drop 001">Drop 001</a><a href="tienda.html?f=tag:hot&n=Hot deals" data-en="Hot deals">Hot deals</a><a href="tienda.html?f=tag:trending&n=Trending" data-en="Trending">Trending</a><a href="tienda.html?f=tag:nuevo&n=Nuevos" data-en="New">Nuevos</a><a class="dd-todo" href="tienda.html" data-en="Shop everything">Ver toda la tienda</a></div></div>
       </nav>
     </div>
     <a class="wordmark" href="index.html"><img src="https://assets.zyrosite.com/AoPeB1VKDLfKgeV3/isotipo-color-1-2x-AoPGxkJ68bF7O1oX.png" alt="" width="26" height="26">GYMRILLAS</a>
     <div class="iconos">
-      <button class="btn-ico" id="btn-lupa" aria-label="Buscar"><svg class="ico" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5 21 21"/></svg></button>
-      <a class="btn-ico" href="login.html" aria-label="Mi cuenta"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.6 3.1-5.6 7-5.6s7 2 7 5.6"/></svg></a>
-      <a class="btn-ico carrito" href="carrito.html" aria-label="Carrito"><svg class="ico" viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><em data-cart-count>0</em></a>
-      <a class="btn-ico" href="index.html#lead" aria-label="Lista de espera del drop"><svg class="ico" viewBox="0 0 24 24"><path d="M18 16H6c1.2-1.2 1.5-2.8 1.5-5a4.5 4.5 0 0 1 9 0c0 2.2.3 3.8 1.5 5z"/><path d="M10.5 19a1.8 1.8 0 0 0 3 0"/></svg></a>
+      <button class="btn-ico" id="btn-lupa" aria-label="Buscar" data-en-aria="Search"><svg class="ico" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5 21 21"/></svg></button>
+      <a class="btn-ico" href="login.html" aria-label="Mi cuenta" data-en-aria="My account"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.6 3.1-5.6 7-5.6s7 2 7 5.6"/></svg></a>
+      <a class="btn-ico carrito" href="carrito.html" aria-label="Carrito" data-en-aria="Cart"><svg class="ico" viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><em data-cart-count>0</em></a>
+      <a class="btn-ico" href="index.html#lead" aria-label="Lista de espera del drop" data-en-aria="Drop waitlist"><svg class="ico" viewBox="0 0 24 24"><path d="M18 16H6c1.2-1.2 1.5-2.8 1.5-5a4.5 4.5 0 0 1 9 0c0 2.2.3 3.8 1.5 5z"/><path d="M10.5 19a1.8 1.8 0 0 0 3 0"/></svg></a>
     </div>
   </div>
   <div class="buscador" id="buscador" hidden>
     <form action="tienda.html" class="container">
-      <input type="search" name="q" placeholder="Buscar productos…" aria-label="Buscar productos">
-      <button class="btn btn-volt" type="submit">Buscar</button>
+      <input type="search" name="q" placeholder="Buscar productos…" aria-label="Buscar productos" data-en-ph="Search products…" data-en-aria="Search products">
+      <button class="btn btn-volt" type="submit" data-en="Search">Buscar</button>
     </form>
   </div>
 </header>
 <div class="drawer" id="drawer">
   <div class="fondo" data-cerrar></div>
   <div class="panel">
-    <button class="cerrar" data-cerrar aria-label="Cerrar">✕</button>
-    <div class="dw-grupo"><h6>Descubre</h6><a href="index.html#preorden">Drop 001</a><a href="tienda.html?f=tag:hot&n=Hot deals">Hot deals</a><a href="tienda.html?f=tag:trending&n=Trending">Trending</a><a href="tienda.html?f=tag:nuevo&n=Nuevos">Nuevos</a><a href="tienda.html">Toda la tienda</a></div><div class="dw-grupo"><h6>Mujer</h6><a href="tienda.html?f=cat:mujer&n=Mujer">Ver todo mujer</a><a href="tienda.html?f=sub:w-leggings&n=Leggings">Leggings</a><a href="tienda.html?f=sub:w-shorts&n=Shorts">Shorts</a></div><div class="dw-grupo"><h6>Hombre</h6><a href="tienda.html?f=cat:hombre&n=Hombre">Ver todo hombre</a><a href="tienda.html?f=sub:h-tanks&n=Tank tops">Tank tops</a></div><div class="dw-grupo"><h6>Accesorios</h6><a href="tienda.html?f=cat:accesorios&n=Accesorios">Ver todo accesorios</a><a href="tienda.html?f=sub:a-straps&n=Straps">Straps</a><a href="tienda.html?f=sub:a-cinturones&n=Cinturones">Cinturones</a></div><div class="dw-grupo"><h6>Cuenta</h6><a href="login.html">Iniciar sesión / Crear cuenta</a><a href="cuenta.html">Mi cuenta</a><a href="carrito.html">Carrito</a></div>
+    <button class="cerrar" data-cerrar aria-label="Cerrar" data-en-aria="Close">✕</button>
+    <div class="dw-grupo"><h6 data-en="Discover">Descubre</h6><a href="index.html#preorden" data-en="Drop 001">Drop 001</a><a href="tienda.html?f=tag:hot&n=Hot deals" data-en="Hot deals">Hot deals</a><a href="tienda.html?f=tag:trending&n=Trending" data-en="Trending">Trending</a><a href="tienda.html?f=tag:nuevo&n=Nuevos" data-en="New">Nuevos</a><a href="tienda.html" data-en="Full store">Toda la tienda</a></div><div class="dw-grupo"><h6 data-en="Women">Mujer</h6><a href="tienda.html?f=cat:mujer&n=Mujer" data-en="Shop all women">Ver todo mujer</a><a href="tienda.html?f=sub:w-leggings&n=Leggings" data-en="Leggings">Leggings</a><a href="tienda.html?f=sub:w-shorts&n=Shorts" data-en="Shorts">Shorts</a></div><div class="dw-grupo"><h6 data-en="Men">Hombre</h6><a href="tienda.html?f=cat:hombre&n=Hombre" data-en="Shop all men">Ver todo hombre</a><a href="tienda.html?f=sub:h-tanks&n=Tank tops" data-en="Tank tops">Tank tops</a></div><div class="dw-grupo"><h6 data-en="Accessories">Accesorios</h6><a href="tienda.html?f=cat:accesorios&n=Accesorios" data-en="Shop all accessories">Ver todo accesorios</a><a href="tienda.html?f=sub:a-straps&n=Straps" data-en="Straps">Straps</a><a href="tienda.html?f=sub:a-cinturones&n=Cinturones" data-en="Belts">Cinturones</a></div><div class="dw-grupo"><h6 data-en="Account">Cuenta</h6><a href="login.html" data-en="Sign in / Create account">Iniciar sesión / Crear cuenta</a><a href="cuenta.html" data-en="My account">Mi cuenta</a><a href="carrito.html" data-en="Cart">Carrito</a></div>
   </div>
 </div>
 <section class="seccion">
   <div class="container auth">
-    <h1 class="titulo" style="text-align:center;margin-bottom:1.4rem">Bienvenido a la <span>tribu</span></h1>
+    <h1 class="titulo" style="text-align:center;margin-bottom:1.4rem" data-en-html='Welcome to the <span>tribe</span>'>Bienvenido a la <span>tribu</span></h1>
     <div class="tabs" data-grupo>
-      <button class="activo" data-mostrar="entrar">Entrar</button>
-      <button data-mostrar="crear">Crear cuenta</button>
+      <button class="activo" data-mostrar="entrar" data-en="Sign in">Entrar</button>
+      <button data-mostrar="crear" data-en="Create account">Crear cuenta</button>
     </div>
     <div data-panel="entrar">
-      <div class="form-grupo"><label>Email</label><input type="email" placeholder="tu@email.com"></div>
-      <div class="form-grupo"><label>Password</label><input type="password" placeholder="••••••••"></div>
-      <button class="btn btn-volt btn-bloque" onclick="grToast('Demo de diseño — auth se conecta en Fase 3')">Entrar</button>
-      <p style="text-align:center;margin-top:.8rem;font-size:.82rem"><a href="#" style="color:var(--gris)">¿Olvidaste tu password?</a></p>
+      <div class="form-grupo"><label data-en="Email">Email</label><input type="email" placeholder="tu@email.com" data-en-ph="you@email.com"></div>
+      <div class="form-grupo"><label data-en="Password">Password</label><input type="password" placeholder="••••••••"></div>
+      <button class="btn btn-volt btn-bloque" onclick="grToast('Demo de diseño — auth se conecta en Fase 3')" data-en="Sign in">Entrar</button>
+      <p style="text-align:center;margin-top:.8rem;font-size:.82rem"><a href="#" style="color:var(--gris)" data-en="Forgot your password?">¿Olvidaste tu password?</a></p>
     </div>
     <div data-panel="crear" style="display:none">
       <div class="dos-cols">
-        <div class="form-grupo"><label>Nombre</label><input></div>
-        <div class="form-grupo"><label>Apellido</label><input></div>
+        <div class="form-grupo"><label data-en="First name">Nombre</label><input></div>
+        <div class="form-grupo"><label data-en="Last name">Apellido</label><input></div>
       </div>
-      <div class="form-grupo"><label>Email</label><input type="email"></div>
-      <div class="form-grupo"><label>Password</label><input type="password" placeholder="Mínimo 8 caracteres"></div>
-      <label style="display:flex;gap:.5rem;font-size:.82rem;color:var(--gris);margin-bottom:1rem"><input type="checkbox" checked style="width:auto"> Quiero ofertas y acceso a drops (10% off de bienvenida)</label>
-      <button class="btn btn-volt btn-bloque" onclick="grToast('Demo de diseño — auth se conecta en Fase 3')">Crear cuenta</button>
+      <div class="form-grupo"><label data-en="Email">Email</label><input type="email"></div>
+      <div class="form-grupo"><label data-en="Password">Password</label><input type="password" placeholder="Mínimo 8 caracteres" data-en-ph="At least 8 characters"></div>
+      <label style="display:flex;gap:.5rem;font-size:.82rem;color:var(--gris);margin-bottom:1rem" data-en-html='<input type="checkbox" checked style="width:auto"> I want offers and access to drops (10% welcome off)'><input type="checkbox" checked style="width:auto"> Quiero ofertas y acceso a drops (10% off de bienvenida)</label>
+      <button class="btn btn-volt btn-bloque" onclick="grToast('Demo de diseño — auth se conecta en Fase 3')" data-en="Create account">Crear cuenta</button>
     </div>
     <div class="beneficios">
-      <h5 style="color:var(--tinta);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.5rem">Beneficios de la tribu</h5>
-      <div><b>Rewards</b> — gana puntos en cada compra</div>
-      <div><b>Drops</b> — acceso anticipado a colecciones</div>
-      <div><b>Tracking</b> — historial y estado de tus órdenes</div>
-      <div><b>Wishlist</b> — guarda tus favoritos</div>
+      <h5 style="color:var(--tinta);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.5rem" data-en="Tribe benefits">Beneficios de la tribu</h5>
+      <div data-en-html='<b>Rewards</b> — earn points on every purchase'><b>Rewards</b> — gana puntos en cada compra</div>
+      <div data-en-html='<b>Drops</b> — early access to collections'><b>Drops</b> — acceso anticipado a colecciones</div>
+      <div data-en-html='<b>Tracking</b> — history and status of your orders'><b>Tracking</b> — historial y estado de tus órdenes</div>
+      <div data-en-html='<b>Wishlist</b> — save your favorites'><b>Wishlist</b> — guarda tus favoritos</div>
     </div>
   </div>
 </section>
@@ -82,59 +83,60 @@
 <footer class="footer">
   <div class="cols">
     <div>
-      <h5>Mujer</h5>
-      
-      
-      <a href="tienda.html?f=sub:w-leggings&n=Leggings">Leggings</a>
-      <a href="tienda.html?f=sub:w-shorts&n=Shorts">Shorts</a>
-      
-      <a href="tienda.html?f=cat:mujer&n=Mujer">Ver todo mujer</a>
+      <h5 data-en="Women">Mujer</h5>
+
+
+      <a href="tienda.html?f=sub:w-leggings&n=Leggings" data-en="Leggings">Leggings</a>
+      <a href="tienda.html?f=sub:w-shorts&n=Shorts" data-en="Shorts">Shorts</a>
+
+      <a href="tienda.html?f=cat:mujer&n=Mujer" data-en="Shop all women">Ver todo mujer</a>
     </div>
     <div>
-      <h5>Hombre</h5>
-      
-      <a href="tienda.html?f=sub:h-tanks&n=Tank tops">Tank tops</a>
-      
-      
-      
-      <a href="tienda.html?f=cat:hombre&n=Hombre">Ver todo hombre</a>
+      <h5 data-en="Men">Hombre</h5>
+
+      <a href="tienda.html?f=sub:h-tanks&n=Tank tops" data-en="Tank tops">Tank tops</a>
+
+
+
+      <a href="tienda.html?f=cat:hombre&n=Hombre" data-en="Shop all men">Ver todo hombre</a>
     </div>
     <div>
-      <h5>Accesorios</h5>
-      
-      
-      
-      
-      <a href="tienda.html?f=sub:a-straps&n=Straps">Straps</a>
-      
-      <a href="tienda.html?f=sub:a-cinturones&n=Cinturones">Cinturones</a>
-      
-      <a href="tienda.html?f=cat:accesorios&n=Accesorios">Ver todo</a>
+      <h5 data-en="Accessories">Accesorios</h5>
+
+
+
+
+      <a href="tienda.html?f=sub:a-straps&n=Straps" data-en="Straps">Straps</a>
+
+      <a href="tienda.html?f=sub:a-cinturones&n=Cinturones" data-en="Belts">Cinturones</a>
+
+      <a href="tienda.html?f=cat:accesorios&n=Accesorios" data-en="Shop all">Ver todo</a>
     </div>
     <div>
-      <h5>Destacados</h5>
-      <a href="tienda.html?f=tag:hot&n=Hot deals">Hot deals</a>
-      <a href="tienda.html?f=tag:trending&n=Trending">Trending</a>
-      <a href="tienda.html?f=tag:nuevo&n=Nuevos">Nuevos</a>
-      <a href="index.html#preorden">Drop 001</a>
-      
+      <h5 data-en="Featured">Destacados</h5>
+      <a href="tienda.html?f=tag:hot&n=Hot deals" data-en="Hot deals">Hot deals</a>
+      <a href="tienda.html?f=tag:trending&n=Trending" data-en="Trending">Trending</a>
+      <a href="tienda.html?f=tag:nuevo&n=Nuevos" data-en="New">Nuevos</a>
+      <a href="index.html#preorden" data-en="Drop 001">Drop 001</a>
+
     </div>
     <div>
-      <h5>Ayuda y cuenta</h5>
-      <a href="envios.html">Envíos y entregas</a>
-      <a href="devoluciones.html">Devoluciones</a>
-      <a href="guia-tallas.html">Guía de tallas</a>
-      <a href="login.html">Iniciar sesión</a>
-      <a href="cuenta.html">Mi cuenta</a>
-      <a href="https://www.instagram.com/_gymrillas/" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://www.tiktok.com/@_gymrillas" target="_blank" rel="noopener">TikTok</a>
+      <h5 data-en="Help &amp; account">Ayuda y cuenta</h5>
+      <a href="envios.html" data-en="Shipping &amp; delivery">Envíos y entregas</a>
+      <a href="devoluciones.html" data-en="Returns">Devoluciones</a>
+      <a href="guia-tallas.html" data-en="Size guide">Guía de tallas</a>
+      <a href="login.html" data-en="Sign in">Iniciar sesión</a>
+      <a href="cuenta.html" data-en="My account">Mi cuenta</a>
+      <a href="https://www.instagram.com/_gymrillas/" target="_blank" rel="noopener" data-en="Instagram">Instagram</a>
+      <a href="https://www.tiktok.com/@_gymrillas" target="_blank" rel="noopener" data-en="TikTok">TikTok</a>
     </div>
   </div>
   <div class="legal">
-    <span>© 2026 Gymrillas · Hecho en Puerto Rico</span>
-    <span class="enlaces-legales"><a href="terminos.html">Términos</a><a href="privacidad.html">Privacidad</a><a href="envios.html">Envíos</a><a href="devoluciones.html">Devoluciones</a></span><span class="pagos"><i>ATH Móvil</i><i>VISA</i><i>Mastercard</i><i>AMEX</i></span>
+    <span data-en="© 2026 Gymrillas · Made in Puerto Rico">© 2026 Gymrillas · Hecho en Puerto Rico</span>
+    <span class="enlaces-legales"><a href="terminos.html" data-en="Terms">Términos</a><a href="privacidad.html" data-en="Privacy">Privacidad</a><a href="envios.html" data-en="Shipping">Envíos</a><a href="devoluciones.html" data-en="Returns">Devoluciones</a></span><span class="pagos"><i>ATH Móvil</i><i>VISA</i><i>Mastercard</i><i>AMEX</i></span>
   </div>
 </footer>
+<script src="assets/js/i18n.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/api.js"></script>
 </body>

@@ -9,161 +9,163 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,400;0,500;1,700;1,800&family=Saira+Condensed:wght@800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/main.css">
+  <script>try{if(localStorage.getItem("gymrillas_theme")==="light")document.documentElement.setAttribute("data-theme","light")}catch(e){}</script>
 </head>
 <body>
-<div class="barra-anuncio">Envío gratis en órdenes +$150 · PR &amp; USA &nbsp;|&nbsp; 10% off con <strong>BIENVENIDO10</strong></div>
+<div class="barra-anuncio" data-en-html='Free shipping on orders +$150 · PR &amp; USA &nbsp;|&nbsp; 10% off with <strong>BIENVENIDO10</strong>'>Envío gratis en órdenes +$150 · PR &amp; USA &nbsp;|&nbsp; 10% off con <strong>BIENVENIDO10</strong></div>
 <header class="header">
   <div class="fila">
     <div class="zona-izq">
-      <button class="hamburguesa" id="btn-menu" aria-label="Abrir menú">☰</button>
+      <button class="hamburguesa" id="btn-menu" aria-label="Abrir menú" data-en-aria="Open menu">☰</button>
       <nav class="nav-desktop" aria-label="Principal">
-        <div class="nav-item"><a href="tienda.html?f=cat:mujer&n=Mujer">Mujer</a><div class="dropdown"><a href="tienda.html?f=sub:w-leggings&n=Leggings">Leggings</a><a href="tienda.html?f=sub:w-shorts&n=Shorts">Shorts</a><a class="dd-todo" href="tienda.html?f=cat:mujer&n=Mujer">Ver todo mujer</a></div></div>
-        <div class="nav-item"><a href="tienda.html?f=cat:hombre&n=Hombre">Hombre</a><div class="dropdown"><a href="tienda.html?f=sub:h-tanks&n=Tank tops">Tank tops</a><a class="dd-todo" href="tienda.html?f=cat:hombre&n=Hombre">Ver todo hombre</a></div></div>
-        <div class="nav-item"><a href="tienda.html?f=cat:accesorios&n=Accesorios">Accesorios</a><div class="dropdown"><a href="tienda.html?f=sub:a-straps&n=Straps">Straps</a><a href="tienda.html?f=sub:a-cinturones&n=Cinturones">Cinturones</a><a class="dd-todo" href="tienda.html?f=cat:accesorios&n=Accesorios">Ver todo accesorios</a></div></div>
-        
-        <div class="nav-item"><a href="tienda.html">Descubre</a><div class="dropdown"><a href="index.html#preorden">Drop 001</a><a href="tienda.html?f=tag:hot&n=Hot deals">Hot deals</a><a href="tienda.html?f=tag:trending&n=Trending">Trending</a><a href="tienda.html?f=tag:nuevo&n=Nuevos">Nuevos</a><a class="dd-todo" href="tienda.html">Ver toda la tienda</a></div></div>
+        <div class="nav-item"><a href="tienda.html?f=cat:mujer&n=Mujer" data-en="Women">Mujer</a><div class="dropdown"><a href="tienda.html?f=sub:w-leggings&n=Leggings" data-en="Leggings">Leggings</a><a href="tienda.html?f=sub:w-shorts&n=Shorts" data-en="Shorts">Shorts</a><a class="dd-todo" href="tienda.html?f=cat:mujer&n=Mujer" data-en="Shop all women">Ver todo mujer</a></div></div>
+        <div class="nav-item"><a href="tienda.html?f=cat:hombre&n=Hombre" data-en="Men">Hombre</a><div class="dropdown"><a href="tienda.html?f=sub:h-tanks&n=Tank tops" data-en="Tank tops">Tank tops</a><a class="dd-todo" href="tienda.html?f=cat:hombre&n=Hombre" data-en="Shop all men">Ver todo hombre</a></div></div>
+        <div class="nav-item"><a href="tienda.html?f=cat:accesorios&n=Accesorios" data-en="Accessories">Accesorios</a><div class="dropdown"><a href="tienda.html?f=sub:a-straps&n=Straps" data-en="Straps">Straps</a><a href="tienda.html?f=sub:a-cinturones&n=Cinturones" data-en="Belts">Cinturones</a><a class="dd-todo" href="tienda.html?f=cat:accesorios&n=Accesorios" data-en="Shop all accessories">Ver todo accesorios</a></div></div>
+
+        <div class="nav-item"><a href="tienda.html" data-en="Discover">Descubre</a><div class="dropdown"><a href="index.html#preorden" data-en="Drop 001">Drop 001</a><a href="tienda.html?f=tag:hot&n=Hot deals" data-en="Hot deals">Hot deals</a><a href="tienda.html?f=tag:trending&n=Trending" data-en="Trending">Trending</a><a href="tienda.html?f=tag:nuevo&n=Nuevos" data-en="New">Nuevos</a><a class="dd-todo" href="tienda.html" data-en="Shop everything">Ver toda la tienda</a></div></div>
       </nav>
     </div>
     <a class="wordmark" href="index.html"><img src="https://assets.zyrosite.com/AoPeB1VKDLfKgeV3/isotipo-color-1-2x-AoPGxkJ68bF7O1oX.png" alt="" width="26" height="26">GYMRILLAS</a>
     <div class="iconos">
-      <button class="btn-ico" id="btn-lupa" aria-label="Buscar"><svg class="ico" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5 21 21"/></svg></button>
-      <a class="btn-ico" href="login.html" aria-label="Mi cuenta"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.6 3.1-5.6 7-5.6s7 2 7 5.6"/></svg></a>
-      <a class="btn-ico carrito" href="carrito.html" aria-label="Carrito"><svg class="ico" viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><em data-cart-count>0</em></a>
-      <a class="btn-ico" href="index.html#lead" aria-label="Lista de espera del drop"><svg class="ico" viewBox="0 0 24 24"><path d="M18 16H6c1.2-1.2 1.5-2.8 1.5-5a4.5 4.5 0 0 1 9 0c0 2.2.3 3.8 1.5 5z"/><path d="M10.5 19a1.8 1.8 0 0 0 3 0"/></svg></a>
+      <button class="btn-ico" id="btn-lupa" aria-label="Buscar" data-en-aria="Search"><svg class="ico" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5 21 21"/></svg></button>
+      <a class="btn-ico" href="login.html" aria-label="Mi cuenta" data-en-aria="My account"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.6 3.1-5.6 7-5.6s7 2 7 5.6"/></svg></a>
+      <a class="btn-ico carrito" href="carrito.html" aria-label="Carrito" data-en-aria="Cart"><svg class="ico" viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><em data-cart-count>0</em></a>
+      <a class="btn-ico" href="index.html#lead" aria-label="Lista de espera del drop" data-en-aria="Drop waitlist"><svg class="ico" viewBox="0 0 24 24"><path d="M18 16H6c1.2-1.2 1.5-2.8 1.5-5a4.5 4.5 0 0 1 9 0c0 2.2.3 3.8 1.5 5z"/><path d="M10.5 19a1.8 1.8 0 0 0 3 0"/></svg></a>
     </div>
   </div>
   <div class="buscador" id="buscador" hidden>
     <form action="tienda.html" class="container">
-      <input type="search" name="q" placeholder="Buscar productos…" aria-label="Buscar productos">
-      <button class="btn btn-volt" type="submit">Buscar</button>
+      <input type="search" name="q" placeholder="Buscar productos…" aria-label="Buscar productos" data-en-ph="Search products…" data-en-aria="Search products">
+      <button class="btn btn-volt" type="submit" data-en="Search">Buscar</button>
     </form>
   </div>
 </header>
 <div class="drawer" id="drawer">
   <div class="fondo" data-cerrar></div>
   <div class="panel">
-    <button class="cerrar" data-cerrar aria-label="Cerrar">✕</button>
-    <div class="dw-grupo"><h6>Descubre</h6><a href="index.html#preorden">Drop 001</a><a href="tienda.html?f=tag:hot&n=Hot deals">Hot deals</a><a href="tienda.html?f=tag:trending&n=Trending">Trending</a><a href="tienda.html?f=tag:nuevo&n=Nuevos">Nuevos</a><a href="tienda.html">Toda la tienda</a></div><div class="dw-grupo"><h6>Mujer</h6><a href="tienda.html?f=cat:mujer&n=Mujer">Ver todo mujer</a><a href="tienda.html?f=sub:w-leggings&n=Leggings">Leggings</a><a href="tienda.html?f=sub:w-shorts&n=Shorts">Shorts</a></div><div class="dw-grupo"><h6>Hombre</h6><a href="tienda.html?f=cat:hombre&n=Hombre">Ver todo hombre</a><a href="tienda.html?f=sub:h-tanks&n=Tank tops">Tank tops</a></div><div class="dw-grupo"><h6>Accesorios</h6><a href="tienda.html?f=cat:accesorios&n=Accesorios">Ver todo accesorios</a><a href="tienda.html?f=sub:a-straps&n=Straps">Straps</a><a href="tienda.html?f=sub:a-cinturones&n=Cinturones">Cinturones</a></div><div class="dw-grupo"><h6>Cuenta</h6><a href="login.html">Iniciar sesión / Crear cuenta</a><a href="cuenta.html">Mi cuenta</a><a href="carrito.html">Carrito</a></div>
+    <button class="cerrar" data-cerrar aria-label="Cerrar" data-en-aria="Close">✕</button>
+    <div class="dw-grupo"><h6 data-en="Discover">Descubre</h6><a href="index.html#preorden" data-en="Drop 001">Drop 001</a><a href="tienda.html?f=tag:hot&n=Hot deals" data-en="Hot deals">Hot deals</a><a href="tienda.html?f=tag:trending&n=Trending" data-en="Trending">Trending</a><a href="tienda.html?f=tag:nuevo&n=Nuevos" data-en="New">Nuevos</a><a href="tienda.html" data-en="Full store">Toda la tienda</a></div><div class="dw-grupo"><h6 data-en="Women">Mujer</h6><a href="tienda.html?f=cat:mujer&n=Mujer" data-en="Shop all women">Ver todo mujer</a><a href="tienda.html?f=sub:w-leggings&n=Leggings" data-en="Leggings">Leggings</a><a href="tienda.html?f=sub:w-shorts&n=Shorts" data-en="Shorts">Shorts</a></div><div class="dw-grupo"><h6 data-en="Men">Hombre</h6><a href="tienda.html?f=cat:hombre&n=Hombre" data-en="Shop all men">Ver todo hombre</a><a href="tienda.html?f=sub:h-tanks&n=Tank tops" data-en="Tank tops">Tank tops</a></div><div class="dw-grupo"><h6 data-en="Accessories">Accesorios</h6><a href="tienda.html?f=cat:accesorios&n=Accesorios" data-en="Shop all accessories">Ver todo accesorios</a><a href="tienda.html?f=sub:a-straps&n=Straps" data-en="Straps">Straps</a><a href="tienda.html?f=sub:a-cinturones&n=Cinturones" data-en="Belts">Cinturones</a></div><div class="dw-grupo"><h6 data-en="Account">Cuenta</h6><a href="login.html" data-en="Sign in / Create account">Iniciar sesión / Crear cuenta</a><a href="cuenta.html" data-en="My account">Mi cuenta</a><a href="carrito.html" data-en="Cart">Carrito</a></div>
   </div>
 </div>
 
 <main class="doc">
-  <p class="eyebrow">Ayuda</p>
-  <h1>Envíos y <span style="color:var(--volt)">entregas</span></h1>
-  <p class="actualizado">Última actualización: junio 2026</p>
-  <p class="intro">Te llevamos el equipo a toda la isla y a Estados Unidos. Aquí está todo lo que necesitas saber sobre costos, tiempos y seguimiento de tu orden.</p>
+  <p class="eyebrow" data-en="Help">Ayuda</p>
+  <h1 data-en-html='Shipping &amp; <span style="color:var(--enlace)">delivery</span>'>Envíos y <span style="color:var(--enlace)">entregas</span></h1>
+  <p class="actualizado" data-en="Last updated: June 2026">Última actualización: junio 2026</p>
+  <p class="intro" data-en="We bring the gear across the island and to the United States. Here is everything you need to know about costs, times and tracking your order.">Te llevamos el equipo a toda la isla y a Estados Unidos. Aquí está todo lo que necesitas saber sobre costos, tiempos y seguimiento de tu orden.</p>
 
   <div class="caja">
-    <p><strong>Envío GRATIS</strong> en todas las órdenes de <strong>$150 o más</strong> (Puerto Rico y USA). Bajo ese monto, la tarifa estándar es <strong>$5.99</strong>. El recogido local en Caguas siempre es gratis.</p>
+    <p data-en-html='<strong>FREE shipping</strong> on all orders of <strong>$150 or more</strong> (Puerto Rico and USA). Below that amount, the standard rate is <strong>$5.99</strong>. Local pickup in Caguas is always free.'><strong>Envío GRATIS</strong> en todas las órdenes de <strong>$150 o más</strong> (Puerto Rico y USA). Bajo ese monto, la tarifa estándar es <strong>$5.99</strong>. El recogido local en Caguas siempre es gratis.</p>
   </div>
 
   <div class="toc">
-    <a href="#zonas">Zonas y costos</a>
-    <a href="#tiempos">Tiempos de entrega</a>
-    <a href="#procesamiento">Procesamiento</a>
-    <a href="#seguimiento">Seguimiento</a>
-    <a href="#pickup">Recogido local</a>
-    <a href="#problemas">Problemas con tu envío</a>
+    <a href="#zonas" data-en="Zones and costs">Zonas y costos</a>
+    <a href="#tiempos" data-en="Delivery times">Tiempos de entrega</a>
+    <a href="#procesamiento" data-en="Processing">Procesamiento</a>
+    <a href="#seguimiento" data-en="Tracking">Seguimiento</a>
+    <a href="#pickup" data-en="Local pickup">Recogido local</a>
+    <a href="#problemas" data-en="Problems with your shipment">Problemas con tu envío</a>
   </div>
 
-  <h2 id="zonas">Zonas y costos</h2>
-  <p>Enviamos a todo Puerto Rico y a los 50 estados de Estados Unidos a través de <strong>USPS</strong>. Los costos se calculan automáticamente en el checkout según el total de tu orden:</p>
+  <h2 id="zonas" data-en="Zones and costs">Zonas y costos</h2>
+  <p data-en-html='We ship to all of Puerto Rico and the 50 United States via <strong>USPS</strong>. Costs are calculated automatically at checkout based on your order total:'>Enviamos a todo Puerto Rico y a los 50 estados de Estados Unidos a través de <strong>USPS</strong>. Los costos se calculan automáticamente en el checkout según el total de tu orden:</p>
   <table>
-    <thead><tr><th>Destino</th><th>Orden bajo $150</th><th>Orden $150+</th></tr></thead>
+    <thead><tr><th data-en="Destination">Destino</th><th data-en="Order under $150">Orden bajo $150</th><th data-en="Order $150+">Orden $150+</th></tr></thead>
     <tbody>
-      <tr><td>Puerto Rico</td><td>$5.99</td><td>Gratis</td></tr>
-      <tr><td>Estados Unidos (mainland)</td><td>$5.99</td><td>Gratis</td></tr>
-      <tr><td>Recogido en Caguas</td><td>Gratis</td><td>Gratis</td></tr>
+      <tr><td data-en="Puerto Rico">Puerto Rico</td><td>$5.99</td><td data-en="Free">Gratis</td></tr>
+      <tr><td data-en="United States (mainland)">Estados Unidos (mainland)</td><td>$5.99</td><td data-en="Free">Gratis</td></tr>
+      <tr><td data-en="Pickup in Caguas">Recogido en Caguas</td><td data-en="Free">Gratis</td><td data-en="Free">Gratis</td></tr>
     </tbody>
   </table>
-  <p>Al total de productos se le añade el <strong>IVU de 11.5%</strong> requerido en Puerto Rico, calculado en el checkout antes de pagar.</p>
+  <p data-en-html='The <strong>11.5% IVU</strong> sales tax required in Puerto Rico is added to the product total, calculated at checkout before you pay.'>Al total de productos se le añade el <strong>IVU de 11.5%</strong> requerido en Puerto Rico, calculado en el checkout antes de pagar.</p>
 
-  <h2 id="tiempos">Tiempos de entrega</h2>
-  <p>Los tiempos son estimados en <strong>días laborables</strong> (lunes a viernes, sin incluir feriados) y empiezan a contar después del procesamiento de tu orden:</p>
+  <h2 id="tiempos" data-en="Delivery times">Tiempos de entrega</h2>
+  <p data-en-html='Times are estimates in <strong>business days</strong> (Monday to Friday, holidays not included) and start counting after your order is processed:'>Los tiempos son estimados en <strong>días laborables</strong> (lunes a viernes, sin incluir feriados) y empiezan a contar después del procesamiento de tu orden:</p>
   <ul>
-    <li><strong>Puerto Rico:</strong> 2–4 días laborables.</li>
-    <li><strong>Estados Unidos:</strong> 4–8 días laborables.</li>
-    <li><strong>Recogido en Caguas:</strong> normalmente listo el mismo día o al día siguiente; coordinamos la hora contigo.</li>
+    <li data-en-html='<strong>Puerto Rico:</strong> 2–4 business days.'><strong>Puerto Rico:</strong> 2–4 días laborables.</li>
+    <li data-en-html='<strong>United States:</strong> 4–8 business days.'><strong>Estados Unidos:</strong> 4–8 días laborables.</li>
+    <li data-en-html='<strong>Pickup in Caguas:</strong> usually ready the same day or the next; we coordinate the time with you.'><strong>Recogido en Caguas:</strong> normalmente listo el mismo día o al día siguiente; coordinamos la hora contigo.</li>
   </ul>
-  <p>En temporadas de alta demanda (drops, Black Friday, Navidad) los tiempos pueden extenderse un poco. Si tu envío se atrasa, te avisamos.</p>
+  <p data-en="During high-demand seasons (drops, Black Friday, Christmas) times may stretch a bit. If your shipment is delayed, we let you know.">En temporadas de alta demanda (drops, Black Friday, Navidad) los tiempos pueden extenderse un poco. Si tu envío se atrasa, te avisamos.</p>
 
-  <h2 id="procesamiento">Procesamiento de la orden</h2>
-  <p>Preparamos y empacamos las órdenes en <strong>1–2 días laborables</strong> luego de confirmar el pago. Las órdenes pagadas con ATH Móvil o tarjeta entran a procesamiento una vez confirmado el cobro.</p>
-  <p>Recibirás un correo de confirmación al hacer tu orden y otro con el número de rastreo cuando salga.</p>
+  <h2 id="procesamiento" data-en="Order processing">Procesamiento de la orden</h2>
+  <p data-en-html='We prepare and pack orders within <strong>1–2 business days</strong> after payment is confirmed. Orders paid with ATH Móvil or card enter processing once the charge is confirmed.'>Preparamos y empacamos las órdenes en <strong>1–2 días laborables</strong> luego de confirmar el pago. Las órdenes pagadas con ATH Móvil o tarjeta entran a procesamiento una vez confirmado el cobro.</p>
+  <p data-en="You will receive a confirmation email when you place your order and another with the tracking number when it ships.">Recibirás un correo de confirmación al hacer tu orden y otro con el número de rastreo cuando salga.</p>
 
-  <h2 id="seguimiento">Seguimiento de tu orden</h2>
-  <p>Cuando despachamos tu paquete te enviamos el <strong>número de rastreo (tracking)</strong> por email. También puedes ver el estado de tu orden desde <a href="cuenta.html">tu cuenta</a>.</p>
-  <p>Si compraste como invitado, guarda tu número de orden (formato <strong>GR…</strong>) y el correo que usaste para consultar el estado.</p>
+  <h2 id="seguimiento" data-en="Tracking your order">Seguimiento de tu orden</h2>
+  <p data-en-html='When we dispatch your package we send you the <strong>tracking number</strong> by email. You can also check your order status from <a href="cuenta.html">your account</a>.'>Cuando despachamos tu paquete te enviamos el <strong>número de rastreo (tracking)</strong> por email. También puedes ver el estado de tu orden desde <a href="cuenta.html">tu cuenta</a>.</p>
+  <p data-en-html='If you checked out as a guest, keep your order number (format <strong>GR…</strong>) and the email you used to look up its status.'>Si compraste como invitado, guarda tu número de orden (formato <strong>GR…</strong>) y el correo que usaste para consultar el estado.</p>
 
-  <h2 id="pickup">Recogido local (Caguas)</h2>
-  <p>¿Estás cerca? Elige <strong>Recogido en Caguas</strong> en el checkout y no pagas envío. Te escribimos para coordinar el punto y la hora de entrega. Trae tu número de orden e identificación.</p>
+  <h2 id="pickup" data-en="Local pickup (Caguas)">Recogido local (Caguas)</h2>
+  <p data-en-html='Nearby? Choose <strong>Pickup in Caguas</strong> at checkout and pay no shipping. We message you to coordinate the spot and delivery time. Bring your order number and ID.'>¿Estás cerca? Elige <strong>Recogido en Caguas</strong> en el checkout y no pagas envío. Te escribimos para coordinar el punto y la hora de entrega. Trae tu número de orden e identificación.</p>
 
-  <h2 id="problemas">Problemas con tu envío</h2>
-  <p>Si tu paquete llega <strong>dañado</strong>, incompleto o no llega en el tiempo estimado, escríbenos dentro de los <strong>7 días</strong> de la fecha de entrega estimada y lo resolvemos. Para cambios o devoluciones, revisa nuestra <a href="devoluciones.html">política de devoluciones</a>.</p>
+  <h2 id="problemas" data-en="Problems with your shipment">Problemas con tu envío</h2>
+  <p data-en-html='If your package arrives <strong>damaged</strong>, incomplete or does not arrive within the estimated time, write to us within <strong>7 days</strong> of the estimated delivery date and we will resolve it. For exchanges or returns, check our <a href="devoluciones.html">returns policy</a>.'>Si tu paquete llega <strong>dañado</strong>, incompleto o no llega en el tiempo estimado, escríbenos dentro de los <strong>7 días</strong> de la fecha de entrega estimada y lo resolvemos. Para cambios o devoluciones, revisa nuestra <a href="devoluciones.html">política de devoluciones</a>.</p>
   <div class="caja">
-    <p><strong>¿Dudas con tu orden?</strong> Escríbenos por Instagram <a href="https://www.instagram.com/_gymrillas/" target="_blank" rel="noopener">@_gymrillas</a> o TikTok <a href="https://www.tiktok.com/@_gymrillas" target="_blank" rel="noopener">@_gymrillas</a> con tu número de orden y te ayudamos.</p>
+    <p data-en-html='<strong>Questions about your order?</strong> Message us on Instagram <a href="https://www.instagram.com/_gymrillas/" target="_blank" rel="noopener">@_gymrillas</a> or TikTok <a href="https://www.tiktok.com/@_gymrillas" target="_blank" rel="noopener">@_gymrillas</a> with your order number and we will help you.'><strong>¿Dudas con tu orden?</strong> Escríbenos por Instagram <a href="https://www.instagram.com/_gymrillas/" target="_blank" rel="noopener">@_gymrillas</a> o TikTok <a href="https://www.tiktok.com/@_gymrillas" target="_blank" rel="noopener">@_gymrillas</a> con tu número de orden y te ayudamos.</p>
   </div>
 
-  <a class="volver" href="index.html">← Volver a la tienda</a>
+  <a class="volver" href="index.html" data-en="← Back to the store">← Volver a la tienda</a>
 </main>
 
 <footer class="footer">
   <div class="cols">
     <div>
-      <h5>Mujer</h5>
-      
-      
-      <a href="tienda.html?f=sub:w-leggings&n=Leggings">Leggings</a>
-      <a href="tienda.html?f=sub:w-shorts&n=Shorts">Shorts</a>
-      
-      <a href="tienda.html?f=cat:mujer&n=Mujer">Ver todo mujer</a>
+      <h5 data-en="Women">Mujer</h5>
+
+
+      <a href="tienda.html?f=sub:w-leggings&n=Leggings" data-en="Leggings">Leggings</a>
+      <a href="tienda.html?f=sub:w-shorts&n=Shorts" data-en="Shorts">Shorts</a>
+
+      <a href="tienda.html?f=cat:mujer&n=Mujer" data-en="Shop all women">Ver todo mujer</a>
     </div>
     <div>
-      <h5>Hombre</h5>
-      
-      <a href="tienda.html?f=sub:h-tanks&n=Tank tops">Tank tops</a>
-      
-      
-      
-      <a href="tienda.html?f=cat:hombre&n=Hombre">Ver todo hombre</a>
+      <h5 data-en="Men">Hombre</h5>
+
+      <a href="tienda.html?f=sub:h-tanks&n=Tank tops" data-en="Tank tops">Tank tops</a>
+
+
+
+      <a href="tienda.html?f=cat:hombre&n=Hombre" data-en="Shop all men">Ver todo hombre</a>
     </div>
     <div>
-      <h5>Accesorios</h5>
-      
-      
-      
-      
-      <a href="tienda.html?f=sub:a-straps&n=Straps">Straps</a>
-      
-      <a href="tienda.html?f=sub:a-cinturones&n=Cinturones">Cinturones</a>
-      
-      <a href="tienda.html?f=cat:accesorios&n=Accesorios">Ver todo</a>
+      <h5 data-en="Accessories">Accesorios</h5>
+
+
+
+
+      <a href="tienda.html?f=sub:a-straps&n=Straps" data-en="Straps">Straps</a>
+
+      <a href="tienda.html?f=sub:a-cinturones&n=Cinturones" data-en="Belts">Cinturones</a>
+
+      <a href="tienda.html?f=cat:accesorios&n=Accesorios" data-en="Shop all">Ver todo</a>
     </div>
     <div>
-      <h5>Destacados</h5>
-      <a href="tienda.html?f=tag:hot&n=Hot deals">Hot deals</a>
-      <a href="tienda.html?f=tag:trending&n=Trending">Trending</a>
-      <a href="tienda.html?f=tag:nuevo&n=Nuevos">Nuevos</a>
-      <a href="index.html#preorden">Drop 001</a>
-      
+      <h5 data-en="Featured">Destacados</h5>
+      <a href="tienda.html?f=tag:hot&n=Hot deals" data-en="Hot deals">Hot deals</a>
+      <a href="tienda.html?f=tag:trending&n=Trending" data-en="Trending">Trending</a>
+      <a href="tienda.html?f=tag:nuevo&n=Nuevos" data-en="New">Nuevos</a>
+      <a href="index.html#preorden" data-en="Drop 001">Drop 001</a>
+
     </div>
     <div>
-      <h5>Ayuda y cuenta</h5>
-      <a href="envios.html">Envíos y entregas</a>
-      <a href="devoluciones.html">Devoluciones</a>
-      <a href="guia-tallas.html">Guía de tallas</a>
-      <a href="login.html">Iniciar sesión</a>
-      <a href="cuenta.html">Mi cuenta</a>
+      <h5 data-en="Help &amp; account">Ayuda y cuenta</h5>
+      <a href="envios.html" data-en="Shipping &amp; delivery">Envíos y entregas</a>
+      <a href="devoluciones.html" data-en="Returns">Devoluciones</a>
+      <a href="guia-tallas.html" data-en="Size guide">Guía de tallas</a>
+      <a href="login.html" data-en="Sign in">Iniciar sesión</a>
+      <a href="cuenta.html" data-en="My account">Mi cuenta</a>
       <a href="https://www.instagram.com/_gymrillas/" target="_blank" rel="noopener">Instagram</a>
       <a href="https://www.tiktok.com/@_gymrillas" target="_blank" rel="noopener">TikTok</a>
     </div>
   </div>
   <div class="legal">
-    <span>© 2026 Gymrillas · Hecho en Puerto Rico</span>
-    <span class="enlaces-legales"><a href="terminos.html">Términos</a><a href="privacidad.html">Privacidad</a><a href="envios.html">Envíos</a><a href="devoluciones.html">Devoluciones</a></span>
+    <span data-en="© 2026 Gymrillas · Made in Puerto Rico">© 2026 Gymrillas · Hecho en Puerto Rico</span>
+    <span class="enlaces-legales"><a href="terminos.html" data-en="Terms">Términos</a><a href="privacidad.html" data-en="Privacy">Privacidad</a><a href="envios.html" data-en="Shipping">Envíos</a><a href="devoluciones.html" data-en="Returns">Devoluciones</a></span>
     <span class="pagos"><i>ATH Móvil</i><i>VISA</i><i>Mastercard</i><i>AMEX</i></span>
   </div>
 </footer>
+<script src="assets/js/i18n.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/api.js"></script>
 </body>
