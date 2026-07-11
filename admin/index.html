@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>GYMRILLAS · Admin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700;1,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/admin.css">
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="login">
+  <div class="card">
+    <h1><b>GYM</b>RILLAS</h1>
+    <p>Panel de administración</p>
+    <div class="campo">
+      <label>Email</label>
+      <input type="email" id="lg-email" placeholder="admin@gymrillas.com" autocomplete="username">
+    </div>
+    <div class="campo">
+      <label>Contraseña</label>
+      <input type="password" id="lg-pass" placeholder="••••••••" autocomplete="current-password">
+    </div>
+    <button class="btn btn-primary" id="lg-btn" style="width:100%;justify-content:center;margin-top:6px">Entrar</button>
+    <p id="lg-err" style="color:var(--err);margin-top:14px;display:none"></p>
+  </div>
+</div>
+
+<!-- APP -->
+<div class="app" id="app">
+  <div class="overlay-movil" id="overlay"></div>
+  <aside class="sidebar" id="sidebar">
+    <div class="marca"><b>GYM</b>RILLAS</div>
+    <nav class="nav" id="nav"></nav>
+    <div class="pie">
+      <div id="pie-user">—</div>
+      <button id="salir">Cerrar sesión</button>
+    </div>
+  </aside>
+
+  <div class="main">
+    <div class="topbar">
+      <button class="hamb" id="hamb">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <h2 id="titulo">Dashboard</h2>
+      <div id="topbar-acciones"></div>
+    </div>
+    <div class="contenido" id="contenido">
+      <div class="cargando"><div class="spinner"></div>Cargando…</div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL genérico -->
+<div class="modal" id="modal">
+  <div class="mbox">
+    <div class="mh"><h3 id="modal-titulo">—</h3><button class="x" id="modal-x">&times;</button></div>
+    <div class="mbody" id="modal-body"></div>
+    <div class="mfoot" id="modal-foot"></div>
+  </div>
+</div>
+
+<script src="assets/admin-demo.js"></script>
+<script src="assets/admin-vistas.js"></script>
+<script src="assets/admin.js"></script>
+</body>
+</html>

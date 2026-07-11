@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout | GYMRILLAS</title>
+<meta name="description" content="Checkout seguro Gymrillas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,400;0,500;1,700;1,800&family=Saira+Condensed:wght@800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<div class="barra-anuncio">Envío gratis en órdenes +$150 · PR &amp; USA &nbsp;|&nbsp; 10% off con <strong>BIENVENIDO10</strong></div>
+<header class="header">
+  <div class="fila">
+    <div class="zona-izq">
+      <button class="hamburguesa" id="btn-menu" aria-label="Abrir menú">☰</button>
+      <nav class="nav-desktop" aria-label="Principal">
+        <div class="nav-item"><a href="tienda.html?f=cat:mujer&n=Mujer">Mujer</a><div class="dropdown"><a href="tienda.html?f=sub:w-leggings&n=Leggings">Leggings</a><a href="tienda.html?f=sub:w-shorts&n=Shorts">Shorts</a><a class="dd-todo" href="tienda.html?f=cat:mujer&n=Mujer">Ver todo mujer</a></div></div>
+        <div class="nav-item"><a href="tienda.html?f=cat:hombre&n=Hombre">Hombre</a><div class="dropdown"><a href="tienda.html?f=sub:h-tanks&n=Tank tops">Tank tops</a><a class="dd-todo" href="tienda.html?f=cat:hombre&n=Hombre">Ver todo hombre</a></div></div>
+        <div class="nav-item"><a href="tienda.html?f=cat:accesorios&n=Accesorios">Accesorios</a><div class="dropdown"><a href="tienda.html?f=sub:a-straps&n=Straps">Straps</a><a href="tienda.html?f=sub:a-cinturones&n=Cinturones">Cinturones</a><a class="dd-todo" href="tienda.html?f=cat:accesorios&n=Accesorios">Ver todo accesorios</a></div></div>
+        
+        <div class="nav-item"><a href="tienda.html">Descubre</a><div class="dropdown"><a href="index.html#preorden">Drop 001</a><a href="tienda.html?f=tag:hot&n=Hot deals">Hot deals</a><a href="tienda.html?f=tag:trending&n=Trending">Trending</a><a href="tienda.html?f=tag:nuevo&n=Nuevos">Nuevos</a><a class="dd-todo" href="tienda.html">Ver toda la tienda</a></div></div>
+      </nav>
+    </div>
+    <a class="wordmark" href="index.html"><img src="https://assets.zyrosite.com/AoPeB1VKDLfKgeV3/isotipo-color-1-2x-AoPGxkJ68bF7O1oX.png" alt="" width="26" height="26">GYMRILLAS</a>
+    <div class="iconos">
+      <button class="btn-ico" id="btn-lupa" aria-label="Buscar"><svg class="ico" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5 21 21"/></svg></button>
+      <a class="btn-ico" href="login.html" aria-label="Mi cuenta"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.6 3.1-5.6 7-5.6s7 2 7 5.6"/></svg></a>
+      <a class="btn-ico carrito" href="carrito.html" aria-label="Carrito"><svg class="ico" viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><em data-cart-count>0</em></a>
+      <a class="btn-ico" href="index.html#lead" aria-label="Lista de espera del drop"><svg class="ico" viewBox="0 0 24 24"><path d="M18 16H6c1.2-1.2 1.5-2.8 1.5-5a4.5 4.5 0 0 1 9 0c0 2.2.3 3.8 1.5 5z"/><path d="M10.5 19a1.8 1.8 0 0 0 3 0"/></svg></a>
+    </div>
+  </div>
+  <div class="buscador" id="buscador" hidden>
+    <form action="tienda.html" class="container">
+      <input type="search" name="q" placeholder="Buscar productos…" aria-label="Buscar productos">
+      <button class="btn btn-volt" type="submit">Buscar</button>
+    </form>
+  </div>
+</header>
+<div class="drawer" id="drawer">
+  <div class="fondo" data-cerrar></div>
+  <div class="panel">
+    <button class="cerrar" data-cerrar aria-label="Cerrar">✕</button>
+    <div class="dw-grupo"><h6>Descubre</h6><a href="index.html#preorden">Drop 001</a><a href="tienda.html?f=tag:hot&n=Hot deals">Hot deals</a><a href="tienda.html?f=tag:trending&n=Trending">Trending</a><a href="tienda.html?f=tag:nuevo&n=Nuevos">Nuevos</a><a href="tienda.html">Toda la tienda</a></div><div class="dw-grupo"><h6>Mujer</h6><a href="tienda.html?f=cat:mujer&n=Mujer">Ver todo mujer</a><a href="tienda.html?f=sub:w-leggings&n=Leggings">Leggings</a><a href="tienda.html?f=sub:w-shorts&n=Shorts">Shorts</a></div><div class="dw-grupo"><h6>Hombre</h6><a href="tienda.html?f=cat:hombre&n=Hombre">Ver todo hombre</a><a href="tienda.html?f=sub:h-tanks&n=Tank tops">Tank tops</a></div><div class="dw-grupo"><h6>Accesorios</h6><a href="tienda.html?f=cat:accesorios&n=Accesorios">Ver todo accesorios</a><a href="tienda.html?f=sub:a-straps&n=Straps">Straps</a><a href="tienda.html?f=sub:a-cinturones&n=Cinturones">Cinturones</a></div><div class="dw-grupo"><h6>Cuenta</h6><a href="login.html">Iniciar sesión / Crear cuenta</a><a href="cuenta.html">Mi cuenta</a><a href="carrito.html">Carrito</a></div>
+  </div>
+</div>
+<section class="seccion">
+  <div class="container">
+    <h1 class="titulo" style="margin-bottom:.8rem">Check<span>out</span></h1>
+    <div class="pasos"><b>1 Información</b> → <span>2 Envío</span> → <span>3 Pago</span></div>
+    <div class="checkout-grid">
+      <div>
+        <h3 style="font-weight:500;margin-bottom:.9rem">Contacto</h3>
+        <div class="form-grupo"><label>Email</label><input type="email" placeholder="tu@email.com"></div>
+        <div class="form-grupo"><label>Teléfono</label><input type="tel" placeholder="787-000-0000"></div>
+        <h3 style="font-weight:500;margin:1.4rem 0 .9rem">Dirección de envío</h3>
+        <div class="dos-cols">
+          <div class="form-grupo"><label>Nombre</label><input></div>
+          <div class="form-grupo"><label>Apellido</label><input></div>
+        </div>
+        <div class="form-grupo"><label>Dirección</label><input placeholder="Calle, número, urb."></div>
+        <div class="dos-cols">
+          <div class="form-grupo"><label>Ciudad</label><input placeholder="Caguas"></div>
+          <div class="form-grupo"><label>Zip</label><input placeholder="00725"></div>
+        </div>
+        <h3 style="font-weight:500;margin:1.4rem 0 .9rem">Método de envío</h3>
+        <div>
+          <div class="radio-card activo"><span class="punto"></span> Estándar PR (2–4 días)<span class="der">Gratis</span></div>
+          <div class="radio-card"><span class="punto"></span> Express PR (1–2 días)<span class="der">$8</span></div>
+          <div class="radio-card"><span class="punto"></span> USA (5–8 días)<span class="der">$12</span></div>
+        </div>
+        <h3 style="font-weight:500;margin:1.4rem 0 .9rem">Pago</h3>
+        <div class="metodo-pago" data-grupo>
+          <button class="activo" data-mostrar="ath">ATH Móvil</button>
+          <button data-mostrar="tarjeta">Tarjeta</button>
+        </div>
+        <div data-panel="ath" style="background:var(--carbon-deep);border:var(--borde);border-radius:12px;padding:1.1rem;font-size:.88rem;color:var(--tinta-2)">
+          Al confirmar, se abre <b style="color:var(--tinta)">ATH Móvil</b> para completar el pago al instante desde tu cuenta.
+        </div>
+        <div data-panel="tarjeta" style="display:none">
+          <div class="form-grupo"><label>Número de tarjeta</label><input placeholder="•••• •••• •••• ••••"></div>
+          <div class="dos-cols">
+            <div class="form-grupo"><label>Vence</label><input placeholder="MM/AA"></div>
+            <div class="form-grupo"><label>CVV</label><input placeholder="123"></div>
+          </div>
+        </div>
+        <button class="btn btn-volt btn-bloque" style="margin-top:1.2rem" onclick="grToast('Demo de diseño — el pago se conecta en Fase 3')">Pagar $121.54</button>
+      </div>
+      <div class="resumen">
+        <h3 style="font-weight:500;margin-bottom:.6rem">Tu orden</h3>
+        <div class="linea"><span>Savage Tee × 2 (M)</span><b>$64.00</b></div>
+        <div class="linea"><span>Apex Leggings × 1 (S)</span><b>$45.00</b></div>
+        <div class="linea"><span>Envío</span><b style="color:var(--green)">Gratis</b></div>
+        <div class="linea"><span>IVU (11.5%)</span><b>$12.54</b></div>
+        <div class="linea total"><span>Total</span><b>$121.54</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="cols">
+    <div>
+      <h5>Mujer</h5>
+      
+      
+      <a href="tienda.html?f=sub:w-leggings&n=Leggings">Leggings</a>
+      <a href="tienda.html?f=sub:w-shorts&n=Shorts">Shorts</a>
+      
+      <a href="tienda.html?f=cat:mujer&n=Mujer">Ver todo mujer</a>
+    </div>
+    <div>
+      <h5>Hombre</h5>
+      
+      <a href="tienda.html?f=sub:h-tanks&n=Tank tops">Tank tops</a>
+      
+      
+      
+      <a href="tienda.html?f=cat:hombre&n=Hombre">Ver todo hombre</a>
+    </div>
+    <div>
+      <h5>Accesorios</h5>
+      
+      
+      
+      
+      <a href="tienda.html?f=sub:a-straps&n=Straps">Straps</a>
+      
+      <a href="tienda.html?f=sub:a-cinturones&n=Cinturones">Cinturones</a>
+      
+      <a href="tienda.html?f=cat:accesorios&n=Accesorios">Ver todo</a>
+    </div>
+    <div>
+      <h5>Destacados</h5>
+      <a href="tienda.html?f=tag:hot&n=Hot deals">Hot deals</a>
+      <a href="tienda.html?f=tag:trending&n=Trending">Trending</a>
+      <a href="tienda.html?f=tag:nuevo&n=Nuevos">Nuevos</a>
+      <a href="index.html#preorden">Drop 001</a>
+      
+    </div>
+    <div>
+      <h5>Ayuda y cuenta</h5>
+      <a href="envios.html">Envíos y entregas</a>
+      <a href="devoluciones.html">Devoluciones</a>
+      <a href="guia-tallas.html">Guía de tallas</a>
+      <a href="login.html">Iniciar sesión</a>
+      <a href="cuenta.html">Mi cuenta</a>
+      <a href="https://www.instagram.com/_gymrillas/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.tiktok.com/@_gymrillas" target="_blank" rel="noopener">TikTok</a>
+    </div>
+  </div>
+  <div class="legal">
+    <span>© 2026 Gymrillas · Hecho en Puerto Rico</span>
+    <span class="enlaces-legales"><a href="terminos.html">Términos</a><a href="privacidad.html">Privacidad</a><a href="envios.html">Envíos</a><a href="devoluciones.html">Devoluciones</a></span><span class="pagos"><i>ATH Móvil</i><i>VISA</i><i>Mastercard</i><i>AMEX</i></span>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/api.js"></script>
+</body>
+</html>

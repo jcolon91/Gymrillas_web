@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Producto | GYMRILLAS</title>
+<meta name="description" content="Equipo Gymrillas: straps, muñequeras, rodilleras, tobilleras, guantes y medias. Forjado para la jungla.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,400;0,500;1,700;1,800&family=Saira+Condensed:wght@800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<div class="barra-anuncio">Envío gratis en órdenes +$150 · PR &amp; USA &nbsp;|&nbsp; 10% off con <strong>BIENVENIDO10</strong></div>
+<header class="header">
+  <div class="fila">
+    <div class="zona-izq">
+      <button class="hamburguesa" id="btn-menu" aria-label="Abrir menú">☰</button>
+      <nav class="nav-desktop" aria-label="Principal">
+        <div class="nav-item"><a href="tienda.html?f=cat:mujer&n=Mujer">Mujer</a></div>
+        <div class="nav-item"><a href="tienda.html?f=cat:hombre&n=Hombre">Hombre</a></div>
+        <div class="nav-item"><a href="tienda.html?f=cat:accesorios&n=Accesorios">Accesorios</a><div class="dropdown"><a href="tienda.html?f=sub:a-straps&n=Straps">Straps</a><a href="tienda.html?f=sub:a-munequeras&n=Muñequeras">Muñequeras</a><a href="tienda.html?f=sub:a-rodilleras&n=Rodilleras">Rodilleras</a><a href="tienda.html?f=sub:a-tobilleras&n=Tobilleras">Tobilleras</a><a href="tienda.html?f=sub:a-guantes&n=Guantes">Guantes</a><a href="tienda.html?f=sub:a-medias&n=Medias">Medias</a><a class="dd-todo" href="tienda.html?f=cat:accesorios&n=Accesorios">Ver todo accesorios</a></div></div>
+        <div class="nav-item"><a href="nosotros.html">Nosotros</a></div>
+        
+        <div class="nav-item"><a href="tienda.html">Descubre</a></div>
+      </nav>
+    </div>
+    <a class="wordmark" href="index.html"><img src="https://assets.zyrosite.com/AoPeB1VKDLfKgeV3/isotipo-color-1-2x-AoPGxkJ68bF7O1oX.png" alt="" width="26" height="26">GYMRILLAS</a>
+    <div class="iconos">
+      <button class="btn-ico" id="btn-lupa" aria-label="Buscar"><svg class="ico" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5 21 21"/></svg></button>
+      <a class="btn-ico" href="login.html" aria-label="Mi cuenta"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.6 3.1-5.6 7-5.6s7 2 7 5.6"/></svg></a>
+      <a class="btn-ico carrito" href="carrito.html" aria-label="Carrito"><svg class="ico" viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><em data-cart-count>0</em></a>
+      <a class="btn-ico" href="index.html#lead" aria-label="Lista de espera del drop"><svg class="ico" viewBox="0 0 24 24"><path d="M18 16H6c1.2-1.2 1.5-2.8 1.5-5a4.5 4.5 0 0 1 9 0c0 2.2.3 3.8 1.5 5z"/><path d="M10.5 19a1.8 1.8 0 0 0 3 0"/></svg></a>
+    </div>
+  </div>
+  <div class="buscador" id="buscador" hidden>
+    <form action="tienda.html" class="container">
+      <input type="search" name="q" placeholder="Buscar productos…" aria-label="Buscar productos">
+      <button class="btn btn-volt" type="submit">Buscar</button>
+    </form>
+  </div>
+</header>
+<div class="drawer" id="drawer">
+  <div class="fondo" data-cerrar></div>
+  <div class="panel">
+    <button class="cerrar" data-cerrar aria-label="Cerrar">✕</button>
+    <div class="dw-grupo"><h6>Accesorios</h6><a href="tienda.html?f=cat:accesorios&n=Accesorios">Ver todo accesorios</a><a href="tienda.html?f=sub:a-straps&n=Straps">Straps</a><a href="tienda.html?f=sub:a-munequeras&n=Muñequeras">Muñequeras</a><a href="tienda.html?f=sub:a-rodilleras&n=Rodilleras">Rodilleras</a><a href="tienda.html?f=sub:a-tobilleras&n=Tobilleras">Tobilleras</a><a href="tienda.html?f=sub:a-guantes&n=Guantes">Guantes</a><a href="tienda.html?f=sub:a-medias&n=Medias">Medias</a></div><div class="dw-grupo"><h6>Marca</h6><a href="nosotros.html">Nosotros</a><a href="index.html#preorden">Drop 001</a></div><div class="dw-grupo"><h6>Cuenta</h6><a href="login.html">Iniciar sesión / Crear cuenta</a><a href="cuenta.html">Mi cuenta</a><a href="carrito.html">Carrito</a></div>
+  </div>
+</div>
+<section style="padding-bottom:3.2rem">
+  <div class="container">
+    <nav class="migas" id="pdp-migas"><a href="index.html">Home</a> / <a href="tienda.html">Tienda</a> / <span id="pdp-miga-cat"></span></nav>
+    <div class="pdp">
+      <div class="galeria">
+        <div class="principal"><img id="pdp-img" src="" alt=""></div>
+        <div class="thumbs" id="pdp-thumbs"></div>
+      </div>
+      <div class="pdp-info">
+        <p class="eyebrow" id="pdp-eyebrow"></p>
+        <h1 id="pdp-nombre"></h1>
+        <p class="precio" id="pdp-precio"></p>
+        <p class="pdp-stock" id="pdp-stock"></p>
+        <div class="opcion" id="pdp-op-color">
+          <div class="label">Color: <b id="pdp-color-lbl" style="color:var(--tinta)"></b></div>
+          <div class="colores" data-grupo id="pdp-colores"></div>
+        </div>
+        <div class="opcion" id="pdp-op-talla" hidden>
+          <div class="label">Talla <a href="guia-tallas.html">Guía de tallas</a></div>
+          <div class="tallas" data-grupo id="pdp-tallas"></div>
+        </div>
+        <div class="opcion">
+          <div class="label">Cantidad</div>
+          <div class="cantidad"><button data-dir="-" aria-label="Menos">−</button><span>1</span><button data-dir="+" aria-label="Más">+</button></div>
+        </div>
+        <div class="pdp-cta">
+          <button class="btn btn-volt btn-bloque" data-add id="pdp-add">Añadir al carrito</button>
+          <button class="btn btn-linea" data-add>Guardar</button>
+        </div>
+        <div class="acordeon">
+          <details open><summary>Descripción</summary><div class="cuerpo" id="pdp-desc"></div></details>
+          <details><summary>Materiales y cuidado</summary><div class="cuerpo" id="pdp-mat"></div></details>
+          <details><summary>Envío y devoluciones</summary><div class="cuerpo">Envío gratis en órdenes +$150 (PR y USA). Entrega 2–4 días laborables en PR. Devoluciones fáciles dentro de 30 días.</div></details>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:3.4rem">
+      <h2 class="titulo reveal" style="margin-bottom:1.3rem">También te puede <span>gustar</span></h2>
+      <div class="grid-prod" id="pdp-rel"></div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="cols">
+    <div>
+      <h5>Accesorios</h5>
+      <a href="tienda.html?f=sub:a-straps&n=Straps">Straps</a>
+      <a href="tienda.html?f=sub:a-munequeras&n=Muñequeras">Muñequeras</a>
+      <a href="tienda.html?f=sub:a-rodilleras&n=Rodilleras">Rodilleras</a>
+      <a href="tienda.html?f=sub:a-tobilleras&n=Tobilleras">Tobilleras</a>
+      <a href="tienda.html?f=sub:a-guantes&n=Guantes">Guantes</a>
+      <a href="tienda.html?f=sub:a-medias&n=Medias">Medias</a>
+      <a href="tienda.html?f=cat:accesorios&n=Accesorios">Ver todo</a>
+    </div>
+    <div>
+      <h5>Drop 001</h5>
+      <a href="index.html#preorden">Oversize Tee — Hombre</a>
+      <a href="index.html#preorden">Croptop — Mujer</a>
+      <a href="index.html#preorden">Tribal Strength</a>
+    </div>
+    <div>
+      <h5>Marca</h5>
+      <a href="nosotros.html">Nosotros</a>
+      
+      
+      <a href="index.html#lead">Únete a la tribu</a>
+    </div>
+    <div>
+      <h5>Destacados</h5>
+      <a href="tienda.html?f=tag:hot&n=Hot deals">Hot deals</a>
+      <a href="tienda.html?f=tag:trending&n=Trending">Trending</a>
+      <a href="tienda.html?f=tag:nuevo&n=Nuevos">Nuevos</a>
+      <a href="index.html#preorden">Drop 001</a>
+    </div>
+    <div>
+      <h5>Ayuda y cuenta</h5>
+      <a href="envios.html">Envíos y entregas</a>
+      <a href="devoluciones.html">Devoluciones</a>
+      <a href="guia-tallas.html">Guía de tallas</a>
+      <a href="login.html">Iniciar sesión</a>
+      <a href="cuenta.html">Mi cuenta</a>
+      <a href="https://www.instagram.com/_gymrillas/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.tiktok.com/@_gymrillas" target="_blank" rel="noopener">TikTok</a>
+    </div>
+  </div>
+  <div class="legal">
+    <span>© 2026 Gymrillas · Hecho en Puerto Rico</span>
+    <span class="enlaces-legales"><a href="terminos.html">Términos</a><a href="privacidad.html">Privacidad</a><a href="envios.html">Envíos</a><a href="devoluciones.html">Devoluciones</a></span><span class="pagos"><i>ATH Móvil</i><i>VISA</i><i>Mastercard</i><i>AMEX</i></span>
+  </div>
+</footer>
+
+<!-- Catálogo real + render dinámico del producto (corre ANTES de main.js para que sus handlers se enganchen a lo pintado). En el VPS esto se puede reemplazar por /api/productos. -->
+<script>
+(function(){
+  var C = '#1b1c19';
+  // Cada producto tiene variantes; cada variante su propia galería (imgs).
+  // Al elegir un color, la galería cambia. Precios de ropa = provisionales (ajústalos).
+  var CATALOGO = {
+    'muscle-tank': { cat:'hombre', sub:'h-tanks', subLabel:'Tanks', nombre:'Muscle Tank Gymrillas', precio:32, tallas:['S','M','L','XL'], stock:26,
+      variantes:[ {color:'Negro',hex:C,imgs:['assets/img/ropa/tank-negro-1.webp','assets/img/ropa/tank-negro-2.webp']}, {color:'Blanco',hex:'#f2f2f2',imgs:['assets/img/ropa/tank-blanco-1.webp','assets/img/ropa/tank-blanco-2.webp']} ],
+      desc:'Muscle tank de corte holgado con sisa amplia: el emblema del gorila al frente y GYMRILLAS vertical en la espalda. Tela suave y transpirable para entrenar sin límites.', mat:'Algodón/poliéster transpirable. Lavar en frío, no secadora caliente.' },
+    'bodysuit': { cat:'mujer', sub:'w-bodysuits', subLabel:'Bodysuits', nombre:'Zip Bodysuit Gymrillas', precio:58, tallas:['XS','S','M','L'], stock:18,
+      variantes:[ {color:'Negro',hex:C,imgs:['assets/img/ropa/bodysuit-negro.webp']}, {color:'Vino',hex:'#4a2233',imgs:['assets/img/ropa/bodysuit-vino.webp']}, {color:'Navy',hex:'#1f2a44',imgs:['assets/img/ropa/bodysuit-navy.webp']} ],
+      desc:'Bodysuit de manga larga con zíper frontal y ajuste de compresión que marca la figura, con el emblema del gorila al pecho. Perfecto para entrenar o para el día.', mat:'Nylon/spandex de alta compresión, tacto suave. Lavar en frío, no secadora.' },
+    'crop-top': { cat:'mujer', sub:'w-crops', subLabel:'Crop tops', nombre:'Open-Back Crop Top', precio:34, tallas:['XS','S','M','L'], stock:22,
+      variantes:[ {color:'Negro',hex:C,imgs:['assets/img/ropa/crop-negro-1.webp','assets/img/ropa/crop-negro-2.webp']}, {color:'Rosa',hex:'#e6a8bd',imgs:['assets/img/ropa/crop-rosa-1.webp','assets/img/ropa/crop-rosa-2.webp']} ],
+      desc:'Crop top de espalda abierta con tiras cruzadas y amarre. Soporte cómodo y un look que no pasa desapercibido, con el emblema del gorila al frente.', mat:'Nylon/spandex suave. Lavar en frío.' },
+    'shorts': { cat:'mujer', sub:'w-shorts', subLabel:'Shorts', nombre:'Seamless Scrunch Shorts', precio:38, tallas:['XS','S','M','L'], stock:24,
+      variantes:[ {color:'Navy',hex:'#1f2a44',imgs:['assets/img/ropa/shorts-navy.webp']}, {color:'Rojo',hex:'#c0341f',imgs:['assets/img/ropa/shorts-rojo.webp']} ],
+      desc:'Shorts seamless con efecto scrunch que realza la figura y no se transparenta. Cintura alta, ajuste firme, con el emblema del gorila.', mat:'Nylon/spandex seamless. Lavar en frío.' },
+    'leggings': { cat:'mujer', sub:'w-leggings', subLabel:'Leggings', nombre:'Seamless Scrunch Leggings', precio:48, tallas:['XS','S','M','L'], stock:20,
+      variantes:[ {color:'Navy',hex:'#1f2a44',imgs:['assets/img/ropa/leggings-navy.webp']} ],
+      desc:'Leggings seamless de cintura alta con efecto scrunch en glúteo y ajuste de segunda piel. Opacos, cómodos y hechos para rendir.', mat:'Nylon/spandex seamless. Lavar en frío, no secadora.' },
+    'lifting-belt': { cat:'accesorios', sub:'a-cinturones', subLabel:'Cinturones', nombre:'Cinturón de Levantamiento', precio:45, tallas:null, stock:15,
+      variantes:[ {color:'Negro',hex:C,imgs:['assets/img/ropa/belt-1.webp','assets/img/ropa/belt-4.webp','assets/img/ropa/belt-2.webp','assets/img/ropa/belt-3.webp']} ],
+      desc:'Cinturón de levantamiento de cuero con el wordmark GYMRILLAS y el emblema del gorila. Soporte firme al core en sentadillas, peso muerto y olímpicos.', mat:'Cuero genuino con hebilla de acero, ancho de soporte lumbar. Talla única ajustable.' },
+    'wrist-straps': { cat:'accesorios', sub:'a-straps', subLabel:'Straps', nombre:'Wrist Straps for Heavy Lifting', precio:24, tallas:null, stock:32,
+      variantes:[ {color:'Negro',hex:C,imgs:['assets/img/tienda/wrist-straps.jpg']}, {color:'Olive',hex:'#5f6b34',imgs:['assets/img/tienda/wrist-straps.jpg']}, {color:'Vino',hex:'#7a1f2b',imgs:['assets/img/tienda/wrist-straps.jpg']}, {color:'Rosa',hex:'#d38fa1',imgs:['assets/img/tienda/wrist-straps.jpg']} ],
+      desc:'Straps de levantamiento de algodón de alta densidad con costura reforzada y el wordmark GYMRILLAS. Mejoran el agarre en peso muerto, jalones y remos. Talla única, ajustables.', mat:'Algodón de alta densidad con costuras reforzadas. Limpiar a mano, secar al aire.' },
+    'wrist-wraps': { cat:'accesorios', sub:'a-munequeras', subLabel:'Muñequeras', nombre:'Wrist Wraps', precio:25, tallas:null, stock:26,
+      variantes:[ {color:'Negro',hex:C,imgs:['assets/img/tienda/wrist-wraps.jpg']} ],
+      desc:'Muñequeras elásticas con soporte firme y cierre de velcro para press de banca, press militar, snatch y todo trabajo pesado sobre la cabeza. Estabilizan la muñeca sin limitar el movimiento.', mat:'Elástico de alta compresión + velcro resistente. Talla única.' },
+    'weightlifting-straps': { cat:'accesorios', sub:'a-straps', subLabel:'Straps', nombre:'Gymrillas Weightlifting Straps', precio:24, tallas:null, stock:24,
+      variantes:[ {color:'Negro',hex:C,imgs:['assets/img/tienda/weightlifting-straps.jpg']} ],
+      desc:'Straps con patrón chevron antideslizante para máximo agarre en tus levantamientos más pesados. Se enrollan a la barra y aguantan.', mat:'Nylon/algodón reforzado con superficie antideslizante. Talla única.' },
+    'ankle-strap': { cat:'accesorios', sub:'a-tobilleras', subLabel:'Tobilleras', nombre:'Gym Ankle Strap', precio:26, tallas:null, stock:18,
+      variantes:[ {color:'Negro',hex:C,imgs:['assets/img/tienda/ankle-strap.jpg']} ],
+      desc:'Tobillera acolchada con argolla en D para conectar a poleas: patadas de glúteo, aducciones, abducciones y trabajo de cadera. Cómoda, firme y resistente.', mat:'Neopreno acolchado + argolla metálica + velcro. Talla única ajustable.' },
+    'knee-sleeve': { cat:'accesorios', sub:'a-rodilleras', subLabel:'Rodilleras', nombre:'Knee Compression Sleeve', precio:27, tallas:null, stock:20,
+      variantes:[ {color:'Negro',hex:C,imgs:['assets/img/tienda/knee-sleeve.jpg']} ],
+      desc:'Rodillera de compresión que da soporte y calor a la articulación en sentadillas y trabajo pesado de pierna. Estabiliza sin restringir el rango de movimiento.', mat:'Neopreno de 5–7 mm. Talla única ajustable.' },
+    'gloves': { cat:'accesorios', sub:'a-guantes', subLabel:'Guantes', nombre:'Gloves with Wrist Wraps', precio:26, tallas:null, stock:22,
+      variantes:[ {color:'Negro',hex:C,imgs:['assets/img/tienda/gloves.jpg']} ],
+      desc:'Guantes con palma acolchada y muñequera integrada: protegen las manos de los callos y dan soporte a la muñeca en un solo accesorio.', mat:'Cuero sintético + malla transpirable + velcro. Talla única.' },
+    'high-socks': { cat:'accesorios', sub:'a-medias', subLabel:'Medias', nombre:'Gymrillas High Socks', precio:14, tallas:null, stock:40,
+      variantes:[ {color:'Negro',hex:C,imgs:['assets/img/tienda/socks-black.jpg']} ],
+      desc:'Medias altas Gymrillas con el emblema del gorila. Tejido acanalado que sujeta la pantorrilla, con soporte de arco y buena absorción del sudor.', mat:'Algodón peinado con soporte de arco. Lavar en frío, no secadora caliente.' },
+    'scrunched-socks': { cat:'accesorios', sub:'a-medias', subLabel:'Medias', nombre:'Gymrillas Scrunched Socks', precio:16, tallas:null, stock:30,
+      variantes:[ {color:'Blanco',hex:'#f2f2f2',imgs:['assets/img/tienda/socks-white.jpg']} ],
+      desc:'Medias scrunched blancas de tejido premium: look limpio dentro y fuera del gym. Cómodas, duraderas y con caída scrunched.', mat:'Algodón peinado premium. Lavar en frío.' },
+    'clothing-collection': { cat:'accesorios', sub:'a-medias', subLabel:'Medias', nombre:'Gymrillas Clothing Collection', precio:14, tallas:null, stock:28,
+      variantes:[ {color:'Negro',hex:C,imgs:['assets/img/tienda/socks-collection.jpg']} ],
+      desc:'Medias Gymrillas con el wordmark de la marca: parte esencial del kit de la tribu para entrenar con estilo.', mat:'Algodón peinado. Lavar en frío.' }
+  };
+  var ORDEN = ['muscle-tank','bodysuit','crop-top','shorts','leggings','lifting-belt','wrist-straps','wrist-wraps','weightlifting-straps','ankle-strap','knee-sleeve','gloves','high-socks','scrunched-socks','clothing-collection'];
+  var CAT_LBL = { hombre:'Hombre', mujer:'Mujer', accesorios:'Accesorios' };
+
+  function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  var slug = new URLSearchParams(location.search).get('p');
+  if (!slug || !CATALOGO[slug]) slug = ORDEN[0];
+  var p = CATALOGO[slug];
+  var variante = p.variantes[0];
+
+  document.title = p.nombre + ' | GYMRILLAS';
+  document.getElementById('pdp-miga-cat').innerHTML = '<a href="tienda.html?f=cat:'+p.cat+'&n='+encodeURIComponent(CAT_LBL[p.cat])+'">'+esc(CAT_LBL[p.cat])+'</a> / '+esc(p.nombre);
+  document.getElementById('pdp-eyebrow').textContent = CAT_LBL[p.cat] + ' · ' + p.subLabel;
+  document.getElementById('pdp-nombre').textContent = p.nombre;
+  document.getElementById('pdp-precio').textContent = '$' + p.precio.toFixed(2);
+
+  // Galería (cambia según la variante de color)
+  var img = document.getElementById('pdp-img');
+  var thumbsWrap = document.getElementById('pdp-thumbs');
+  function pintarGaleria(v){
+    img.src = v.imgs[0]; img.alt = p.nombre;
+    if (v.imgs.length > 1){
+      thumbsWrap.style.display = '';
+      thumbsWrap.innerHTML = v.imgs.map(function(u,i){ return '<button class="'+(i===0?'activo':'')+'"><img src="'+u+'" alt="" loading="lazy"></button>'; }).join('');
+      thumbsWrap.querySelectorAll('button').forEach(function(b,i){ b.addEventListener('click', function(){ thumbsWrap.querySelectorAll('button').forEach(function(x){ x.classList.remove('activo'); }); b.classList.add('activo'); img.src = v.imgs[i]; }); });
+    } else { thumbsWrap.style.display = 'none'; thumbsWrap.innerHTML = ''; }
+  }
+  pintarGaleria(variante);
+
+  // Stock
+  var st = document.getElementById('pdp-stock');
+  if (p.stock > 0) {
+    st.innerHTML = (p.stock <= 6 ? '¡Últimas ' + p.stock + ' unidades!' : 'En stock') + ' · listo para enviar';
+    st.className = 'pdp-stock' + (p.stock <= 6 ? ' bajo' : '');
+  } else { st.textContent = 'Agotado'; st.className = 'pdp-stock agotado'; }
+
+  // Colores → cambian la galería
+  var lbl = document.getElementById('pdp-color-lbl');
+  lbl.textContent = variante.color;
+  var cw = document.getElementById('pdp-colores');
+  cw.innerHTML = p.variantes.map(function(v,i){
+    var borde = (v.hex.toLowerCase()==='#f2f2f2') ? ';border:1px solid #ccc' : '';
+    return '<button class="'+(i===0?'activo':'')+'" style="background:'+v.hex+borde+'" aria-label="'+esc(v.color)+'"></button>';
+  }).join('');
+  cw.querySelectorAll('button').forEach(function(b,i){ b.addEventListener('click', function(){ variante = p.variantes[i]; lbl.textContent = variante.color; pintarGaleria(variante); }); });
+
+  // Talla
+  var opT = document.getElementById('pdp-op-talla'); opT.hidden = false;
+  var tw = document.getElementById('pdp-tallas');
+  if (p.tallas && p.tallas.length) {
+    var mid = Math.min(1, p.tallas.length - 1);
+    tw.innerHTML = p.tallas.map(function(t,i){ return '<button class="'+(i===mid?'activo':'')+'">'+esc(t)+'</button>'; }).join('');
+  } else {
+    var lab = opT.querySelector('.label'); if (lab) lab.textContent = 'Talla';
+    tw.innerHTML = '<span class="talla-unica">Talla única</span>';
+  }
+
+  document.getElementById('pdp-add').textContent = 'Añadir al carrito · $' + p.precio;
+  document.getElementById('pdp-desc').textContent = p.desc;
+  document.getElementById('pdp-mat').textContent = p.mat;
+
+  // Relacionados: 4 de la misma categoría (o cualquiera) distintos
+  var mismaCat = ORDEN.filter(function(s){ return s !== slug && CATALOGO[s].cat === p.cat; });
+  var otros = ORDEN.filter(function(s){ return s !== slug && CATALOGO[s].cat !== p.cat; });
+  var rel = mismaCat.concat(otros).slice(0, 4);
+  document.getElementById('pdp-rel').innerHTML = rel.map(function(s){
+    var q = CATALOGO[s], v0 = q.variantes[0];
+    return '<article class="prod reveal" data-categoria="'+q.cat+'" data-sub="'+q.sub+'" data-precio="'+q.precio+'">'
+      + '<a href="producto.html?p='+s+'"><div class="foto"><img src="'+v0.imgs[0]+'" alt="'+esc(q.nombre)+'" loading="lazy" onerror="this.remove()"></div></a>'
+      + '<div class="info"><a href="producto.html?p='+s+'"><h4>'+esc(q.nombre)+'</h4></a><p class="precio">$'+q.precio+' </p>'
+      + '<div class="swatches">'+q.variantes.map(function(v){ return '<span class="swatch" style="background:'+v.hex+(v.hex.toLowerCase()==='#f2f2f2'?';border:1px solid #ccc':'')+'"></span>'; }).join('')+'</div></div>'
+      + '<button class="add" data-add aria-label="Añadir '+esc(q.nombre)+' al carrito">+</button></article>';
+  }).join('');
+})();
+</script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/api.js"></script>
+</body>
+</html>

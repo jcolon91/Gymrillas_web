@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nosotros | GYMRILLAS</title>
+<meta name="description" content="La historia de Gymrillas: la jungla de cemento, el gorila, la hermandad y la misión de conquistar tu jungla personal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,400;0,500;1,700;1,800&family=Saira+Condensed:wght@800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/main.css">
+<style>
+  .ns-hero{position:relative;min-height:56vh;display:flex;align-items:flex-end;overflow:hidden;background:#111}
+  .ns-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
+  .ns-hero .ns-hero-in{position:relative;z-index:2;padding:2.4rem 0}
+  .ns-hero h1{font-family:var(--display);font-size:clamp(2.4rem,9vw,5rem);line-height:.95;text-transform:uppercase;color:#fff;margin:.3rem 0}
+  .ns-hero h1 span{color:var(--volt)}
+  .ns-hero p{color:#e7e8e3;max-width:42ch;font-size:1rem}
+  .ns-wrap{max-width:760px;margin:0 auto}
+  .ns-bloque{padding:2.6rem 0;border-bottom:1px solid rgba(245,246,242,.08)}
+  .ns-bloque:last-of-type{border-bottom:0}
+  .ns-bloque h2{font-family:var(--display);font-size:clamp(1.5rem,5vw,2.1rem);text-transform:uppercase;margin:.2rem 0 .8rem}
+  .ns-bloque h2 span{color:var(--volt)}
+  .ns-bloque p{color:var(--gris);line-height:1.7;font-size:1.02rem;margin:.7rem 0}
+  .ns-bloque p b{color:var(--blanco)}
+  .ns-valores{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.4rem 0}
+  .ns-valor{background:var(--panel);border:1px solid rgba(245,246,242,.1);border-radius:14px;padding:1.1rem;text-align:center}
+  .ns-valor b{display:block;font-family:var(--display);text-transform:uppercase;color:var(--volt);letter-spacing:.04em;margin-bottom:.3rem}
+  .ns-valor span{color:var(--gris);font-size:.86rem}
+  .ns-cta{text-align:center;padding:3rem 1rem}
+  .ns-cta h2{font-family:var(--display);font-size:clamp(1.8rem,6vw,2.6rem);text-transform:uppercase}
+  @media(max-width:600px){.ns-valores{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="barra-anuncio">Envío gratis en órdenes +$150 · PR &amp; USA &nbsp;|&nbsp; 10% off con <strong>BIENVENIDO10</strong></div>
+<header class="header">
+  <div class="fila">
+    <div class="zona-izq">
+      <button class="hamburguesa" id="btn-menu" aria-label="Abrir menú">☰</button>
+      <nav class="nav-desktop" aria-label="Principal">
+        <div class="nav-item"><a href="tienda.html?f=cat:mujer&n=Mujer">Mujer</a></div>
+        <div class="nav-item"><a href="tienda.html?f=cat:hombre&n=Hombre">Hombre</a></div>
+        <div class="nav-item"><a href="tienda.html?f=cat:accesorios&n=Accesorios">Accesorios</a></div>
+        <div class="nav-item"><a href="nosotros.html" aria-current="page">Nosotros</a></div>
+        
+        <div class="nav-item"><a href="tienda.html">Descubre</a></div>
+      </nav>
+    </div>
+    <a class="wordmark" href="index.html"><img src="https://assets.zyrosite.com/AoPeB1VKDLfKgeV3/isotipo-color-1-2x-AoPGxkJ68bF7O1oX.png" alt="" width="26" height="26">GYMRILLAS</a>
+    <div class="iconos">
+      <button class="btn-ico" id="btn-lupa" aria-label="Buscar"><svg class="ico" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5 21 21"/></svg></button>
+      <a class="btn-ico" href="login.html" aria-label="Mi cuenta"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.6 3.1-5.6 7-5.6s7 2 7 5.6"/></svg></a>
+      <a class="btn-ico carrito" href="carrito.html" aria-label="Carrito"><svg class="ico" viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><em data-cart-count>0</em></a>
+    </div>
+  </div>
+  <div class="buscador" id="buscador" hidden>
+    <form action="tienda.html" class="container">
+      <input type="search" name="q" placeholder="Buscar productos…" aria-label="Buscar productos">
+      <button class="btn btn-volt" type="submit">Buscar</button>
+    </form>
+  </div>
+</header>
+<div class="drawer" id="drawer">
+  <div class="fondo" data-cerrar></div>
+  <div class="panel">
+    <button class="cerrar" data-cerrar aria-label="Cerrar">✕</button>
+    <div class="dw-grupo"><h6>Tienda</h6><a href="tienda.html">Toda la tienda</a><a href="tienda.html?f=cat:accesorios&n=Accesorios">Accesorios</a><a href="index.html#preorden">Drop 001</a></div>
+    <div class="dw-grupo"><h6>Marca</h6><a href="nosotros.html">Nosotros</a></div>
+    <div class="dw-grupo"><h6>Cuenta</h6><a href="login.html">Iniciar sesión / Crear cuenta</a><a href="cuenta.html">Mi cuenta</a><a href="carrito.html">Carrito</a></div>
+  </div>
+</div>
+
+<section class="ns-hero">
+  <img src="https://d8j0ntlcm91z4.cloudfront.net/user_37oXaVoFICTcwhHWuCWo5lkkfRO/hf_20260610_024059_8a7845dc-eaeb-44bf-b0d0-426583939174.png" alt="Gorila Gymrillas en la jungla del gym" fetchpriority="high">
+  <div class="container ns-hero-in">
+    <p class="eyebrow" style="color:var(--volt)">Nosotros</p>
+    <h1>La jungla es<br><span>nuestra casa</span></h1>
+    <p>Una comunidad de guerreros que se esfuerzan por mejorar cada día, que se apoyan mutuamente y que despiertan la fuerza del gorila que llevan dentro.</p>
+  </div>
+</section>
+
+<section class="seccion">
+  <div class="container ns-wrap">
+
+    <div class="ns-bloque">
+      <p class="eyebrow">La historia de Gymrillas</p>
+      <h2>En lo profundo de la <span>jungla de cemento</span></h2>
+      <p>Donde el ruido de las pesas y el eco del esfuerzo resuenan, nace Gymrillas. El gimnasio es nuestra jungla: un territorio salvaje donde cada quien enfrenta sus retos con coraje y busca su transformación <b>física, mental y emocional</b>.</p>
+      <p>Cada levantamiento, cada repetición y cada gota de sudor es un paso hacia un nuevo mundo de posibilidades. No venimos a sobrevivir la jungla — venimos a <b>conquistarla</b>.</p>
+    </div>
+
+    <div class="ns-bloque">
+      <p class="eyebrow">El nacimiento de un icono</p>
+      <h2>¿Por qué un <span>gorila</span>?</h2>
+      <p>En la naturaleza, los gorilas son criaturas <b>poderosas, protectoras y leales</b>. Dominan su entorno con fuerza tranquila y cuidan de los suyos sin dudarlo. Ese es el espíritu que forjamos en cada pieza que hacemos.</p>
+      <div class="ns-valores">
+        <div class="ns-valor"><b>Poder</b><span>Fuerza forjada en disciplina, no en excusas.</span></div>
+        <div class="ns-valor"><b>Lealtad</b><span>A la tribu, al proceso y a ti mismo.</span></div>
+        <div class="ns-valor"><b>Instinto</b><span>La mentalidad savage que no se rinde.</span></div>
+      </div>
+    </div>
+
+    <div class="ns-bloque">
+      <p class="eyebrow">La hermandad</p>
+      <h2>Más que pesas, una <span>tribu</span></h2>
+      <p>Más allá de las máquinas, en el gimnasio se forma una hermandad. Los que llevan tiempo guían a los que empiezan; nadie se queda atrás. Aquí se comparten consejos, se celebran los récords y se levanta al que cae — sin importar el nivel de experiencia.</p>
+      <p>Gymrillas es esa comunidad vibrante donde los que aman el fitness <b>se conectan, comparten y se inspiran</b> unos a otros.</p>
+    </div>
+
+    <div class="ns-bloque">
+      <p class="eyebrow">Nuestra misión</p>
+      <h2>Conquista tu <span>jungla personal</span></h2>
+      <p>Nuestra misión es <b>inspirar y equipar</b> a todos los que deseen conquistar su jungla personal. Diseñamos ropa y equipo enfocados en el rendimiento — forjados para aguantar tu entrenamiento más brutal — y respaldados por una tribu que te empuja a seguir.</p>
+      <p>Hecho en Puerto Rico, con orgullo, para guerreros de todas partes.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="ns-cta">
+  <div class="container">
+    <h2>Únete a la <span style="color:var(--volt)">tribu</span></h2>
+    <p style="color:var(--gris);max-width:44ch;margin:.6rem auto 1.4rem">Descubre la fuerza del gorila que llevas dentro. Juntos conquistamos la jungla.</p>
+    <a class="btn btn-volt" href="index.html#lead" style="margin-right:.5rem">Únete ahora</a>
+    <a class="btn btn-linea" href="index.html#preorden">Ver el Drop 001</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="cols">
+    <div>
+      <h5>Accesorios</h5>
+      <a href="tienda.html?f=sub:a-straps&n=Straps">Straps</a>
+      <a href="tienda.html?f=sub:a-munequeras&n=Muñequeras">Muñequeras</a>
+      <a href="tienda.html?f=sub:a-rodilleras&n=Rodilleras">Rodilleras</a>
+      <a href="tienda.html?f=sub:a-guantes&n=Guantes">Guantes</a>
+      <a href="tienda.html?f=sub:a-medias&n=Medias">Medias</a>
+      <a href="tienda.html?f=cat:accesorios&n=Accesorios">Ver todo</a>
+    </div>
+    <div>
+      <h5>Drop 001</h5>
+      <a href="index.html#preorden">Oversize Tee — Hombre</a>
+      <a href="index.html#preorden">Croptop — Mujer</a>
+      <a href="index.html#preorden">Tribal Strength</a>
+    </div>
+    <div>
+      <h5>Marca</h5>
+      <a href="nosotros.html">Nosotros</a>
+      
+      
+      <a href="index.html#lead">Únete a la tribu</a>
+    </div>
+    <div>
+      <h5>Ayuda y cuenta</h5>
+      <a href="envios.html">Envíos y entregas</a>
+      <a href="devoluciones.html">Devoluciones</a>
+      <a href="guia-tallas.html">Guía de tallas</a>
+      <a href="login.html">Iniciar sesión</a>
+      <a href="cuenta.html">Mi cuenta</a>
+      <a href="https://www.instagram.com/_gymrillas/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.tiktok.com/@_gymrillas" target="_blank" rel="noopener">TikTok</a>
+    </div>
+  </div>
+  <div class="legal">
+    <span>© 2026 Gymrillas · Hecho en Puerto Rico</span>
+    <span class="enlaces-legales"><a href="terminos.html">Términos</a><a href="privacidad.html">Privacidad</a><a href="envios.html">Envíos</a><a href="devoluciones.html">Devoluciones</a></span><span class="pagos"><i>ATH Móvil</i><i>VISA</i><i>Mastercard</i><i>AMEX</i></span>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/api.js"></script>
+</body>
+</html>
