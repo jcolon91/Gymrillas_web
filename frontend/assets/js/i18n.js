@@ -96,9 +96,10 @@
     }
   }
   function injectSwitcher() {
-    if (document.querySelector('.lang-switch')) return;
     var host = document.querySelector('.header .iconos');
-    if (host) { host.insertBefore(buildSwitcher(), host.firstChild); paintSwitcher(); }
+    if (!host || host.querySelector('.lang-switch')) return;
+    host.insertBefore(buildSwitcher(), host.firstChild);
+    paintSwitcher();
   }
 
   /* --- Contenido inyectado dinámicamente: traducir subárboles nuevos --- */
@@ -126,17 +127,33 @@
   function setTheme(t) { localStorage.setItem(THEME_KEY, t === 'light' ? 'light' : 'dark'); applyTheme(); }
   var SUN = '<svg class="ico-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4l1.4-1.4M18 6l1.4-1.4"/></svg>';
   var MOON = '<svg class="ico-luna" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.6 6.6 0 0 0 9.8 9.8z"/></svg>';
-  function injectThemeToggle() {
-    if (document.querySelector('.theme-toggle')) return;
-    var host = document.querySelector('.header .iconos');
-    if (!host) return;
+  function buildThemeToggle() {
     var b = document.createElement('button');
     b.type = 'button';
     b.className = 'theme-toggle';
     b.setAttribute('aria-label', 'Cambiar tema / Toggle theme');
     b.innerHTML = SUN + MOON;
     b.addEventListener('click', function () { setTheme(getTheme() === 'light' ? 'dark' : 'light'); });
-    host.insertBefore(b, host.firstChild);
+    return b;
+  }
+  function injectThemeToggle() {
+    var host = document.querySelector('.header .iconos');
+    if (!host || host.querySelector('.theme-toggle')) return;
+    host.insertBefore(buildThemeToggle(), host.firstChild);
+  }
+
+  /* En móvil no caben en el header (tapaban el logo): el CSS los oculta ahí
+     por debajo de 760px y esta copia en el drawer queda como acceso. */
+  function injectDrawerPrefs() {
+    var panel = document.querySelector('.drawer .panel');
+    if (!panel || panel.querySelector('.dw-prefs')) return;
+    var row = document.createElement('div');
+    row.className = 'dw-prefs';
+    row.appendChild(buildSwitcher());
+    row.appendChild(buildThemeToggle());
+    var cerrar = panel.querySelector('.cerrar');
+    panel.insertBefore(row, cerrar ? cerrar.nextSibling : panel.firstChild);
+    paintSwitcher();
   }
 
   // API pública para los scripts de página
@@ -154,6 +171,7 @@
     document.documentElement.setAttribute('lang', getLang());
     injectThemeToggle();
     injectSwitcher();
+    injectDrawerPrefs();
     apply(document);
     observe();
   }

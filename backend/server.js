@@ -2,6 +2,8 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
+const fs = require('fs');
+const crypto = require('crypto');
 const path = require('path');
 const rateLimit = require('express-rate-limit');
 
@@ -73,20 +75,55 @@ app.use('/admin', express.static(path.join(__dirname, '..', 'admin')));
 const FRONT = path.join(__dirname, '..', 'frontend');
 // MIME explícito para 3D (GLB/AR) y video spin del drop.
 const MIME_EXTRA = { '.glb': 'model/gltf-binary', '.gltf': 'model/gltf+json', '.usdz': 'model/vnd.usdz+zip', '.mp4': 'video/mp4' };
+
+// HTML del storefront: se sirve con ?v=<hash del contenido> en cada CSS/JS local.
+// Así esos assets pueden ir con caché inmutable de 1 año y, al editarlos, el HTML
+// apunta solo a la URL nueva. Sin paso de build ni versiones a mano.
+const hashes = new Map(); // ruta absoluta → { mtime, v }
+function versionDe(abs) {
+  const mtime = fs.statSync(abs).mtimeMs;
+  const c = hashes.get(abs);
+  if (c && c.mtime === mtime) return c.v;
+  const v = crypto.createHash('md5').update(fs.readFileSync(abs)).digest('hex').slice(0, 10);
+  hashes.set(abs, { mtime, v });
+  return v;
+}
+const REF_ASSET = /((?:href|src)=")(assets\/(?:css|js)\/[\w.-]+\.(?:css|js))(")/g;
+app.use((req, res, next) => {
+  if (req.method !== 'GET' && req.method !== 'HEAD') return next();
+  let rel;
+  try { rel = decodeURIComponent(req.path); } catch (e) { return next(); }
+  if (rel.endsWith('/')) rel += 'index.html';
+  else if (!path.extname(rel)) rel += '.html';
+  if (!rel.endsWith('.html')) return next();
+  const abs = path.join(FRONT, rel);
+  if (!abs.startsWith(FRONT + path.sep)) return next();
+  let html;
+  try { html = fs.readFileSync(abs, 'utf8'); } catch (e) { return next(); }
+  html = html.replace(REF_ASSET, (m, a, ref, z) => {
+    try { return a + ref + '?v=' + versionDe(path.join(FRONT, ref)) + z; } catch (e) { return m; }
+  });
+  res.set('Cache-Control', 'no-cache').type('html').send(html);
+});
+
 app.use(express.static(FRONT, {
   extensions: ['html'],
   setHeaders: function (res, filePath) {
     const ext = path.extname(filePath).toLowerCase();
     if (MIME_EXTRA[ext]) res.setHeader('Content-Type', MIME_EXTRA[ext]);
-    // HTML siempre fresco; assets (img/css/js/webp/mp4/fonts) con caché largo.
+    // HTML siempre fresco. Assets con ?v=<hash> (los pone el middleware de arriba) y
+    // fuentes: caché de 1 año inmutable. El resto se reemplaza a veces con el mismo
+    // nombre, así que caché corto + revalidación (ETag) en segundo plano.
     if (ext === '.html') res.setHeader('Cache-Control', 'no-cache');
-    else res.setHeader('Cache-Control', 'public, max-age=2592000, immutable'); // 30 días
+    else if (res.req.query.v || ext === '.woff2') res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+    else res.setHeader('Cache-Control', 'public, max-age=86400, stale-while-revalidate=604800');
   },
 }));
 
-// Fallback storefront (deja pasar /api y /admin)
+// Ruta inexistente del storefront → 404 real (no la home con 200: confunde a Google
+// y devolvía HTML para /favicon.ico, imágenes rotas, etc.). Deja pasar /api y /admin.
 app.get(/^\/(?!api|admin|uploads).*/, (req, res) => {
-  res.sendFile(path.join(FRONT, 'index.html'), (err) => { if (err) res.status(404).send('No encontrado'); });
+  res.status(404).sendFile(path.join(FRONT, '404.html'), (err) => { if (err) res.end('No encontrado'); });
 });
 
 // ---------- Manejo de errores ----------

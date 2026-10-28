@@ -1,9 +1,15 @@
 /* GYMRILLAS — main.css v5 (tema oscuro original + estructura v4) */
+/* Saira auto-hospedada (subset latin, OFL — ver assets/fonts/OFL.txt). Sin Google Fonts:
+   cero conexiones a terceros y sin CSS bloqueante externo. */
+@font-face{font-family:'Saira';font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/saira-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Saira';font-style:normal;font-weight:500;font-display:swap;src:url(../fonts/saira-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Saira';font-style:italic;font-weight:700;font-display:swap;src:url(../fonts/saira-latin-700-italic.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Saira';font-style:italic;font-weight:800;font-display:swap;src:url(../fonts/saira-latin-800-italic.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 :root{
   --volt:#DFE44E;--green:#93C83F;--carbon:#262726;--carbon-deep:#1a1b1a;--panel:#2e2f2e;
   --blanco:#F5F6F2;--tinta:#F5F6F2;--tinta-2:#9a9b96;--gris:#9a9b96;--gris-osc:#6f706b;
   --suave:#1a1b1a;--hueso:#2e2f2e;--enlace:#DFE44E;--linea:rgba(245,246,242,.1);--borde:1px solid rgba(245,246,242,.09);
-  --display:'Saira',sans-serif;--condensed:'Saira Condensed',sans-serif;--radio:12px;
+  --display:'Saira',sans-serif;--radio:12px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -446,6 +452,13 @@ button{font-family:var(--display);cursor:pointer}
 .lang-btn:hover{color:var(--tinta)}
 .lang-btn.is-on{background:var(--volt);color:var(--carbon)}
 @media(max-width:420px){ .lang-switch{margin-right:.3rem} .lang-btn{padding:.28rem .42rem;font-size:.66rem} }
+/* Header móvil: idioma/tema pasan al drawer (.dw-prefs, ver i18n.js) y se ocultan
+   íconos que el drawer ya cubre, para que nada tape el logo centrado. */
+.dw-prefs{display:flex;align-items:center;gap:.8rem;padding:.1rem 0 .9rem}
+.dw-prefs .lang-switch{margin-right:0}
+@media(max-width:759px){ .header .iconos>.lang-switch,.header .iconos>.theme-toggle{display:none} }
+@media(max-width:519px){ .header .iconos>a[href="index.html#lead"]{display:none} }
+@media(max-width:379px){ .header .iconos>a[href="login.html"]{display:none} }
 
 /* ============================================================
    MODO CLARO  (:root[data-theme="light"])

@@ -344,6 +344,33 @@ function T(es, en){ return (window.GYM_I18N ? GYM_I18N.t(es, en) : es); }
   document.getElementById('tienda-count').textContent = n ? n + (n === 1 ? T(' producto', ' product') : T(' productos', ' products')) : T('Sin resultados — intenta otra búsqueda', 'No results — try another search');
 })();
 
+// Videos 360° (video[data-lazy-video]): el <source> trae data-src y solo se descarga
+// al acercarse al viewport; se pausa fuera de pantalla. Con reduced-motion o
+// ahorro de datos se queda el poster (no se baja el video).
+(function(){
+  var vids = document.querySelectorAll('video[data-lazy-video]');
+  if (!vids.length) return;
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var ahorro = navigator.connection && navigator.connection.saveData;
+  if (reduce || ahorro) return;
+  function cargar(v){
+    if (v.dataset.cargado) return;
+    v.dataset.cargado = '1';
+    v.querySelectorAll('source[data-src]').forEach(function(s){ s.src = s.dataset.src; });
+    v.load();
+  }
+  function play(v){ var p = v.play(); if (p && p.catch) p.catch(function(){}); }
+  if (!('IntersectionObserver' in window)) { vids.forEach(function(v){ cargar(v); play(v); }); return; }
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      var v = e.target;
+      if (e.isIntersecting){ cargar(v); play(v); }
+      else if (v.dataset.cargado) v.pause();
+    });
+  }, { rootMargin: '200px 0px' });
+  vids.forEach(function(v){ io.observe(v); });
+})();
+
 // ===== Pre-orden del drop (edicion limitada 50/50) =====
 (function(){
   var seccion = document.getElementById('preorden');
@@ -506,7 +533,7 @@ function T(es, en){ return (window.GYM_I18N ? GYM_I18N.t(es, en) : es); }
       elc.m.textContent = dos(Math.floor(t % 3600 / 60));
       elc.s.textContent = dos(t % 60);
     };
-    tick(); var itv = setInterval(tick, 1000);
+    tick(); var itv = dropCerrado ? null : setInterval(tick, 1000);
   }
 
   // ---- Visor frente/espalda (boton "Ver espalda") ----
